@@ -1,3 +1,3 @@
 #pkgdoc
 
-[演示地址](https://pkgdoc-liudiwu.coding.io)
+[演示地址](http://pkgdoc-liudiwu.coding.io)
