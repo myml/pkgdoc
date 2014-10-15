@@ -1,5 +1,6 @@
 
 from os.path import isfile,isdir
+import os
 
 def application(environ, start_response):
 	status = '200 OK'
