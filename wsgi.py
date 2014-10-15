@@ -17,5 +17,5 @@ def application(environ, start_response):
 			return [file.read()]
 	if isdir('static'+path):
 		dir=os.listdir('static'+path)
-		return ['<html><body>','\r\n'.join(['<a href="%s/%s" traget=_blank>%s</a><br/>'%(path,d,d) for d in dir]),'</body></html>']
+		return ['<html><body>','\r\n'.join(['<a href="%s/%s" target=_blank>%s</a><br/>'%(path,d,d) for d in dir]),'</body></html>']
 	return ['<h1>not find</h1>']
