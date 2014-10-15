@@ -7,6 +7,8 @@ def application(environ, start_response):
 	response_headers = [('Content-type','text/html')]
 	start_response(status, response_headers)
 	path='static'+environ['PATH_INFO']
+	if path=='static/':
+		path='static/index.html'
 	if isfile(path):
 		with open(path,'r') as file:
 			return [file.read()]
