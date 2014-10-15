@@ -6,7 +6,7 @@ def application(environ, start_response):
 	status = '200 OK'
 	path=environ['PATH_INFO']
 	if path=='/':
-		path='index.html'
+		path='/index.html'
 	if path[-3:]=='css':
 		response_headers = [('Content-type','text/css')]
 	else:
