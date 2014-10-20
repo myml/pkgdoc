@@ -11,7 +11,7 @@
     <h2 id="pkg-overview">package regexp</h2>
     <p><code>import "regexp"</code>
     <p align="left">regexp包实现了正则表达式搜索。</p>
-    <p align="left">正则表达式采用RE2语法（除了\C），和Perl、Python等语言的正则基本一致。</p>
+    <p align="left">正则表达式采用RE2语法（除了\c、\C），和Perl、Python等语言的正则基本一致。</p>
     <p align="left">参见<a href="http://code.google.com/p/re2/wiki/Syntax">http://code.google.com/p/re2/wiki/Syntax</a>。</p>
     <h4>Syntax</h4>
     <p>本包采用的正则表达式语法，默认采用perl标志。某些语法可以通过切换解析时的标志来关闭。</p>
@@ -51,7 +51,7 @@
         (?:re)         不捕获的分组
         (?flags)       设置当前所在分组的标志，不捕获也不匹配
         (?flags:re)    设置re段的标志，不捕获的分组</pre>
-    <p>表示语法为xyz（设置）、-xyz（清楚）、xy-z（设置xy，清楚z），标志如下：</p>
+    <p>标志的语法为xyz（设置）、-xyz（清楚）、xy-z（设置xy，清楚z），标志如下：</p>
     <pre>        I              大小写敏感（默认关闭）
         m              ^和$在匹配文本开始和结尾之外，还可以匹配行首和行尾（默认开启）
         s              让.可以匹配\n（默认关闭）
@@ -75,7 +75,7 @@
         \x{10FFFF}     十六进制表示的字符码
         \*             字面值'*'
         \Q...\E        反斜线后面的字符的字面值</pre>
-    <p>字符族（预定义字符族之外，方括号内部的语法）：</p>
+    <p>字符族（预定义字符族之外，方括号内部）的语法：</p>
     <pre>        x              单个字符
         A-Z            字符范围（方括号内部才可以用）
         \d             Perl字符族
@@ -113,7 +113,7 @@
         [:upper:]      == [A-Z]
         [:word:]       == [0-9A-Za-z_]
         [:xdigit:]     == [0-9A-Fa-f]</pre>
-    <p>本包的正则表达式保证搜索复杂度为O(n)，其中n为输入的长度。这一点很多其他开源实现时无法保证的。参见：</p>
+    <p>本包的正则表达式保证搜索复杂度为O(n)，其中n为输入的长度。这一点很多其他开源实现是无法保证的。参见：</p>
     <pre><a href="http://swtch.com/~rsc/regexp/regexp1.html">http://swtch.com/~rsc/regexp/regexp1.html</a>
 </pre>
     <p align="left">或其他关于自动机理论的书籍。</p>

@@ -124,7 +124,7 @@
     <p>如果sign&gt;=0函数返回正无穷大，否则返回负无穷大。</p>
     <h3 id="IsInf">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/math/bits.go?name=release#43">IsInf</a> <a class="permalink" href="#IsInf">&para;</a></h3>
     <pre class="funcdecl">func IsInf(f <a href="https://godoc.org/builtin#float64">float64</a>, sign <a href="https://godoc.org/builtin#int">int</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
-    <p>如果sign &gt; 0，f是正无穷大时返回真；如果sign&lt;0，f是负无穷大时返回真；f是两种无穷大时都返回真。</p>
+    <p>如果sign &gt; 0，f是正无穷大时返回真；如果sign&lt;0，f是负无穷大时返回真；sign==0则f是两种无穷大时都返回真。</p>
     <h3 id="Float32bits">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/math/unsafe.go?name=release#10">Float32bits</a> <a class="permalink" href="#Float32bits">&para;</a></h3>
     <pre class="funcdecl">func Float32bits(f <a href="https://godoc.org/builtin#float32">float32</a>) <a href="https://godoc.org/builtin#uint32">uint32</a></pre>
     <p>函数返回浮点数f的IEEE 754格式二进制表示对应的4字节无符号整数。</p>
