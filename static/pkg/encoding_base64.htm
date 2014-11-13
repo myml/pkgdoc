@@ -50,7 +50,7 @@
     <pre>type Encoding struct {
     <span class="com">// 内含隐藏或非导出字段</span>
 }</pre>
-    <p>双向的编码/解码协议，根据一个64字符的字符集定义，R<a href="http://tools.ietf.org/html/rfc4648">FC 4648</a>准化了两种字符集。默认字符集用于MIME（<a href="http://tools.ietf.org/html/rfc2045">RFC 2045</a>）和PEM（<a href="http://tools.ietf.org/html/rfc1421">RFC 1421</a>）编码；另一种用于URL和文件名，用'-'和'_'替换了'+'和'/'。</p>
+    <p>双向的编码/解码协议，根据一个64字符的字符集定义，<a href="http://tools.ietf.org/html/rfc4648">RFC 4648</a>标准化了两种字符集。默认字符集用于MIME（<a href="http://tools.ietf.org/html/rfc2045">RFC 2045</a>）和PEM（<a href="http://tools.ietf.org/html/rfc1421">RFC 1421</a>）编码；另一种用于URL和文件名，用'-'和'_'替换了'+'和'/'。</p>
 <h4 id="NewEncoding">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/encoding/base64/base64.go?name=release#34">NewEncoding</a> <a class="permalink" href="#NewEncoding">&para;</a></h4>
     <pre class="funcdecl">func NewEncoding(encoder <a href="https://godoc.org/builtin#string">string</a>) *<a href="#Encoding">Encoding</a></pre>
     <p>使用给出的字符集生成一个*Encoding，字符集必须是64字节的字符串。</p>
