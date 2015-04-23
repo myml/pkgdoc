@@ -13,7 +13,8 @@
     <p> driver包定义了应被数据库驱动实现的接口，这些接口会被sql包使用。 </p>
     <p> 绝大多数代码应使用sql包。</p>
     <h3 id="pkg-index" class="section-header">Index <a class="permalink" href="#pkg-index">&para;</a></h3>
-    <ul class="list-unstyled">
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#pkg-variables">Variables</a></li>
         <li><a href="#Value">type Value</a></li>
         <li><a href="#Valuer">type Valuer</a></li>
@@ -43,7 +44,7 @@
         </ul>
         <li><a href="#Rows">type Rows</a></li>
     </ul>
-    <h3 id="pkg-variables">Variables <a class="permalink" href="#pkg-variables">&para;</a></h3>
+    <h3 id="pkg-variables">Variables <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>var <span id="Bool">Bool</span> boolType</pre>
     <p> Bool是ValueConverter接口值，用于将输入的值转换为布尔类型。</p>
     <p> 转换规则如下：</p>
@@ -68,7 +69,7 @@
     <p> 为了避免重复的操作，如果数据库服务端执行了操作，就不应返回ErrBadConn。即使服务端返回了一个错误。</p>
     <pre>var <span id="ErrSkip">ErrSkip</span> = <a href="/errors">errors</a>.<a href="/errors#New">New</a>(&#34;driver: skip fast-path; continue as if unimplemented&#34;)</pre>
     <p> ErrSkip可能会被某些可选接口的方法返回，用于在运行时表明快速方法不可用，sql包应像未实现该接口的情况一样执行。ErrSkip只有文档显式说明的地方才支持。</p>
-    <h3 id="Value">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/driver.go?name=release#22">Value</a> <a class="permalink" href="#Value">&para;</a></h3>
+    <h3 id="Value">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/driver.go?name=release#22">Value</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Value interface{}</pre>
     <p> Value是驱动必须能处理的值。它要么是nil，要么是如下类型的实例：</p>
     <pre>int64
@@ -77,19 +78,19 @@ bool
 []byte
 string   [*] Rows.Next不会返回该类型值
 time.Time</pre>
-    <h3 id="Valuer">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/types.go?name=release#39">Valuer</a> <a class="permalink" href="#Valuer">&para;</a></h3>
+    <h3 id="Valuer">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/types.go?name=release#39">Valuer</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Valuer interface {
     <span class="com">// Value返回一个驱动支持的Value类型值</span>
     <span id="Valuer.Value">Value</span>() (<a href="#Value">Value</a>, <a href="/builtin#error">error</a>)
 }</pre>
     <p> Valuer是提供Value方法的接口。实现了Valuer接口的类型可以将自身转换为驱动支持的Value类型值。</p>
-<h3 id="IsValue">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/types.go?name=release#176">IsValue</a> <a class="permalink" href="#IsValue">&para;</a></h3>
+<h3 id="IsValue">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/types.go?name=release#176">IsValue</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre class="funcdecl">func IsValue(v interface{}) <a href="/builtin#bool">bool</a></pre>
     <p> IsValue报告v是否是合法的Value类型参数。和IsScanValue不同，IsValue接受字符串类型。</p>
-    <h3 id="IsScanValue">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/types.go?name=release#188">IsScanValue</a> <a class="permalink" href="#IsScanValue">&para;</a></h3>
+    <h3 id="IsScanValue">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/types.go?name=release#188">IsScanValue</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre class="funcdecl">func IsScanValue(v interface{}) <a href="/builtin#bool">bool</a></pre>
     <p> IsScanValue报告v是否是合法的Value扫描类型参数。和IsValue不同，IsScanValue不接受字符串类型。</p>
-    <h3 id="ValueConverter">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/types.go?name=release#30">ValueConverter</a> <a class="permalink" href="#ValueConverter">&para;</a></h3>
+    <h3 id="ValueConverter">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/types.go?name=release#30">ValueConverter</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type ValueConverter interface {
     <span class="com">// ConvertValue将一个值转换为驱动支持的Value类型</span>
     <span id="ValueConverter.ConvertValue">ConvertValue</span>(v interface{}) (<a href="#Value">Value</a>, <a href="/builtin#error">error</a>)
@@ -102,28 +103,28 @@ time.Time</pre>
 * 转换数据库提供的值到驱动的Value类型。
 
 * 在扫描时被sql包用于将驱动的Value类型转换为用户的类型。</pre>
-    <h3 id="ColumnConverter">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/driver.go?name=release#145">ColumnConverter</a> <a class="permalink" href="#ColumnConverter">&para;</a></h3>
+    <h3 id="ColumnConverter">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/driver.go?name=release#145">ColumnConverter</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type ColumnConverter interface {
     <span class="com">// ColumnConverter返回指定列的ValueConverter</span>
     <span class="com">// 如果该列未指定类型，或不应特殊处理，应返回</span><span class="com">DefaultValueConverter</span>
     <span id="ColumnConverter.ColumnConverter">ColumnConverter</span>(idx <a href="/builtin#int">int</a>) <a href="#ValueConverter">ValueConverter</a>
 }</pre>
     <p> 如果Stmt有自己的列类型，可以实现ColumnConverter接口，返回值可以将任意类型转换为驱动的Value类型。</p>
-<h3 id="NotNull">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/types.go?name=release#163">NotNull</a> <a class="permalink" href="#NotNull">&para;</a></h3>
+<h3 id="NotNull">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/types.go?name=release#163">NotNull</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type NotNull struct {
     <span id="NotNull.Converter">Converter</span> <a href="#ValueConverter">ValueConverter</a>
 }</pre>
     <p> NotNull实现了ValueConverter接口，不允许nil值，否则会将值交给Converter字段处理。</p>
-    <h4 id="NotNull.ConvertValue">func (NotNull) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/types.go?name=release#167">ConvertValue</a> <a class="permalink" href="#NotNull.ConvertValue">&para;</a></h4>
+    <h4 id="NotNull.ConvertValue">func (NotNull) <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/types.go?name=release#167">ConvertValue</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (n <a href="#NotNull">NotNull</a>) ConvertValue(v interface{}) (<a href="#Value">Value</a>, <a href="/builtin#error">error</a>)</pre>
-    <h3 id="Null">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/types.go?name=release#150">Null</a> <a class="permalink" href="#Null">&para;</a></h3>
+    <h3 id="Null">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/types.go?name=release#150">Null</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Null struct {
     <span id="Null.Converter">Converter</span> <a href="#ValueConverter">ValueConverter</a>
 }</pre>
     <p> Null实现了ValueConverter接口，允许nil值，否则会将值交给Converter字段处理。 </p>
-    <h4 id="Null.ConvertValue">func (Null) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/types.go?name=release#154">ConvertValue</a> <a class="permalink" href="#Null.ConvertValue">&para;</a></h4>
+    <h4 id="Null.ConvertValue">func (Null) <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/types.go?name=release#154">ConvertValue</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (n <a href="#Null">Null</a>) ConvertValue(v interface{}) (<a href="#Value">Value</a>, <a href="/builtin#error">error</a>)</pre>
-    <h3 id="Driver">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/driver.go?name=release#26">Driver</a> <a class="permalink" href="#Driver">&para;</a></h3>
+    <h3 id="Driver">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/driver.go?name=release#26">Driver</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Driver interface {
     <span class="com">// Open返回一个新的与数据库的连接，参数</span><span class="com">name的格式是驱动特定的。</span>
     <span class="com">//</span>
@@ -134,7 +135,7 @@ time.Time</pre>
     <span id="Driver.Open">Open</span>(name <a href="/builtin#string">string</a>) (<a href="#Conn">Conn</a>, <a href="/builtin#error">error</a>)
 }</pre>
     <p> Driver接口必须被数据库驱动实现。</p>
-    <h3 id="Conn">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/driver.go?name=release#83">Conn</a> <a class="permalink" href="#Conn">&para;</a></h3>
+    <h3 id="Conn">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/driver.go?name=release#83">Conn</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Conn interface {
     <span class="com">// Prepare返回一个准备好的、绑定到该连接的状态。</span>
     <span id="Conn.Prepare">Prepare</span>(query <a href="/builtin#string">string</a>) (<a href="#Stmt">Stmt</a>, <a href="/builtin#error">error</a>)
@@ -149,19 +150,19 @@ time.Time</pre>
     <span id="Conn.Begin">Begin</span>() (<a href="#Tx">Tx</a>, <a href="/builtin#error">error</a>)
 }</pre>
     <p> Conn是与数据库的连接。该连接不会被多线程并行使用。连接被假定为具有状态的。</p>
-<h3 id="Execer">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/driver.go?name=release#64">Execer</a> <a class="permalink" href="#Execer">&para;</a></h3>
+<h3 id="Execer">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/driver.go?name=release#64">Execer</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Execer interface {
     <span id="Execer.Exec">Exec</span>(query <a href="/builtin#string">string</a>, args []<a href="#Value">Value</a>) (<a href="#Result">Result</a>, <a href="/builtin#error">error</a>)
 }</pre>
     <p> Execer是一个可选的、可能被Conn接口实现的接口。 </p>
     <p> 如果一个Conn未实现Execer接口，sql包的DB.Exec会首先准备一个查询，执行状态，然后关闭状态。Exec可能会返回ErrSkip。</p>
-<h3 id="Queryer">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/driver.go?name=release#75">Queryer</a> <a class="permalink" href="#Queryer">&para;</a></h3>
+<h3 id="Queryer">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/driver.go?name=release#75">Queryer</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Queryer interface {
     <span id="Queryer.Query">Query</span>(query <a href="/builtin#string">string</a>, args []<a href="#Value">Value</a>) (<a href="#Rows">Rows</a>, <a href="/builtin#error">error</a>)
 }</pre>
     <p> Queryer是一个可选的、可能被Conn接口实现的接口。</p>
     <p>如果一个Conn未实现Queryer接口，sql包的DB.Query会首先准备一个查询，执行状态，然后关闭状态。Query可能会返回ErrSkip。</p>
-<h3 id="Stmt">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/driver.go?name=release#115">Stmt</a> <a class="permalink" href="#Stmt">&para;</a></h3>
+<h3 id="Stmt">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/driver.go?name=release#115">Stmt</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Stmt interface {
     <span class="com">// Close关闭Stmt。</span>
     <span class="com">//</span>
@@ -184,13 +185,13 @@ time.Time</pre>
     <span id="Stmt.Query">Query</span>(args []<a href="#Value">Value</a>) (<a href="#Rows">Rows</a>, <a href="/builtin#error">error</a>)
 }</pre>
     <p> Stmt是准备好的状态。它会绑定到一个连接，不应被多go程同时使用。</p>
-    <h3 id="Tx">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/driver.go?name=release#177">Tx</a> <a class="permalink" href="#Tx">&para;</a></h3>
+    <h3 id="Tx">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/driver.go?name=release#177">Tx</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Tx interface {
     <span id="Tx.Commit">Commit</span>() <a href="/builtin#error">error</a>
     <span id="Tx.Rollback">Rollback</span>() <a href="/builtin#error">error</a>
 }</pre>
     <p> Tx是一次事务。</p>
-    <h3 id="Result">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/driver.go?name=release#102">Result</a> <a class="permalink" href="#Result">&para;</a></h3>
+    <h3 id="Result">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/driver.go?name=release#102">Result</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Result interface {
     <span class="com">// LastInsertId返回insert等命令后数据库自动生成的ID</span>
     <span id="Result.LastInsertId">LastInsertId</span>() (<a href="/builtin#int64">int64</a>, <a href="/builtin#error">error</a>)
@@ -199,14 +200,14 @@ time.Time</pre>
     <span id="Result.RowsAffected">RowsAffected</span>() (<a href="/builtin#int64">int64</a>, <a href="/builtin#error">error</a>)
 }</pre>
     <p> Result是查询执行的结果。</p>
-    <h3 id="RowsAffected">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/driver.go?name=release#184">RowsAffected</a> <a class="permalink" href="#RowsAffected">&para;</a></h3>
+    <h3 id="RowsAffected">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/driver.go?name=release#184">RowsAffected</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type RowsAffected <a href="/builtin#int64">int64</a></pre>
     <p> RowsAffected实现了Result接口，用于insert或update操作，这些操作会修改零到多行数据。</p>
-    <h4 id="RowsAffected.LastInsertId">func (RowsAffected) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/driver.go?name=release#188">LastInsertId</a> <a class="permalink" href="#RowsAffected.LastInsertId">&para;</a></h4>
+    <h4 id="RowsAffected.LastInsertId">func (RowsAffected) <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/driver.go?name=release#188">LastInsertId</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (<a href="#RowsAffected">RowsAffected</a>) LastInsertId() (<a href="/builtin#int64">int64</a>, <a href="/builtin#error">error</a>)</pre>
-    <h4 id="RowsAffected.RowsAffected">func (RowsAffected) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/driver.go?name=release#192">RowsAffected</a> <a class="permalink" href="#RowsAffected.RowsAffected">&para;</a></h4>
+    <h4 id="RowsAffected.RowsAffected">func (RowsAffected) <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/driver.go?name=release#192">RowsAffected</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (v <a href="#RowsAffected">RowsAffected</a>) RowsAffected() (<a href="/builtin#int64">int64</a>, <a href="/builtin#error">error</a>)</pre>
-    <h3 id="Rows">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/database/sql/driver/driver.go?name=release#154">Rows</a> <a class="permalink" href="#Rows">&para;</a></h3>
+    <h3 id="Rows">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/database/sql/driver/driver.go?name=release#154">Rows</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Rows interface {
     <span class="com">// Columns返回各列的名称，列的数量可以从切片长度确定。</span>
     <span class="com">// 如果某个列的名称未知，对应的条目应为空字符串。</span>

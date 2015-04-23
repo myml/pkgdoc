@@ -12,12 +12,13 @@
     <p><code>import "go/format"</code>
     <p>Package format implements standard formatting of Go source.。</p>
     <h3 id="pkg-index" class="section-header">Index <a class="permalink" href="#pkg-index">&para;</a></h3>
-    <ul class="list-unstyled">
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#Node">func Node(dst io.Writer, fset *token.FileSet, node interface{}) error</a></li>
         <li><a href="#Source">func Source(src []byte) ([]byte, error)</a></li>
     </ul>
     
-    <h3 id="Node">func Node</a> <a class="permalink" href="#KeySizeError">&para;</a></h3>
+    <h3 id="Node">func Node</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>func Node(dst <a href="./io.htm">io</a>.<a href="./io.htm#Writer">Writer</a>, fset *<a href="./go_token.htm">token</a>.<a href="./go_token.htm#FileSet">FileSet</a>, node interface{}) <a href="./builtin.htm#error">error</a></pre>
     <p>
 Node formats node in canonical gofmt style and writes the result to dst.
@@ -34,7 +35,7 @@ The function may return early (before the entire result is written)
 and return a formatting error, for instance due to an incorrect AST.
 </p>
 
-    <h3 id="Source">func Source <a class="permalink" href="#NewCipher">&para;</a></h3>
+    <h3 id="Source">func Source <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>func Source(src []<a href="./builtin.htm#byte">byte</a>) ([]<a href="./builtin.htm#byte">byte</a>, <a href="./builtin.htm#error">error</a>)</pre>
     <p>
 Source formats src in canonical gofmt style and returns the result

@@ -13,7 +13,8 @@
     <p align="left">cipher包实现了多个标准的用于包装底层块加密算法的加密算法实现。</p>
     <p align="left">参见<a href="http://csrc.nist.gov/groups/ST/toolkit/BCM/current_modes.html">http://csrc.nist.gov/groups/ST/toolkit/BCM/current_modes.html</a>和NIST Special Publication 800-38A。</p>
     <h3 id="pkg-index" class="section-header">Index <a class="permalink" href="#pkg-index">&para;</a></h3>
-    <ul class="list-unstyled">
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#Block">type Block</a></li>
         <li><a href="#BlockMode">type BlockMode</a></li>
         <ul>
@@ -41,8 +42,9 @@
             <li><a href="#NewGCM">func NewGCM(cipher Block) (AEAD, error)</a></li>
         </ul>
     </ul>
-    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-examples">&para;</a></h4>
-    <ul class="list-unstyled">
+    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#example-NewCBCDecrypter" onclick="$('#ex-NewCBCDecrypter').addClass('in').removeClass('collapse').height('auto')">NewCBCDecrypter</a></li>
         <li><a href="#example-NewCBCEncrypter" onclick="$('#ex-NewCBCEncrypter').addClass('in').removeClass('collapse').height('auto')">NewCBCEncrypter</a></li>
         <li><a href="#example-NewCFBDecrypter" onclick="$('#ex-NewCFBDecrypter').addClass('in').removeClass('collapse').height('auto')">NewCFBDecrypter</a></li>
@@ -52,26 +54,26 @@
         <li><a href="#example-StreamReader" onclick="$('#ex-StreamReader').addClass('in').removeClass('collapse').height('auto')">StreamReader</a></li>
         <li><a href="#example-StreamWriter" onclick="$('#ex-StreamWriter').addClass('in').removeClass('collapse').height('auto')">StreamWriter</a></li>
     </ul>
-    <h3 id="Block">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/crypto/cipher/cipher.go?name=release#15">Block</a> <a class="permalink" href="#Block">&para;</a></h3>
+    <h3 id="Block">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/crypto/cipher/cipher.go?name=release#15">Block</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Block interface {
     <span class="com">// 返回加密字节块的大小</span>
-    <span id="Block.BlockSize">BlockSize</span>() <a href="https://godoc.org/builtin#int">int</a>
+    <span id="Block.BlockSize">BlockSize</span>() <a href="builtin.htm#int">int</a>
     <span class="com">// 加密src的第一块数据并写入dst，src和dst可指向同一内存地址</span>
-    <span id="Block.Encrypt">Encrypt</span>(dst, src []<a href="https://godoc.org/builtin#byte">byte</a>)
+    <span id="Block.Encrypt">Encrypt</span>(dst, src []<a href="builtin.htm#byte">byte</a>)
     <span class="com">// 解密src的第一块数据并写入dst，src和dst可指向同一内存地址</span>
-    <span id="Block.Decrypt">Decrypt</span>(dst, src []<a href="https://godoc.org/builtin#byte">byte</a>)
+    <span id="Block.Decrypt">Decrypt</span>(dst, src []<a href="builtin.htm#byte">byte</a>)
 }</pre>
     <p>Block接口代表一个使用特定密钥的底层块加/解密器。它提供了加密和解密独立数据块的能力。</p>
-    <h3 id="BlockMode">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/crypto/cipher/cipher.go?name=release#37">BlockMode</a> <a class="permalink" href="#BlockMode">&para;</a></h3>
+    <h3 id="BlockMode">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/crypto/cipher/cipher.go?name=release#37">BlockMode</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type BlockMode interface {
     <span class="com">// 返回加密字节块的大小</span>
-    <span id="BlockMode.BlockSize">BlockSize</span>() <a href="https://godoc.org/builtin#int">int</a>
+    <span id="BlockMode.BlockSize">BlockSize</span>() <a href="builtin.htm#int">int</a>
     <span class="com">// 加密或解密连续的数据块，src的尺寸必须是块大小的整数倍，src和dst可指向同一内存地址</span>
-    <span id="BlockMode.CryptBlocks">CryptBlocks</span>(dst, src []<a href="https://godoc.org/builtin#byte">byte</a>)
+    <span id="BlockMode.CryptBlocks">CryptBlocks</span>(dst, src []<a href="builtin.htm#byte">byte</a>)
 }</pre>
     <p>BlockMode接口代表一个工作在块模式（如CBC、ECB等）的加/解密器。</p>
-    <h4 id="NewCBCEncrypter">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/crypto/cipher/cbc.go?name=release#35">NewCBCEncrypter</a> <a class="permalink" href="#NewCBCEncrypter">&para;</a></h4>
-    <pre class="funcdecl">func NewCBCEncrypter(b <a href="#Block">Block</a>, iv []<a href="https://godoc.org/builtin#byte">byte</a>) <a href="#BlockMode">BlockMode</a></pre>
+    <h4 id="NewCBCEncrypter">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/crypto/cipher/cbc.go?name=release#35">NewCBCEncrypter</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func NewCBCEncrypter(b <a href="#Block">Block</a>, iv []<a href="builtin.htm#byte">byte</a>) <a href="#BlockMode">BlockMode</a></pre>
     <p>返回一个密码分组链接模式的、底层用b加密的BlockMode接口，初始向量iv的长度必须等于b的块尺寸。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-NewCBCEncrypter">
@@ -110,8 +112,8 @@ fmt.Printf(&#34;%x\n&#34;, ciphertext)
             </div>
         </div>
     </div>
-    <h4 id="NewCBCDecrypter">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/crypto/cipher/cbc.go?name=release#81">NewCBCDecrypter</a> <a class="permalink" href="#NewCBCDecrypter">&para;</a></h4>
-    <pre class="funcdecl">func NewCBCDecrypter(b <a href="#Block">Block</a>, iv []<a href="https://godoc.org/builtin#byte">byte</a>) <a href="#BlockMode">BlockMode</a></pre>
+    <h4 id="NewCBCDecrypter">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/crypto/cipher/cbc.go?name=release#81">NewCBCDecrypter</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func NewCBCDecrypter(b <a href="#Block">Block</a>, iv []<a href="builtin.htm#byte">byte</a>) <a href="#BlockMode">BlockMode</a></pre>
     <p>返回一个密码分组链接模式的、底层用b解密的BlockMode接口，初始向量iv必须和加密时使用的iv相同。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-NewCBCDecrypter">
@@ -153,14 +155,14 @@ fmt.Printf(&#34;%s\n&#34;, ciphertext)</pre>
             </div>
         </div>
     </div>
-    <h3 id="Stream">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/crypto/cipher/cipher.go?name=release#29">Stream</a> <a class="permalink" href="#Stream">&para;</a></h3>
+    <h3 id="Stream">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/crypto/cipher/cipher.go?name=release#29">Stream</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Stream interface {
     <span class="com">// 从加密器的key流和src中依次取出字节二者xor后写入dst，src和dst可指向同一内存地址</span>
-    <span id="Stream.XORKeyStream">XORKeyStream</span>(dst, src []<a href="https://godoc.org/builtin#byte">byte</a>)
+    <span id="Stream.XORKeyStream">XORKeyStream</span>(dst, src []<a href="builtin.htm#byte">byte</a>)
 }</pre>
     <p>Stream接口代表一个流模式的加/解密器。</p>
-    <h4 id="NewCFBEncrypter">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/crypto/cipher/cfb.go?name=release#45">NewCFBEncrypter</a> <a class="permalink" href="#NewCFBEncrypter">&para;</a></h4>
-    <pre class="funcdecl">func NewCFBEncrypter(block <a href="#Block">Block</a>, iv []<a href="https://godoc.org/builtin#byte">byte</a>) <a href="#Stream">Stream</a></pre>
+    <h4 id="NewCFBEncrypter">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/crypto/cipher/cfb.go?name=release#45">NewCFBEncrypter</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func NewCFBEncrypter(block <a href="#Block">Block</a>, iv []<a href="builtin.htm#byte">byte</a>) <a href="#Stream">Stream</a></pre>
     <p>返回一个密码反馈模式的、底层用block加密的Stream接口，初始向量iv的长度必须等于block的块尺寸。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-NewCFBEncrypter">
@@ -191,8 +193,8 @@ stream.XORKeyStream(ciphertext[aes.BlockSize:], plaintext)
             </div>
         </div>
     </div>
-    <h4 id="NewCFBDecrypter">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/crypto/cipher/cfb.go?name=release#52">NewCFBDecrypter</a> <a class="permalink" href="#NewCFBDecrypter">&para;</a></h4>
-    <pre class="funcdecl">func NewCFBDecrypter(block <a href="#Block">Block</a>, iv []<a href="https://godoc.org/builtin#byte">byte</a>) <a href="#Stream">Stream</a></pre>
+    <h4 id="NewCFBDecrypter">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/crypto/cipher/cfb.go?name=release#52">NewCFBDecrypter</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func NewCFBDecrypter(block <a href="#Block">Block</a>, iv []<a href="builtin.htm#byte">byte</a>) <a href="#Stream">Stream</a></pre>
     <p>返回一个密码反馈模式的、底层用block解密的Stream接口，初始向量iv必须和加密时使用的iv相同。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-NewCFBDecrypter">
@@ -223,8 +225,8 @@ fmt.Printf(&#34;%s&#34;, ciphertext)</pre>
             </div>
         </div>
     </div>
-    <h4 id="NewOFB">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/crypto/cipher/ofb.go?name=release#19">NewOFB</a> <a class="permalink" href="#NewOFB">&para;</a></h4>
-    <pre class="funcdecl">func NewOFB(b <a href="#Block">Block</a>, iv []<a href="https://godoc.org/builtin#byte">byte</a>) <a href="#Stream">Stream</a></pre>
+    <h4 id="NewOFB">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/crypto/cipher/ofb.go?name=release#19">NewOFB</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func NewOFB(b <a href="#Block">Block</a>, iv []<a href="builtin.htm#byte">byte</a>) <a href="#Stream">Stream</a></pre>
     <p>返回一个输出反馈模式的、底层采用b生成key流的Stream接口，初始向量iv的长度必须等于b的块尺寸。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-NewOFB">
@@ -262,8 +264,8 @@ fmt.Printf(&#34;%s\n&#34;, plaintext2)</pre>
             </div>
         </div>
     </div>
-    <h4 id="NewCTR">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/crypto/cipher/ctr.go?name=release#26">NewCTR</a> <a class="permalink" href="#NewCTR">&para;</a></h4>
-    <pre class="funcdecl">func NewCTR(block <a href="#Block">Block</a>, iv []<a href="https://godoc.org/builtin#byte">byte</a>) <a href="#Stream">Stream</a></pre>
+    <h4 id="NewCTR">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/crypto/cipher/ctr.go?name=release#26">NewCTR</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func NewCTR(block <a href="#Block">Block</a>, iv []<a href="builtin.htm#byte">byte</a>) <a href="#Stream">Stream</a></pre>
     <p>返回一个计数器模式的、底层采用block生成key流的Stream接口，初始向量iv的长度必须等于block的块尺寸。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-NewCTR">
@@ -301,10 +303,10 @@ fmt.Printf(&#34;%s\n&#34;, plaintext2)</pre>
             </div>
         </div>
     </div>
-    <h3 id="StreamReader">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/crypto/cipher/io.go?name=release#14">StreamReader</a> <a class="permalink" href="#StreamReader">&para;</a></h3>
+    <h3 id="StreamReader">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/crypto/cipher/io.go?name=release#14">StreamReader</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type StreamReader struct {
     <span id="StreamReader.S">S</span>   <a href="#Stream">Stream</a>
-    <span id="StreamReader.R">R</span>   <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#Reader">Reader</a>
+    <span id="StreamReader.R">R</span>   <a href="io.htm">io</a>.<a href="io.htm#Reader">Reader</a>
 }</pre>
     <p>将一个Stream与一个io.Reader接口关联起来，Read方法会调用XORKeyStream方法来处理获取的所有切片。</p>
     <div class="panel-group">
@@ -346,13 +348,13 @@ if _, err := io.Copy(outFile, reader); err != nil {
             </div>
         </div>
     </div>
-    <h4 id="StreamReader.Read">func (StreamReader) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/crypto/cipher/io.go?name=release#19">Read</a> <a class="permalink" href="#StreamReader.Read">&para;</a></h4>
-    <pre class="funcdecl">func (r <a href="#StreamReader">StreamReader</a>) Read(dst []<a href="https://godoc.org/builtin#byte">byte</a>) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
-    <h3 id="StreamWriter">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/crypto/cipher/io.go?name=release#30">StreamWriter</a> <a class="permalink" href="#StreamWriter">&para;</a></h3>
+    <h4 id="StreamReader.Read">func (StreamReader) <a title="View Source" href="https://github.com/golang/go/blob/master/src/crypto/cipher/io.go?name=release#19">Read</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (r <a href="#StreamReader">StreamReader</a>) Read(dst []<a href="builtin.htm#byte">byte</a>) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
+    <h3 id="StreamWriter">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/crypto/cipher/io.go?name=release#30">StreamWriter</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type StreamWriter struct {
     <span id="StreamWriter.S">S</span>   <a href="#Stream">Stream</a>
-    <span id="StreamWriter.W">W</span>   <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#Writer">Writer</a>
-    <span id="StreamWriter.Err">Err</span> <a href="https://godoc.org/builtin#error">error</a> <span class="com">// unused</span>
+    <span id="StreamWriter.W">W</span>   <a href="io.htm">io</a>.<a href="io.htm#Writer">Writer</a>
+    <span id="StreamWriter.Err">Err</span> <a href="builtin.htm#error">error</a> <span class="com">// unused</span>
 }</pre>
     <p>将一个Stream与一个io.Writer接口关联起来，Write方法会调用XORKeyStream方法来处理提供的所有切片。如果Write方法返回的n小于提供的切片的长度，则表示StreamWriter不同步，必须丢弃。StreamWriter没有内建的缓存，不需要调用Close方法去清空缓存。</p>
     <div class="panel-group">
@@ -394,29 +396,29 @@ if _, err := io.Copy(writer, inFile); err != nil {
             </div>
         </div>
     </div>
-    <h4 id="StreamWriter.Write">func (StreamWriter) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/crypto/cipher/io.go?name=release#36">Write</a> <a class="permalink" href="#StreamWriter.Write">&para;</a></h4>
-    <pre class="funcdecl">func (w <a href="#StreamWriter">StreamWriter</a>) Write(src []<a href="https://godoc.org/builtin#byte">byte</a>) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
-    <h4 id="StreamWriter.Close">func (StreamWriter) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/crypto/cipher/io.go?name=release#50">Close</a> <a class="permalink" href="#StreamWriter.Close">&para;</a></h4>
-    <pre class="funcdecl">func (w <a href="#StreamWriter">StreamWriter</a>) Close() <a href="https://godoc.org/builtin#error">error</a></pre>
+    <h4 id="StreamWriter.Write">func (StreamWriter) <a title="View Source" href="https://github.com/golang/go/blob/master/src/crypto/cipher/io.go?name=release#36">Write</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (w <a href="#StreamWriter">StreamWriter</a>) Write(src []<a href="builtin.htm#byte">byte</a>) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
+    <h4 id="StreamWriter.Close">func (StreamWriter) <a title="View Source" href="https://github.com/golang/go/blob/master/src/crypto/cipher/io.go?name=release#50">Close</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (w <a href="#StreamWriter">StreamWriter</a>) Close() <a href="builtin.htm#error">error</a></pre>
     <p>如果w.W字段实现了io.Closer接口，本方法会调用其Close方法并返回该方法的返回值；否则不做操作返回nil。</p>
-    <h3 id="AEAD">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/crypto/cipher/gcm.go?name=release#14">AEAD</a> <a class="permalink" href="#AEAD">&para;</a></h3>
+    <h3 id="AEAD">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/crypto/cipher/gcm.go?name=release#14">AEAD</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type AEAD interface {
     <span class="com">// 返回提供给Seal和Open方法的随机数nonce的字节长度</span>
-    <span id="AEAD.NonceSize">NonceSize</span>() <a href="https://godoc.org/builtin#int">int</a>
+    <span id="AEAD.NonceSize">NonceSize</span>() <a href="builtin.htm#int">int</a>
     <span class="com">// 返回原始文本和加密文本的最大长度差异</span>
-    <span id="AEAD.Overhead">Overhead</span>() <a href="https://godoc.org/builtin#int">int</a>
+    <span id="AEAD.Overhead">Overhead</span>() <a href="builtin.htm#int">int</a>
     <span class="com">// 加密并认证明文，认证附加的data，将结果添加到dst，返回更新后的切片。</span>
     <span class="com">// nonce的长度必须是NonceSize()字节，且对给定的key和时间都是独一无二的。</span>
     <span class="com">// plaintext和dst可以是同一个切片，也可以不同。</span>
-    <span id="AEAD.Seal">Seal</span>(dst, nonce, plaintext, data []<a href="https://godoc.org/builtin#byte">byte</a>) []<a href="https://godoc.org/builtin#byte">byte</a>
+    <span id="AEAD.Seal">Seal</span>(dst, nonce, plaintext, data []<a href="builtin.htm#byte">byte</a>) []<a href="builtin.htm#byte">byte</a>
     <span class="com">// 解密密文并认证，认证附加的data，如果认证成功，将明文添加到dst，返回更新后的切片。</span>
     <span class="com">// nonce的长度必须是NonceSize()字节，nonce和data都必须和加密时使用的相同。</span>
     <span class="com">// ciphertext和dst可以是同一个切片，也可以不同。</span>
-    <span id="AEAD.Open">Open</span>(dst, nonce, ciphertext, data []<a href="https://godoc.org/builtin#byte">byte</a>) ([]<a href="https://godoc.org/builtin#byte">byte</a>, <a href="https://godoc.org/builtin#error">error</a>)
+    <span id="AEAD.Open">Open</span>(dst, nonce, ciphertext, data []<a href="builtin.htm#byte">byte</a>) ([]<a href="builtin.htm#byte">byte</a>, <a href="builtin.htm#error">error</a>)
 }</pre>
     <p>AEAD接口是一种提供了使用关联数据进行认证加密的功能的加密模式。</p>
-    <h4 id="NewGCM">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/crypto/cipher/gcm.go?name=release#62">NewGCM</a> <a class="permalink" href="#NewGCM">&para;</a></h4>
-    <pre class="funcdecl">func NewGCM(cipher <a href="#Block">Block</a>) (<a href="#AEAD">AEAD</a>, <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h4 id="NewGCM">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/crypto/cipher/gcm.go?name=release#62">NewGCM</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func NewGCM(cipher <a href="#Block">Block</a>) (<a href="#AEAD">AEAD</a>, <a href="builtin.htm#error">error</a>)</pre>
     <p>函数用迦洛瓦计数器模式包装提供的128位Block接口，并返回AEAD接口。</p>
 </div>
 </body>

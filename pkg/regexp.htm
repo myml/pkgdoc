@@ -153,7 +153,8 @@ false
         </div>
     </div>
     <h3 id="pkg-index" class="section-header">Index <a class="permalink" href="#pkg-index">&para;</a></h3>
-    <ul class="list-unstyled">
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#QuoteMeta">func QuoteMeta(s string) string</a></li>
         <li><a href="#Match">func Match(pattern string, b []byte) (matched bool, err error)</a></li>
         <li><a href="#MatchString">func MatchString(pattern string, s string) (matched bool, err error)</a></li>
@@ -201,8 +202,9 @@ false
             <li><a href="#Regexp.ReplaceAllStringFunc">func (re *Regexp) ReplaceAllStringFunc(src string, repl func(string) string) string</a></li>
         </ul>
     </ul>
-    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-examples">&para;</a></h4>
-    <ul class="list-unstyled">
+    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#example-MatchString" onclick="$('#ex-MatchString').addClass('in').removeClass('collapse').height('auto')">MatchString</a></li>
         <li><a href="#example-Regexp-FindAllString" onclick="$('#ex-Regexp-FindAllString').addClass('in').removeClass('collapse').height('auto')">Regexp.FindAllString</a></li>
         <li><a href="#example-Regexp-FindAllStringSubmatch" onclick="$('#ex-Regexp-FindAllStringSubmatch').addClass('in').removeClass('collapse').height('auto')">Regexp.FindAllStringSubmatch</a></li>
@@ -215,14 +217,14 @@ false
         <li><a href="#example-Regexp-SubexpNames" onclick="$('#ex-Regexp-SubexpNames').addClass('in').removeClass('collapse').height('auto')">Regexp.SubexpNames</a></li>
         <li><a href="#example-package" onclick="$('#ex-package').addClass('in').removeClass('collapse').height('auto')">package</a></li>
     </ul>
-    <h3 id="QuoteMeta">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#581">QuoteMeta</a> <a class="permalink" href="#QuoteMeta">&para;</a></h3>
-    <pre class="funcdecl">func QuoteMeta(s <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="QuoteMeta">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#581">QuoteMeta</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func QuoteMeta(s <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>QuoteMeta返回将s中所有正则表达式元字符都进行转义后字符串。该字符串可以用在正则表达式中匹配字面值s。例如，QuoteMeta(`[foo]`)会返回`\[foo\]`。</p>
-    <h3 id="Match">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#433">Match</a> <a class="permalink" href="#Match">&para;</a></h3>
-    <pre class="funcdecl">func Match(pattern <a href="https://godoc.org/builtin#string">string</a>, b []<a href="https://godoc.org/builtin#byte">byte</a>) (matched <a href="https://godoc.org/builtin#bool">bool</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h3 id="Match">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#433">Match</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Match(pattern <a href="builtin.htm#string">string</a>, b []<a href="builtin.htm#byte">byte</a>) (matched <a href="builtin.htm#bool">bool</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>Match检查b中是否存在匹配pattern的子序列。更复杂的用法请使用Compile函数和Regexp对象。</p>
-    <h3 id="MatchString">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#422">MatchString</a> <a class="permalink" href="#MatchString">&para;</a></h3>
-    <pre class="funcdecl">func MatchString(pattern <a href="https://godoc.org/builtin#string">string</a>, s <a href="https://godoc.org/builtin#string">string</a>) (matched <a href="https://godoc.org/builtin#bool">bool</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h3 id="MatchString">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#422">MatchString</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func MatchString(pattern <a href="builtin.htm#string">string</a>, s <a href="builtin.htm#string">string</a>) (matched <a href="builtin.htm#bool">bool</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>MatchString类似Match，但匹配对象是字符串。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-MatchString">
@@ -244,41 +246,41 @@ false error parsing regexp: missing closing ): `a(b`
             </div>
         </div>
     </div>
-    <h3 id="MatchReader">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#411">MatchReader</a> <a class="permalink" href="#MatchReader">&para;</a></h3>
-    <pre class="funcdecl">func MatchReader(pattern <a href="https://godoc.org/builtin#string">string</a>, r <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#RuneReader">RuneReader</a>) (matched <a href="https://godoc.org/builtin#bool">bool</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h3 id="MatchReader">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#411">MatchReader</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func MatchReader(pattern <a href="builtin.htm#string">string</a>, r <a href="io.htm">io</a>.<a href="io.htm#RuneReader">RuneReader</a>) (matched <a href="builtin.htm#bool">bool</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>MatchReader类似Match，但匹配对象是io.RuneReader。</p>
-    <h3 id="Regexp">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#82">Regexp</a> <a class="permalink" href="#Regexp">&para;</a></h3>
+    <h3 id="Regexp">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#82">Regexp</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Regexp struct {
     <span class="com">// 内含隐藏或非导出字段</span>
 }</pre>
     <p>Regexp代表一个编译好的正则表达式。Regexp可以被多线程安全地同时使用。</p>
-    <h4 id="Compile">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#117">Compile</a> <a class="permalink" href="#Compile">&para;</a></h4>
-    <pre class="funcdecl">func Compile(expr <a href="https://godoc.org/builtin#string">string</a>) (*<a href="#Regexp">Regexp</a>, <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h4 id="Compile">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#117">Compile</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func Compile(expr <a href="builtin.htm#string">string</a>) (*<a href="#Regexp">Regexp</a>, <a href="builtin.htm#error">error</a>)</pre>
     <p align="left">Compile解析并返回一个正则表达式。如果成功返回，该Regexp就可用于匹配文本。</p>
     <p align="left">在匹配文本时，该正则表达式会尽可能早的开始匹配，并且在匹配过程中选择回溯搜索到的第一个匹配结果。这种模式被称为&ldquo;leftmost-first&rdquo;，Perl、Python和其他实现都采用了这种模式，但本包的实现没有回溯的损耗。对POSIX的&ldquo;leftmost-longest&rdquo;模式，参见CompilePOSIX。</p>
-    <h4 id="CompilePOSIX">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#140">CompilePOSIX</a> <a class="permalink" href="#CompilePOSIX">&para;</a></h4>
-    <pre class="funcdecl">func CompilePOSIX(expr <a href="https://godoc.org/builtin#string">string</a>) (*<a href="#Regexp">Regexp</a>, <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h4 id="CompilePOSIX">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#140">CompilePOSIX</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func CompilePOSIX(expr <a href="builtin.htm#string">string</a>) (*<a href="#Regexp">Regexp</a>, <a href="builtin.htm#error">error</a>)</pre>
     <p align="left">类似Compile但会将语法约束到POSIX ERE（egrep）语法，并将匹配模式设置为leftmost-longest。</p>
     <p align="left">在匹配文本时，该正则表达式会尽可能早的开始匹配，并且在匹配过程中选择搜索到的最长的匹配结果。这种模式被称为&ldquo;leftmost-longest&rdquo;，POSIX采用了这种模式（早期正则的DFA自动机模式）。</p>
     <p align="left">然而，可能会有多个&ldquo;leftmost-longest&rdquo;匹配，每个都有不同的组匹配状态，本包在这里和POSIX不同。在所有可能的&ldquo;leftmost-longest&rdquo;匹配里，本包选择回溯搜索时第一个找到的，而POSIX会选择候选结果中第一个组匹配最长的（可能有多个），然后再从中选出第二个组匹配最长的，依次类推。POSIX规则计算困难，甚至没有良好定义。</p>
     <p align="left">参见<a href="http://swtch.com/~rsc/regexp/regexp2.html#posix">http://swtch.com/~rsc/regexp/regexp2.html#posix</a>获取细节。</p>
-    <h4 id="MustCompile">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#218">MustCompile</a> <a class="permalink" href="#MustCompile">&para;</a></h4>
-    <pre class="funcdecl">func MustCompile(str <a href="https://godoc.org/builtin#string">string</a>) *<a href="#Regexp">Regexp</a></pre>
+    <h4 id="MustCompile">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#218">MustCompile</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func MustCompile(str <a href="builtin.htm#string">string</a>) *<a href="#Regexp">Regexp</a></pre>
     <p>MustCompile类似Compile但会在解析失败时panic，主要用于全局正则表达式变量的安全初始化。</p>
-    <h4 id="MustCompilePOSIX">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#229">MustCompilePOSIX</a> <a class="permalink" href="#MustCompilePOSIX">&para;</a></h4>
-    <pre class="funcdecl">func MustCompilePOSIX(str <a href="https://godoc.org/builtin#string">string</a>) *<a href="#Regexp">Regexp</a></pre>
+    <h4 id="MustCompilePOSIX">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#229">MustCompilePOSIX</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func MustCompilePOSIX(str <a href="builtin.htm#string">string</a>) *<a href="#Regexp">Regexp</a></pre>
     <p>MustCompilePOSIX类似CompilePOSIX但会在解析失败时panic，主要用于全局正则表达式变量的安全初始化。</p>
-    <h4 id="Regexp.String">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#103">String</a> <a class="permalink" href="#Regexp.String">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) String() <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h4 id="Regexp.String">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#103">String</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) String() <a href="builtin.htm#string">string</a></pre>
     <p>String返回用于编译成正则表达式的字符串。</p>
-    <h4 id="Regexp.LiteralPrefix">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#388">LiteralPrefix</a> <a class="permalink" href="#Regexp.LiteralPrefix">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) LiteralPrefix() (prefix <a href="https://godoc.org/builtin#string">string</a>, complete <a href="https://godoc.org/builtin#bool">bool</a>)</pre>
+    <h4 id="Regexp.LiteralPrefix">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#388">LiteralPrefix</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) LiteralPrefix() (prefix <a href="builtin.htm#string">string</a>, complete <a href="builtin.htm#bool">bool</a>)</pre>
     <p>LiteralPrefix返回一个字符串字面值prefix，任何匹配本正则表达式的字符串都会以prefix起始。 如果该字符串字面值包含整个正则表达式，返回值complete会设为真。</p>
-    <h4 id="Regexp.NumSubexp">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#245">NumSubexp</a> <a class="permalink" href="#Regexp.NumSubexp">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) NumSubexp() <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h4 id="Regexp.NumSubexp">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#245">NumSubexp</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) NumSubexp() <a href="builtin.htm#int">int</a></pre>
     <p>NumSubexp返回该正则表达式中捕获分组的数量。</p>
-    <h4 id="Regexp.SubexpNames">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#254">SubexpNames</a> <a class="permalink" href="#Regexp.SubexpNames">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) SubexpNames() []<a href="https://godoc.org/builtin#string">string</a></pre>
+    <h4 id="Regexp.SubexpNames">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#254">SubexpNames</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) SubexpNames() []<a href="builtin.htm#string">string</a></pre>
     <p>SubexpNames返回该正则表达式中捕获分组的名字。第一个分组的名字是names[1]，因此，如果m是一个组匹配切片，m[i]的名字是SubexpNames()[i]。因为整个正则表达式是无法被命名的，names[0]必然是空字符串。该切片不应被修改。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Regexp-SubexpNames">
@@ -301,23 +303,23 @@ Turing Alan
             </div>
         </div>
     </div>
-    <h4 id="Regexp.Longest">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#148">Longest</a> <a class="permalink" href="#Regexp.Longest">&para;</a></h4>
+    <h4 id="Regexp.Longest">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#148">Longest</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) Longest()</pre>
     <p>Longest让正则表达式在之后的搜索中都采用"leftmost-longest"模式。在匹配文本时，该正则表达式会尽可能早的开始匹配，并且在匹配过程中选择搜索到的最长的匹配结果。</p>
-    <h4 id="Regexp.Match">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#404">Match</a> <a class="permalink" href="#Regexp.Match">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) Match(b []<a href="https://godoc.org/builtin#byte">byte</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h4 id="Regexp.Match">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#404">Match</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) Match(b []<a href="builtin.htm#byte">byte</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>Match检查b中是否存在匹配pattern的子序列。</p>
-    <h4 id="Regexp.MatchString">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#399">MatchString</a> <a class="permalink" href="#Regexp.MatchString">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) MatchString(s <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h4 id="Regexp.MatchString">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#399">MatchString</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) MatchString(s <a href="builtin.htm#string">string</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>MatchString类似Match，但匹配对象是字符串。</p>
-    <h4 id="Regexp.MatchReader">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#394">MatchReader</a> <a class="permalink" href="#Regexp.MatchReader">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) MatchReader(r <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#RuneReader">RuneReader</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h4 id="Regexp.MatchReader">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#394">MatchReader</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) MatchReader(r <a href="io.htm">io</a>.<a href="io.htm#RuneReader">RuneReader</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>MatchReader类似Match，但匹配对象是io.RuneReader。</p>
-    <h4 id="Regexp.Find">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#663">Find</a> <a class="permalink" href="#Regexp.Find">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) Find(b []<a href="https://godoc.org/builtin#byte">byte</a>) []<a href="https://godoc.org/builtin#byte">byte</a></pre>
+    <h4 id="Regexp.Find">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#663">Find</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) Find(b []<a href="builtin.htm#byte">byte</a>) []<a href="builtin.htm#byte">byte</a></pre>
     <p>Find返回保管正则表达式re在b中的最左侧的一个匹配结果的[]byte切片。如果没有匹配到，会返回nil。</p>
-    <h4 id="Regexp.FindString">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#688">FindString</a> <a class="permalink" href="#Regexp.FindString">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindString(s <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h4 id="Regexp.FindString">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#688">FindString</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindString(s <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>Find返回保管正则表达式re在b中的最左侧的一个匹配结果的字符串。如果没有匹配到，会返回""；但如果正则表达式成功匹配了一个空字符串，也会返回""。如果需要区分这种情况，请使用FindStringIndex 或FindStringSubmatch。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Regexp-FindString">
@@ -335,11 +337,11 @@ fmt.Printf(&#34;%q\n&#34;, re.FindString(&#34;meat&#34;))</pre>
             </div>
         </div>
     </div>
-    <h4 id="Regexp.FindIndex">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#675">FindIndex</a> <a class="permalink" href="#Regexp.FindIndex">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindIndex(b []<a href="https://godoc.org/builtin#byte">byte</a>) (loc []<a href="https://godoc.org/builtin#int">int</a>)</pre>
+    <h4 id="Regexp.FindIndex">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#675">FindIndex</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindIndex(b []<a href="builtin.htm#byte">byte</a>) (loc []<a href="builtin.htm#int">int</a>)</pre>
     <p>Find返回保管正则表达式re在b中的最左侧的一个匹配结果的起止位置的切片（显然len(loc)==2）。匹配结果可以通过起止位置对b做切片操作得到：b[loc[0]:loc[1]]。如果没有匹配到，会返回nil。</p>
-    <h4 id="Regexp.FindStringIndex">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#700">FindStringIndex</a> <a class="permalink" href="#Regexp.FindStringIndex">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindStringIndex(s <a href="https://godoc.org/builtin#string">string</a>) (loc []<a href="https://godoc.org/builtin#int">int</a>)</pre>
+    <h4 id="Regexp.FindStringIndex">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#700">FindStringIndex</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindStringIndex(s <a href="builtin.htm#string">string</a>) (loc []<a href="builtin.htm#int">int</a>)</pre>
     <p>Find返回保管正则表达式re在b中的最左侧的一个匹配结果的起止位置的切片（显然len(loc)==2）。匹配结果可以通过起止位置对b做切片操作得到：b[loc[0]:loc[1]]。如果没有匹配到，会返回nil。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Regexp-FindStringIndex">
@@ -357,14 +359,14 @@ true
             </div>
         </div>
     </div>
-    <h4 id="Regexp.FindReaderIndex">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#713">FindReaderIndex</a> <a class="permalink" href="#Regexp.FindReaderIndex">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindReaderIndex(r <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#RuneReader">RuneReader</a>) (loc []<a href="https://godoc.org/builtin#int">int</a>)</pre>
+    <h4 id="Regexp.FindReaderIndex">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#713">FindReaderIndex</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindReaderIndex(r <a href="io.htm">io</a>.<a href="io.htm#RuneReader">RuneReader</a>) (loc []<a href="builtin.htm#int">int</a>)</pre>
     <p>Find返回保管正则表达式re在b中的最左侧的一个匹配结果的起止位置的切片（显然len(loc)==2）。匹配结果可以在输入流r的字节偏移量loc[0]到loc[1]-1（包括二者）位置找到。如果没有匹配到，会返回nil。</p>
-    <h4 id="Regexp.FindSubmatch">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#726">FindSubmatch</a> <a class="permalink" href="#Regexp.FindSubmatch">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindSubmatch(b []<a href="https://godoc.org/builtin#byte">byte</a>) [][]<a href="https://godoc.org/builtin#byte">byte</a></pre>
+    <h4 id="Regexp.FindSubmatch">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#726">FindSubmatch</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindSubmatch(b []<a href="builtin.htm#byte">byte</a>) [][]<a href="builtin.htm#byte">byte</a></pre>
     <p>Find返回一个保管正则表达式re在b中的最左侧的一个匹配结果以及（可能有的）分组匹配的结果的[][]byte切片。如果没有匹配到，会返回nil。</p>
-    <h4 id="Regexp.FindStringSubmatch">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#882">FindStringSubmatch</a> <a class="permalink" href="#Regexp.FindStringSubmatch">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindStringSubmatch(s <a href="https://godoc.org/builtin#string">string</a>) []<a href="https://godoc.org/builtin#string">string</a></pre>
+    <h4 id="Regexp.FindStringSubmatch">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#882">FindStringSubmatch</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindStringSubmatch(s <a href="builtin.htm#string">string</a>) []<a href="builtin.htm#string">string</a></pre>
     <p>Find返回一个保管正则表达式re在b中的最左侧的一个匹配结果以及（可能有的）分组匹配的结果的[]string切片。如果没有匹配到，会返回nil。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Regexp-FindStringSubmatch">
@@ -382,20 +384,20 @@ fmt.Printf(&#34;%q\n&#34;, re.FindStringSubmatch(&#34;-abzc-&#34;))</pre>
             </div>
         </div>
     </div>
-    <h4 id="Regexp.FindSubmatchIndex">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#873">FindSubmatchIndex</a> <a class="permalink" href="#Regexp.FindSubmatchIndex">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindSubmatchIndex(b []<a href="https://godoc.org/builtin#byte">byte</a>) []<a href="https://godoc.org/builtin#int">int</a></pre>
+    <h4 id="Regexp.FindSubmatchIndex">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#873">FindSubmatchIndex</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindSubmatchIndex(b []<a href="builtin.htm#byte">byte</a>) []<a href="builtin.htm#int">int</a></pre>
     <p>Find返回一个保管正则表达式re在b中的最左侧的一个匹配结果以及（可能有的）分组匹配的结果的起止位置的切片。匹配结果和分组匹配结果可以通过起止位置对b做切片操作得到：b[loc[2*n]:loc[2*n+1]]。如果没有匹配到，会返回nil。</p>
-    <h4 id="Regexp.FindStringSubmatchIndex">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#901">FindStringSubmatchIndex</a> <a class="permalink" href="#Regexp.FindStringSubmatchIndex">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindStringSubmatchIndex(s <a href="https://godoc.org/builtin#string">string</a>) []<a href="https://godoc.org/builtin#int">int</a></pre>
+    <h4 id="Regexp.FindStringSubmatchIndex">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#901">FindStringSubmatchIndex</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindStringSubmatchIndex(s <a href="builtin.htm#string">string</a>) []<a href="builtin.htm#int">int</a></pre>
     <p>Find返回一个保管正则表达式re在b中的最左侧的一个匹配结果以及（可能有的）分组匹配的结果的起止位置的切片。匹配结果和分组匹配结果可以通过起止位置对b做切片操作得到：b[loc[2*n]:loc[2*n+1]]。如果没有匹配到，会返回nil。</p>
-    <h4 id="Regexp.FindReaderSubmatchIndex">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#910">FindReaderSubmatchIndex</a> <a class="permalink" href="#Regexp.FindReaderSubmatchIndex">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindReaderSubmatchIndex(r <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#RuneReader">RuneReader</a>) []<a href="https://godoc.org/builtin#int">int</a></pre>
+    <h4 id="Regexp.FindReaderSubmatchIndex">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#910">FindReaderSubmatchIndex</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindReaderSubmatchIndex(r <a href="io.htm">io</a>.<a href="io.htm#RuneReader">RuneReader</a>) []<a href="builtin.htm#int">int</a></pre>
     <p>Find返回一个保管正则表达式re在b中的最左侧的一个匹配结果以及（可能有的）分组匹配的结果的起止位置的切片。匹配结果和分组匹配结果可以在输入流r的字节偏移量loc[0]到loc[1]-1（包括二者）位置找到。如果没有匹配到，会返回nil。</p>
-    <h4 id="Regexp.FindAll">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#920">FindAll</a> <a class="permalink" href="#Regexp.FindAll">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindAll(b []<a href="https://godoc.org/builtin#byte">byte</a>, n <a href="https://godoc.org/builtin#int">int</a>) [][]<a href="https://godoc.org/builtin#byte">byte</a></pre>
+    <h4 id="Regexp.FindAll">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#920">FindAll</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindAll(b []<a href="builtin.htm#byte">byte</a>, n <a href="builtin.htm#int">int</a>) [][]<a href="builtin.htm#byte">byte</a></pre>
     <p>Find返回保管正则表达式re在b中的所有不重叠的匹配结果的[][]byte切片。如果没有匹配到，会返回nil。</p>
-    <h4 id="Regexp.FindAllString">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#956">FindAllString</a> <a class="permalink" href="#Regexp.FindAllString">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindAllString(s <a href="https://godoc.org/builtin#string">string</a>, n <a href="https://godoc.org/builtin#int">int</a>) []<a href="https://godoc.org/builtin#string">string</a></pre>
+    <h4 id="Regexp.FindAllString">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#956">FindAllString</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindAllString(s <a href="builtin.htm#string">string</a>, n <a href="builtin.htm#int">int</a>) []<a href="builtin.htm#string">string</a></pre>
     <p>Find返回保管正则表达式re在b中的所有不重叠的匹配结果的[]string切片。如果没有匹配到，会返回nil。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Regexp-FindAllString">
@@ -417,17 +419,17 @@ fmt.Println(re.FindAllString(&#34;none&#34;, -1))</pre>
             </div>
         </div>
     </div>
-    <h4 id="Regexp.FindAllIndex">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#938">FindAllIndex</a> <a class="permalink" href="#Regexp.FindAllIndex">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindAllIndex(b []<a href="https://godoc.org/builtin#byte">byte</a>, n <a href="https://godoc.org/builtin#int">int</a>) [][]<a href="https://godoc.org/builtin#int">int</a></pre>
+    <h4 id="Regexp.FindAllIndex">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#938">FindAllIndex</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindAllIndex(b []<a href="builtin.htm#byte">byte</a>, n <a href="builtin.htm#int">int</a>) [][]<a href="builtin.htm#int">int</a></pre>
     <p>Find返回保管正则表达式re在b中的所有不重叠的匹配结果的起止位置的切片。如果没有匹配到，会返回nil。</p>
-    <h4 id="Regexp.FindAllStringIndex">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#974">FindAllStringIndex</a> <a class="permalink" href="#Regexp.FindAllStringIndex">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindAllStringIndex(s <a href="https://godoc.org/builtin#string">string</a>, n <a href="https://godoc.org/builtin#int">int</a>) [][]<a href="https://godoc.org/builtin#int">int</a></pre>
+    <h4 id="Regexp.FindAllStringIndex">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#974">FindAllStringIndex</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindAllStringIndex(s <a href="builtin.htm#string">string</a>, n <a href="builtin.htm#int">int</a>) [][]<a href="builtin.htm#int">int</a></pre>
     <p>Find返回保管正则表达式re在b中的所有不重叠的匹配结果的起止位置的切片。如果没有匹配到，会返回nil。</p>
-    <h4 id="Regexp.FindAllSubmatch">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#992">FindAllSubmatch</a> <a class="permalink" href="#Regexp.FindAllSubmatch">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindAllSubmatch(b []<a href="https://godoc.org/builtin#byte">byte</a>, n <a href="https://godoc.org/builtin#int">int</a>) [][][]<a href="https://godoc.org/builtin#byte">byte</a></pre>
+    <h4 id="Regexp.FindAllSubmatch">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#992">FindAllSubmatch</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindAllSubmatch(b []<a href="builtin.htm#byte">byte</a>, n <a href="builtin.htm#int">int</a>) [][][]<a href="builtin.htm#byte">byte</a></pre>
     <p>Find返回一个保管正则表达式re在b中的所有不重叠的匹配结果及其对应的（可能有的）分组匹配的结果的[][][]byte切片。如果没有匹配到，会返回nil。</p>
-    <h4 id="Regexp.FindAllStringSubmatch">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#1034">FindAllStringSubmatch</a> <a class="permalink" href="#Regexp.FindAllStringSubmatch">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindAllStringSubmatch(s <a href="https://godoc.org/builtin#string">string</a>, n <a href="https://godoc.org/builtin#int">int</a>) [][]<a href="https://godoc.org/builtin#string">string</a></pre>
+    <h4 id="Regexp.FindAllStringSubmatch">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#1034">FindAllStringSubmatch</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindAllStringSubmatch(s <a href="builtin.htm#string">string</a>, n <a href="builtin.htm#int">int</a>) [][]<a href="builtin.htm#string">string</a></pre>
     <p>Find返回一个保管正则表达式re在b中的所有不重叠的匹配结果及其对应的（可能有的）分组匹配的结果的[][]string切片。如果没有匹配到，会返回nil。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Regexp-FindAllStringSubmatch">
@@ -449,11 +451,11 @@ fmt.Printf(&#34;%q\n&#34;, re.FindAllStringSubmatch(&#34;-axxb-ab-&#34;, -1))</p
             </div>
         </div>
     </div>
-    <h4 id="Regexp.FindAllSubmatchIndex">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#1016">FindAllSubmatchIndex</a> <a class="permalink" href="#Regexp.FindAllSubmatchIndex">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindAllSubmatchIndex(b []<a href="https://godoc.org/builtin#byte">byte</a>, n <a href="https://godoc.org/builtin#int">int</a>) [][]<a href="https://godoc.org/builtin#int">int</a></pre>
+    <h4 id="Regexp.FindAllSubmatchIndex">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#1016">FindAllSubmatchIndex</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindAllSubmatchIndex(b []<a href="builtin.htm#byte">byte</a>, n <a href="builtin.htm#int">int</a>) [][]<a href="builtin.htm#int">int</a></pre>
     <p>Find返回一个保管正则表达式re在b中的所有不重叠的匹配结果及其对应的（可能有的）分组匹配的结果的起止位置的切片（第一层表示第几个匹配结果，完整匹配和分组匹配的起止位置对在第二层）。如果没有匹配到，会返回nil。</p>
-    <h4 id="Regexp.FindAllStringSubmatchIndex">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#1059">FindAllStringSubmatchIndex</a> <a class="permalink" href="#Regexp.FindAllStringSubmatchIndex">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindAllStringSubmatchIndex(s <a href="https://godoc.org/builtin#string">string</a>, n <a href="https://godoc.org/builtin#int">int</a>) [][]<a href="https://godoc.org/builtin#int">int</a></pre>
+    <h4 id="Regexp.FindAllStringSubmatchIndex">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#1059">FindAllStringSubmatchIndex</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) FindAllStringSubmatchIndex(s <a href="builtin.htm#string">string</a>, n <a href="builtin.htm#int">int</a>) [][]<a href="builtin.htm#int">int</a></pre>
     <p>Find返回一个保管正则表达式re在b中的所有不重叠的匹配结果及其对应的（可能有的）分组匹配的结果的起止位置的切片（第一层表示第几个匹配结果，完整匹配和分组匹配的起止位置对在第二层）。如果没有匹配到，会返回nil。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Regexp-FindAllStringSubmatchIndex">
@@ -480,8 +482,8 @@ fmt.Println(re.FindAllStringSubmatchIndex(&#34;-foo-&#34;, -1))</pre>
             </div>
         </div>
     </div>
-    <h4 id="Regexp.Split">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#1088">Split</a> <a class="permalink" href="#Regexp.Split">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) Split(s <a href="https://godoc.org/builtin#string">string</a>, n <a href="https://godoc.org/builtin#int">int</a>) []<a href="https://godoc.org/builtin#string">string</a></pre>
+    <h4 id="Regexp.Split">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#1088">Split</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) Split(s <a href="builtin.htm#string">string</a>, n <a href="builtin.htm#int">int</a>) []<a href="builtin.htm#string">string</a></pre>
     <p align="left">Split将re在s中匹配到的结果作为分隔符将s分割成多个字符串，并返回这些正则匹配结果之间的字符串的切片。</p>
     <p align="left">返回的切片不会包含正则匹配的结果，只包含匹配结果之间的片段。当正则表达式re中不含正则元字符时，本方法等价于strings.SplitN。</p>
     <p align="left">举例：</p>
@@ -493,20 +495,20 @@ fmt.Println(re.FindAllStringSubmatchIndex(&#34;-foo-&#34;, -1))</pre>
 n == 0: 返回nil (zero substrings)
 n &lt; 0 : 返回所有子字符串
 </pre>
-    <h4 id="Regexp.Expand">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#757">Expand</a> <a class="permalink" href="#Regexp.Expand">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) Expand(dst []<a href="https://godoc.org/builtin#byte">byte</a>, template []<a href="https://godoc.org/builtin#byte">byte</a>, src []<a href="https://godoc.org/builtin#byte">byte</a>, match []<a href="https://godoc.org/builtin#int">int</a>) []<a href="https://godoc.org/builtin#byte">byte</a></pre>
+    <h4 id="Regexp.Expand">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#757">Expand</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) Expand(dst []<a href="builtin.htm#byte">byte</a>, template []<a href="builtin.htm#byte">byte</a>, src []<a href="builtin.htm#byte">byte</a>, match []<a href="builtin.htm#int">int</a>) []<a href="builtin.htm#byte">byte</a></pre>
     <p align="left">Expand返回新生成的将template添加到dst后面的切片。在添加时，Expand会将template中的变量替换为从src匹配的结果。match应该是被FindSubmatchIndex返回的匹配结果起止位置索引。（通常就是匹配src，除非你要将匹配得到的位置用于另一个[]byte）</p>
     <p align="left">在template参数里，一个变量表示为格式如：$name或${name}的字符串，其中name是长度&gt;0的字母、数字和下划线的序列。一个单纯的数字字符名如$1会作为捕获分组的数字索引；其他的名字对应(?P&lt;name&gt;...)语法产生的命名捕获分组的名字。超出范围的数字索引、索引对应的分组未匹配到文本、正则表达式中未出现的分组名，都会被替换为空切片。</p>
     <p align="left">$name格式的变量名，name会尽可能取最长序列：$1x等价于${1x}而非${1}x，$10等价于${10}而非${1}0。因此$name适用在后跟空格/换行等字符的情况，${name}适用所有情况。</p>
     <p align="left">如果要在输出中插入一个字面值'$'，在template里可以使用$$。</p>
-    <h4 id="Regexp.ExpandString">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#764">ExpandString</a> <a class="permalink" href="#Regexp.ExpandString">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) ExpandString(dst []<a href="https://godoc.org/builtin#byte">byte</a>, template <a href="https://godoc.org/builtin#string">string</a>, src <a href="https://godoc.org/builtin#string">string</a>, match []<a href="https://godoc.org/builtin#int">int</a>) []<a href="https://godoc.org/builtin#byte">byte</a></pre>
+    <h4 id="Regexp.ExpandString">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#764">ExpandString</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) ExpandString(dst []<a href="builtin.htm#byte">byte</a>, template <a href="builtin.htm#string">string</a>, src <a href="builtin.htm#string">string</a>, match []<a href="builtin.htm#int">int</a>) []<a href="builtin.htm#byte">byte</a></pre>
     <p>ExpandString类似Expand，但template和src参数为字符串。它将替换结果添加到切片并返回切片，以便让调用代码控制内存申请。</p>
-    <h4 id="Regexp.ReplaceAllLiteral">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#556">ReplaceAllLiteral</a> <a class="permalink" href="#Regexp.ReplaceAllLiteral">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) ReplaceAllLiteral(src, repl []<a href="https://godoc.org/builtin#byte">byte</a>) []<a href="https://godoc.org/builtin#byte">byte</a></pre>
+    <h4 id="Regexp.ReplaceAllLiteral">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#556">ReplaceAllLiteral</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) ReplaceAllLiteral(src, repl []<a href="builtin.htm#byte">byte</a>) []<a href="builtin.htm#byte">byte</a></pre>
     <p>ReplaceAllLiteral返回src的一个拷贝，将src中所有re的匹配结果都替换为repl。repl参数被直接使用，不会使用Expand进行扩展。</p>
-    <h4 id="Regexp.ReplaceAllLiteralString">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#458">ReplaceAllLiteralString</a> <a class="permalink" href="#Regexp.ReplaceAllLiteralString">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) ReplaceAllLiteralString(src, repl <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h4 id="Regexp.ReplaceAllLiteralString">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#458">ReplaceAllLiteralString</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) ReplaceAllLiteralString(src, repl <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>ReplaceAllLiteralString返回src的一个拷贝，将src中所有re的匹配结果都替换为repl。repl参数被直接使用，不会使用Expand进行扩展。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Regexp-ReplaceAllLiteralString">
@@ -526,11 +528,11 @@ fmt.Println(re.ReplaceAllLiteralString(&#34;-ab-axxb-&#34;, &#34;${1}&#34;))</pr
             </div>
         </div>
     </div>
-    <h4 id="Regexp.ReplaceAll">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#538">ReplaceAll</a> <a class="permalink" href="#Regexp.ReplaceAll">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) ReplaceAll(src, repl []<a href="https://godoc.org/builtin#byte">byte</a>) []<a href="https://godoc.org/builtin#byte">byte</a></pre>
+    <h4 id="Regexp.ReplaceAll">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#538">ReplaceAll</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) ReplaceAll(src, repl []<a href="builtin.htm#byte">byte</a>) []<a href="builtin.htm#byte">byte</a></pre>
     <p>ReplaceAllLiteral返回src的一个拷贝，将src中所有re的匹配结果都替换为repl。在替换时，repl中的'$'符号会按照Expand方法的规则进行解释和替换，例如$1会被替换为第一个分组匹配结果。</p>
-    <h4 id="Regexp.ReplaceAllString">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#444">ReplaceAllString</a> <a class="permalink" href="#Regexp.ReplaceAllString">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) ReplaceAllString(src, repl <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h4 id="Regexp.ReplaceAllString">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#444">ReplaceAllString</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) ReplaceAllString(src, repl <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>ReplaceAllLiteral返回src的一个拷贝，将src中所有re的匹配结果都替换为repl。在替换时，repl中的'$'符号会按照Expand方法的规则进行解释和替换，例如$1会被替换为第一个分组匹配结果。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Regexp-ReplaceAllString">
@@ -552,11 +554,11 @@ fmt.Println(re.ReplaceAllString(&#34;-ab-axxb-&#34;, &#34;${1}W&#34;))</pre>
             </div>
         </div>
     </div>
-    <h4 id="Regexp.ReplaceAllFunc">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#566">ReplaceAllFunc</a> <a class="permalink" href="#Regexp.ReplaceAllFunc">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) ReplaceAllFunc(src []<a href="https://godoc.org/builtin#byte">byte</a>, repl func([]<a href="https://godoc.org/builtin#byte">byte</a>) []<a href="https://godoc.org/builtin#byte">byte</a>) []<a href="https://godoc.org/builtin#byte">byte</a></pre>
+    <h4 id="Regexp.ReplaceAllFunc">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#566">ReplaceAllFunc</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) ReplaceAllFunc(src []<a href="builtin.htm#byte">byte</a>, repl func([]<a href="builtin.htm#byte">byte</a>) []<a href="builtin.htm#byte">byte</a>) []<a href="builtin.htm#byte">byte</a></pre>
     <p>ReplaceAllLiteral返回src的一个拷贝，将src中所有re的匹配结果（设为matched）都替换为repl(matched)。repl返回的切片被直接使用，不会使用Expand进行扩展。</p>
-    <h4 id="Regexp.ReplaceAllStringFunc">func (*Regexp) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/regexp/regexp.go?name=release#468">ReplaceAllStringFunc</a> <a class="permalink" href="#Regexp.ReplaceAllStringFunc">&para;</a></h4>
-    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) ReplaceAllStringFunc(src <a href="https://godoc.org/builtin#string">string</a>, repl func(<a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h4 id="Regexp.ReplaceAllStringFunc">func (*Regexp) <a title="View Source" href="https://github.com/golang/go/blob/master/src/regexp/regexp.go?name=release#468">ReplaceAllStringFunc</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (re *<a href="#Regexp">Regexp</a>) ReplaceAllStringFunc(src <a href="builtin.htm#string">string</a>, repl func(<a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>ReplaceAllLiteral返回src的一个拷贝，将src中所有re的匹配结果（设为matched）都替换为repl(matched)。repl返回的字符串被直接使用，不会使用Expand进行扩展。</p>
 </div>
 </body>

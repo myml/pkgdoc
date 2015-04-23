@@ -12,7 +12,8 @@
     <p><code>import "strings"</code>
     <p>strings包实现了用于操作字符的简单函数。</p>
     <h3 id="pkg-index" class="section-header">Index <a class="permalink" href="#pkg-index">&para;</a></h3>
-    <ul class="list-unstyled">
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#EqualFold">func EqualFold(s, t string) bool</a></li>
         <li><a href="#HasPrefix">func HasPrefix(s, prefix string) bool</a></li>
         <li><a href="#HasSuffix">func HasSuffix(s, suffix string) bool</a></li>
@@ -74,8 +75,9 @@
             <li><a href="#Replacer.WriteString">func (r *Replacer) WriteString(w io.Writer, s string) (n int, err error)</a></li>
         </ul>
     </ul>
-    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-examples">&para;</a></h4>
-    <ul class="list-unstyled">
+    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#example-Contains" onclick="$('#ex-Contains').addClass('in').removeClass('collapse').height('auto')">Contains</a></li>
         <li><a href="#example-ContainsAny" onclick="$('#ex-ContainsAny').addClass('in').removeClass('collapse').height('auto')">ContainsAny</a></li>
         <li><a href="#example-Count" onclick="$('#ex-Count').addClass('in').removeClass('collapse').height('auto')">Count</a></li>
@@ -105,8 +107,8 @@
         <li><a href="#example-TrimSpace" onclick="$('#ex-TrimSpace').addClass('in').removeClass('collapse').height('auto')">TrimSpace</a></li>
         <li><a href="#example-TrimSuffix" onclick="$('#ex-TrimSuffix').addClass('in').removeClass('collapse').height('auto')">TrimSuffix</a></li>
     </ul>
-    <h3 id="EqualFold">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#674">EqualFold</a> <a class="permalink" href="#EqualFold">&para;</a></h3>
-    <pre class="funcdecl">func EqualFold(s, t <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h3 id="EqualFold">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#674">EqualFold</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func EqualFold(s, t <a href="builtin.htm#string">string</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>判断两个utf-8编码字符串（将unicode大写、小写、标题三种格式字符视为相同）是否相同。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-EqualFold">
@@ -121,14 +123,14 @@
             </div>
         </div>
     </div>
-    <h3 id="HasPrefix">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#371">HasPrefix</a> <a class="permalink" href="#HasPrefix">&para;</a></h3>
-    <pre class="funcdecl">func HasPrefix(s, prefix <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h3 id="HasPrefix">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#371">HasPrefix</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func HasPrefix(s, prefix <a href="builtin.htm#string">string</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>判断s是否有前缀字符串prefix。</p>
-    <h3 id="HasSuffix">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#376">HasSuffix</a> <a class="permalink" href="#HasSuffix">&para;</a></h3>
-    <pre class="funcdecl">func HasSuffix(s, suffix <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h3 id="HasSuffix">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#376">HasSuffix</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func HasSuffix(s, suffix <a href="builtin.htm#string">string</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>判断s是否有后缀字符串suffix。</p>
-    <h3 id="Contains">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#112">Contains</a> <a class="permalink" href="#Contains">&para;</a></h3>
-    <pre class="funcdecl">func Contains(s, substr <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h3 id="Contains">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#112">Contains</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Contains(s, substr <a href="builtin.htm#string">string</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>判断字符串s是否包含子串substr。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Contains">
@@ -149,11 +151,11 @@ true
             </div>
         </div>
     </div>
-    <h3 id="ContainsRune">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#122">ContainsRune</a> <a class="permalink" href="#ContainsRune">&para;</a></h3>
-    <pre class="funcdecl">func ContainsRune(s <a href="https://godoc.org/builtin#string">string</a>, r <a href="https://godoc.org/builtin#rune">rune</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h3 id="ContainsRune">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#122">ContainsRune</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func ContainsRune(s <a href="builtin.htm#string">string</a>, r <a href="builtin.htm#rune">rune</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>判断字符串s是否包含utf-8码值r。</p>
-    <h3 id="ContainsAny">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#117">ContainsAny</a> <a class="permalink" href="#ContainsAny">&para;</a></h3>
-    <pre class="funcdecl">func ContainsAny(s, chars <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h3 id="ContainsAny">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#117">ContainsAny</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func ContainsAny(s, chars <a href="builtin.htm#string">string</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>判断字符串s是否包含字符串chars中的任一字符。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-ContainsAny">
@@ -174,8 +176,8 @@ false
             </div>
         </div>
     </div>
-    <h3 id="Count">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#65">Count</a> <a class="permalink" href="#Count">&para;</a></h3>
-    <pre class="funcdecl">func Count(s, sep <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h3 id="Count">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#65">Count</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Count(s, sep <a href="builtin.htm#string">string</a>) <a href="builtin.htm#int">int</a></pre>
     <p>返回字符串s中有几个不重复的sep子串。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Count">
@@ -192,8 +194,8 @@ fmt.Println(strings.Count(&#34;five&#34;, &#34;&#34;)) <span class="com">// befo
             </div>
         </div>
     </div>
-    <h3 id="Index">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#127">Index</a> <a class="permalink" href="#Index">&para;</a></h3>
-    <pre class="funcdecl">func Index(s, sep <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h3 id="Index">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#127">Index</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Index(s, sep <a href="builtin.htm#string">string</a>) <a href="builtin.htm#int">int</a></pre>
     <p>子串sep在字符串s中第一次出现的位置，不存在则返回-1。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Index">
@@ -210,11 +212,11 @@ fmt.Println(strings.Index(&#34;chicken&#34;, &#34;dmr&#34;))</pre>
             </div>
         </div>
     </div>
-    <h3 id="IndexByte">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings_decl.go?name=release#8">IndexByte</a> <a class="permalink" href="#IndexByte">&para;</a></h3>
-    <pre class="funcdecl">func IndexByte(s <a href="https://godoc.org/builtin#string">string</a>, c <a href="https://godoc.org/builtin#byte">byte</a>) <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h3 id="IndexByte">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings_decl.go?name=release#8">IndexByte</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func IndexByte(s <a href="builtin.htm#string">string</a>, c <a href="builtin.htm#byte">byte</a>) <a href="builtin.htm#int">int</a></pre>
     <p>字符c在s中第一次出现的位置，不存在则返回-1。</p>
-    <h3 id="IndexRune">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#190">IndexRune</a> <a class="permalink" href="#IndexRune">&para;</a></h3>
-    <pre class="funcdecl">func IndexRune(s <a href="https://godoc.org/builtin#string">string</a>, r <a href="https://godoc.org/builtin#rune">rune</a>) <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h3 id="IndexRune">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#190">IndexRune</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func IndexRune(s <a href="builtin.htm#string">string</a>, r <a href="builtin.htm#rune">rune</a>) <a href="builtin.htm#int">int</a></pre>
     <p>unicode码值r在s中第一次出现的位置，不存在则返回-1。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-IndexRune">
@@ -231,8 +233,8 @@ fmt.Println(strings.IndexRune(&#34;chicken&#34;, &#39;d&#39;))</pre>
             </div>
         </div>
     </div>
-    <h3 id="IndexAny">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#211">IndexAny</a> <a class="permalink" href="#IndexAny">&para;</a></h3>
-    <pre class="funcdecl">func IndexAny(s, chars <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h3 id="IndexAny">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#211">IndexAny</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func IndexAny(s, chars <a href="builtin.htm#string">string</a>) <a href="builtin.htm#int">int</a></pre>
     <p>字符串chars中的任一utf-8码值在s中第一次出现的位置，如果不存在或者chars为空字符串则返回-1。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-IndexAny">
@@ -249,8 +251,8 @@ fmt.Println(strings.IndexAny(&#34;crwth&#34;, &#34;aeiouy&#34;))</pre>
             </div>
         </div>
     </div>
-    <h3 id="IndexFunc">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#537">IndexFunc</a> <a class="permalink" href="#IndexFunc">&para;</a></h3>
-    <pre class="funcdecl">func IndexFunc(s <a href="https://godoc.org/builtin#string">string</a>, f func(<a href="https://godoc.org/builtin#rune">rune</a>) <a href="https://godoc.org/builtin#bool">bool</a>) <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h3 id="IndexFunc">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#537">IndexFunc</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func IndexFunc(s <a href="builtin.htm#string">string</a>, f func(<a href="builtin.htm#rune">rune</a>) <a href="builtin.htm#bool">bool</a>) <a href="builtin.htm#int">int</a></pre>
     <p>s中第一个满足函数f的位置i（该处的utf-8码值r满足f(r)==true），不存在则返回-1。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-IndexFunc">
@@ -270,8 +272,8 @@ fmt.Println(strings.IndexFunc(&#34;Hello, world&#34;, f))</pre>
             </div>
         </div>
     </div>
-    <h3 id="LastIndex">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#164">LastIndex</a> <a class="permalink" href="#LastIndex">&para;</a></h3>
-    <pre class="funcdecl">func LastIndex(s, sep <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h3 id="LastIndex">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#164">LastIndex</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func LastIndex(s, sep <a href="builtin.htm#string">string</a>) <a href="builtin.htm#int">int</a></pre>
     <p>子串sep在字符串s中最后一次出现的位置，不存在则返回-1。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-LastIndex">
@@ -290,14 +292,14 @@ fmt.Println(strings.LastIndex(&#34;go gopher&#34;, &#34;rodent&#34;))</pre>
             </div>
         </div>
     </div>
-    <h3 id="LastIndexAny">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#227">LastIndexAny</a> <a class="permalink" href="#LastIndexAny">&para;</a></h3>
-    <pre class="funcdecl">func LastIndexAny(s, chars <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h3 id="LastIndexAny">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#227">LastIndexAny</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func LastIndexAny(s, chars <a href="builtin.htm#string">string</a>) <a href="builtin.htm#int">int</a></pre>
     <p>字符串chars中的任一utf-8码值在s中最后一次出现的位置，如不存在或者chars为空字符串则返回-1。</p>
-    <h3 id="LastIndexFunc">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#543">LastIndexFunc</a> <a class="permalink" href="#LastIndexFunc">&para;</a></h3>
-    <pre class="funcdecl">func LastIndexFunc(s <a href="https://godoc.org/builtin#string">string</a>, f func(<a href="https://godoc.org/builtin#rune">rune</a>) <a href="https://godoc.org/builtin#bool">bool</a>) <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h3 id="LastIndexFunc">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#543">LastIndexFunc</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func LastIndexFunc(s <a href="builtin.htm#string">string</a>, f func(<a href="builtin.htm#rune">rune</a>) <a href="builtin.htm#bool">bool</a>) <a href="builtin.htm#int">int</a></pre>
     <p>s中最后一个满足函数f的unicode码值的位置i，不存在则返回-1。</p>
-    <h3 id="Title">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#489">Title</a> <a class="permalink" href="#Title">&para;</a></h3>
-    <pre class="funcdecl">func Title(s <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="Title">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#489">Title</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Title(s <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p align="left">返回s中每个单词的首字母都改为标题格式的字符串拷贝。</p>
     <p align="left">BUG: Title用于划分单词的规则不能很好的处理Unicode标点符号。</p>
     <div class="panel-group">
@@ -313,8 +315,8 @@ fmt.Println(strings.LastIndex(&#34;go gopher&#34;, &#34;rodent&#34;))</pre>
             </div>
         </div>
     </div>
-    <h3 id="ToLower">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#437">ToLower</a> <a class="permalink" href="#ToLower">&para;</a></h3>
-    <pre class="funcdecl">func ToLower(s <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="ToLower">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#437">ToLower</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func ToLower(s <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>返回将所有字母都转为对应的小写版本的拷贝。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-ToLower">
@@ -329,11 +331,11 @@ fmt.Println(strings.LastIndex(&#34;go gopher&#34;, &#34;rodent&#34;))</pre>
             </div>
         </div>
     </div>
-    <h3 id="ToLowerSpecial">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#450">ToLowerSpecial</a> <a class="permalink" href="#ToLowerSpecial">&para;</a></h3>
-    <pre class="funcdecl">func ToLowerSpecial(_case <a href="https://godoc.org/unicode">unicode</a>.<a href="https://godoc.org/unicode#SpecialCase">SpecialCase</a>, s <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="ToLowerSpecial">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#450">ToLowerSpecial</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func ToLowerSpecial(_case <a href="unicode.htm">unicode</a>.<a href="unicode.htm#SpecialCase">SpecialCase</a>, s <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>使用_case规定的字符映射，返回将所有字母都转为对应的小写版本的拷贝。</p>
-    <h3 id="ToUpper">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#434">ToUpper</a> <a class="permalink" href="#ToUpper">&para;</a></h3>
-    <pre class="funcdecl">func ToUpper(s <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="ToUpper">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#434">ToUpper</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func ToUpper(s <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>返回将所有字母都转为对应的大写版本的拷贝。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-ToUpper">
@@ -348,11 +350,11 @@ fmt.Println(strings.LastIndex(&#34;go gopher&#34;, &#34;rodent&#34;))</pre>
             </div>
         </div>
     </div>
-    <h3 id="ToUpperSpecial">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#444">ToUpperSpecial</a> <a class="permalink" href="#ToUpperSpecial">&para;</a></h3>
-    <pre class="funcdecl">func ToUpperSpecial(_case <a href="https://godoc.org/unicode">unicode</a>.<a href="https://godoc.org/unicode#SpecialCase">SpecialCase</a>, s <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="ToUpperSpecial">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#444">ToUpperSpecial</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func ToUpperSpecial(_case <a href="unicode.htm">unicode</a>.<a href="unicode.htm#SpecialCase">SpecialCase</a>, s <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>使用_case规定的字符映射，返回将所有字母都转为对应的大写版本的拷贝。</p>
-    <h3 id="ToTitle">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#440">ToTitle</a> <a class="permalink" href="#ToTitle">&para;</a></h3>
-    <pre class="funcdecl">func ToTitle(s <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="ToTitle">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#440">ToTitle</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func ToTitle(s <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>返回将所有字母都转为对应的标题版本的拷贝。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-ToTitle">
@@ -369,11 +371,11 @@ fmt.Println(strings.ToTitle(&#34;хлеб&#34;))</pre>
             </div>
         </div>
     </div>
-    <h3 id="ToTitleSpecial">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#456">ToTitleSpecial</a> <a class="permalink" href="#ToTitleSpecial">&para;</a></h3>
-    <pre class="funcdecl">func ToTitleSpecial(_case <a href="https://godoc.org/unicode">unicode</a>.<a href="https://godoc.org/unicode#SpecialCase">SpecialCase</a>, s <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="ToTitleSpecial">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#456">ToTitleSpecial</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func ToTitleSpecial(_case <a href="unicode.htm">unicode</a>.<a href="unicode.htm#SpecialCase">SpecialCase</a>, s <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>使用_case规定的字符映射，返回将所有字母都转为对应的标题版本的拷贝。</p>
-    <h3 id="Repeat">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#424">Repeat</a> <a class="permalink" href="#Repeat">&para;</a></h3>
-    <pre class="funcdecl">func Repeat(s <a href="https://godoc.org/builtin#string">string</a>, count <a href="https://godoc.org/builtin#int">int</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="Repeat">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#424">Repeat</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Repeat(s <a href="builtin.htm#string">string</a>, count <a href="builtin.htm#int">int</a>) <a href="builtin.htm#string">string</a></pre>
     <p>返回count个s串联的字符串。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Repeat">
@@ -388,8 +390,8 @@ fmt.Println(strings.ToTitle(&#34;хлеб&#34;))</pre>
             </div>
         </div>
     </div>
-    <h3 id="Replace">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#638">Replace</a> <a class="permalink" href="#Replace">&para;</a></h3>
-    <pre class="funcdecl">func Replace(s, old, new <a href="https://godoc.org/builtin#string">string</a>, n <a href="https://godoc.org/builtin#int">int</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="Replace">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#638">Replace</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Replace(s, old, new <a href="builtin.htm#string">string</a>, n <a href="builtin.htm#int">int</a>) <a href="builtin.htm#string">string</a></pre>
     <p>返回将s中前n个不重叠old子串都替换为new的新字符串，如果n&lt;0会替换所有old子串。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Replace">
@@ -406,8 +408,8 @@ moo moo moo
             </div>
         </div>
     </div>
-    <h3 id="Map">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#383">Map</a> <a class="permalink" href="#Map">&para;</a></h3>
-    <pre class="funcdecl">func Map(mapping func(<a href="https://godoc.org/builtin#rune">rune</a>) <a href="https://godoc.org/builtin#rune">rune</a>, s <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="Map">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#383">Map</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Map(mapping func(<a href="builtin.htm#rune">rune</a>) <a href="builtin.htm#rune">rune</a>, s <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>将s的每一个unicode码值r都替换为mapping(r)，返回这些新码值组成的字符串拷贝。如果mapping返回一个负值，将会丢弃该码值而不会被替换。（返回值中对应位置将没有码值）</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Map">
@@ -431,8 +433,8 @@ fmt.Println(strings.Map(rot13, &#34;&#39;Twas brillig and the slithy gopher...&#
             </div>
         </div>
     </div>
-    <h3 id="Trim">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#586">Trim</a> <a class="permalink" href="#Trim">&para;</a></h3>
-    <pre class="funcdecl">func Trim(s <a href="https://godoc.org/builtin#string">string</a>, cutset <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="Trim">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#586">Trim</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Trim(s <a href="builtin.htm#string">string</a>, cutset <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>返回将s前后端所有cutset包含的utf-8码值都去掉的字符串。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Trim">
@@ -447,8 +449,8 @@ fmt.Println(strings.Map(rot13, &#34;&#39;Twas brillig and the slithy gopher...&#
             </div>
         </div>
     </div>
-    <h3 id="TrimSpace">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#613">TrimSpace</a> <a class="permalink" href="#TrimSpace">&para;</a></h3>
-    <pre class="funcdecl">func TrimSpace(s <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="TrimSpace">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#613">TrimSpace</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func TrimSpace(s <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>返回将s前后端所有空白（unicode.IsSpace指定）都去掉的字符串。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-TrimSpace">
@@ -463,17 +465,17 @@ fmt.Println(strings.Map(rot13, &#34;&#39;Twas brillig and the slithy gopher...&#
             </div>
         </div>
     </div>
-    <h3 id="TrimFunc">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#531">TrimFunc</a> <a class="permalink" href="#TrimFunc">&para;</a></h3>
-    <pre class="funcdecl">func TrimFunc(s <a href="https://godoc.org/builtin#string">string</a>, f func(<a href="https://godoc.org/builtin#rune">rune</a>) <a href="https://godoc.org/builtin#bool">bool</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="TrimFunc">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#531">TrimFunc</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func TrimFunc(s <a href="builtin.htm#string">string</a>, f func(<a href="builtin.htm#rune">rune</a>) <a href="builtin.htm#bool">bool</a>) <a href="builtin.htm#string">string</a></pre>
     <p>返回将s前后端所有满足f的unicode码值都去掉的字符串。</p>
-    <h3 id="TrimLeft">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#595">TrimLeft</a> <a class="permalink" href="#TrimLeft">&para;</a></h3>
-    <pre class="funcdecl">func TrimLeft(s <a href="https://godoc.org/builtin#string">string</a>, cutset <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="TrimLeft">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#595">TrimLeft</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func TrimLeft(s <a href="builtin.htm#string">string</a>, cutset <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>返回将s前端所有cutset包含的utf-8码值都去掉的字符串。</p>
-    <h3 id="TrimLeftFunc">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#508">TrimLeftFunc</a> <a class="permalink" href="#TrimLeftFunc">&para;</a></h3>
-    <pre class="funcdecl">func TrimLeftFunc(s <a href="https://godoc.org/builtin#string">string</a>, f func(<a href="https://godoc.org/builtin#rune">rune</a>) <a href="https://godoc.org/builtin#bool">bool</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="TrimLeftFunc">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#508">TrimLeftFunc</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func TrimLeftFunc(s <a href="builtin.htm#string">string</a>, f func(<a href="builtin.htm#rune">rune</a>) <a href="builtin.htm#bool">bool</a>) <a href="builtin.htm#string">string</a></pre>
     <p>返回将s前端所有满足f的unicode码值都去掉的字符串。</p>
-    <h3 id="TrimPrefix">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#619">TrimPrefix</a> <a class="permalink" href="#TrimPrefix">&para;</a></h3>
-    <pre class="funcdecl">func TrimPrefix(s, prefix <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="TrimPrefix">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#619">TrimPrefix</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func TrimPrefix(s, prefix <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>返回去除s可能的前缀prefix的字符串。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-TrimPrefix">
@@ -491,14 +493,14 @@ fmt.Print(&#34;Hello&#34; + s)</pre>
             </div>
         </div>
     </div>
-    <h3 id="TrimRight">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#604">TrimRight</a> <a class="permalink" href="#TrimRight">&para;</a></h3>
-    <pre class="funcdecl">func TrimRight(s <a href="https://godoc.org/builtin#string">string</a>, cutset <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="TrimRight">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#604">TrimRight</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func TrimRight(s <a href="builtin.htm#string">string</a>, cutset <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>返回将s后端所有cutset包含的utf-8码值都去掉的字符串。</p>
-    <h3 id="TrimRightFunc">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#518">TrimRightFunc</a> <a class="permalink" href="#TrimRightFunc">&para;</a></h3>
-    <pre class="funcdecl">func TrimRightFunc(s <a href="https://godoc.org/builtin#string">string</a>, f func(<a href="https://godoc.org/builtin#rune">rune</a>) <a href="https://godoc.org/builtin#bool">bool</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="TrimRightFunc">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#518">TrimRightFunc</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func TrimRightFunc(s <a href="builtin.htm#string">string</a>, f func(<a href="builtin.htm#rune">rune</a>) <a href="builtin.htm#bool">bool</a>) <a href="builtin.htm#string">string</a></pre>
     <p>返回将s后端所有满足f的unicode码值都去掉的字符串。</p>
-    <h3 id="TrimSuffix">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#628">TrimSuffix</a> <a class="permalink" href="#TrimSuffix">&para;</a></h3>
-    <pre class="funcdecl">func TrimSuffix(s, suffix <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="TrimSuffix">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#628">TrimSuffix</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func TrimSuffix(s, suffix <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>返回去除s可能的后缀suffix的字符串。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-TrimSuffix">
@@ -516,8 +518,8 @@ fmt.Print(s, &#34;world!&#34;)</pre>
             </div>
         </div>
     </div>
-    <h3 id="Fields">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#307">Fields</a> <a class="permalink" href="#Fields">&para;</a></h3>
-    <pre class="funcdecl">func Fields(s <a href="https://godoc.org/builtin#string">string</a>) []<a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="Fields">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#307">Fields</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Fields(s <a href="builtin.htm#string">string</a>) []<a href="builtin.htm#string">string</a></pre>
     <p>返回将字符串按照空白（unicode.IsSpace确定，可以是一到多个连续的空白字符）分割的多个字符串。如果字符串全部是空白或者是空字符串的话，会返回空切片。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Fields">
@@ -532,8 +534,8 @@ fmt.Print(s, &#34;world!&#34;)</pre>
             </div>
         </div>
     </div>
-    <h3 id="FieldsFunc">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#314">FieldsFunc</a> <a class="permalink" href="#FieldsFunc">&para;</a></h3>
-    <pre class="funcdecl">func FieldsFunc(s <a href="https://godoc.org/builtin#string">string</a>, f func(<a href="https://godoc.org/builtin#rune">rune</a>) <a href="https://godoc.org/builtin#bool">bool</a>) []<a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="FieldsFunc">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#314">FieldsFunc</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func FieldsFunc(s <a href="builtin.htm#string">string</a>, f func(<a href="builtin.htm#rune">rune</a>) <a href="builtin.htm#bool">bool</a>) []<a href="builtin.htm#string">string</a></pre>
     <p>类似Fields，但使用函数f来确定分割符（满足f的unicode码值）。如果字符串全部是分隔符或者是空字符串的话，会返回空切片。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-FieldsFunc">
@@ -551,8 +553,8 @@ fmt.Printf(&#34;Fields are: %q&#34;, strings.FieldsFunc(&#34;  foo1;bar2,baz3...
             </div>
         </div>
     </div>
-    <h3 id="Split">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#294">Split</a> <a class="permalink" href="#Split">&para;</a></h3>
-    <pre class="funcdecl">func Split(s, sep <a href="https://godoc.org/builtin#string">string</a>) []<a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="Split">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#294">Split</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Split(s, sep <a href="builtin.htm#string">string</a>) []<a href="builtin.htm#string">string</a></pre>
     <p>用去掉s中出现的sep的方式进行分割，会分割到结尾，并返回生成的所有片段组成的切片（每一个sep都会进行一次切割，即使两个sep相邻，也会进行两次切割）。如果sep为空字符，Split会将s切分成每一个unicode码值一个字符串。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Split">
@@ -573,8 +575,8 @@ fmt.Printf(&#34;%q\n&#34;, strings.Split(&#34;&#34;, &#34;Bernardo O&#39;Higgins
             </div>
         </div>
     </div>
-    <h3 id="SplitN">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#277">SplitN</a> <a class="permalink" href="#SplitN">&para;</a></h3>
-    <pre class="funcdecl">func SplitN(s, sep <a href="https://godoc.org/builtin#string">string</a>, n <a href="https://godoc.org/builtin#int">int</a>) []<a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="SplitN">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#277">SplitN</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func SplitN(s, sep <a href="builtin.htm#string">string</a>, n <a href="builtin.htm#int">int</a>) []<a href="builtin.htm#string">string</a></pre>
     <p>用去掉s中出现的sep的方式进行分割，会分割到结尾，并返回生成的所有片段组成的切片（每一个sep都会进行一次切割，即使两个sep相邻，也会进行两次切割）。如果sep为空字符，Split会将s切分成每一个unicode码值一个字符串。参数n决定返回的切片的数目：</p>
     <pre>n &gt; 0 : 返回的切片最多n个子字符串；最后一个子字符串包含未进行切割的部分。
 n == 0: 返回nil
@@ -596,8 +598,8 @@ fmt.Printf(&#34;%q (nil = %v)\n&#34;, z, z == nil)</pre>
             </div>
         </div>
     </div>
-    <h3 id="SplitAfter">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#300">SplitAfter</a> <a class="permalink" href="#SplitAfter">&para;</a></h3>
-    <pre class="funcdecl">func SplitAfter(s, sep <a href="https://godoc.org/builtin#string">string</a>) []<a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="SplitAfter">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#300">SplitAfter</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func SplitAfter(s, sep <a href="builtin.htm#string">string</a>) []<a href="builtin.htm#string">string</a></pre>
     <p>用从s中出现的sep后面切断的方式进行分割，会分割到结尾，并返回生成的所有片段组成的切片（每一个sep都会进行一次切割，即使两个sep相邻，也会进行两次切割）。如果sep为空字符，Split会将s切分成每一个unicode码值一个字符串。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-SplitAfter">
@@ -612,8 +614,8 @@ fmt.Printf(&#34;%q (nil = %v)\n&#34;, z, z == nil)</pre>
             </div>
         </div>
     </div>
-    <h3 id="SplitAfterN">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#286">SplitAfterN</a> <a class="permalink" href="#SplitAfterN">&para;</a></h3>
-    <pre class="funcdecl">func SplitAfterN(s, sep <a href="https://godoc.org/builtin#string">string</a>, n <a href="https://godoc.org/builtin#int">int</a>) []<a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="SplitAfterN">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#286">SplitAfterN</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func SplitAfterN(s, sep <a href="builtin.htm#string">string</a>, n <a href="builtin.htm#int">int</a>) []<a href="builtin.htm#string">string</a></pre>
     <p>用从s中出现的sep后面切断的方式进行分割，会分割到结尾，并返回生成的所有片段组成的切片（每一个sep都会进行一次切割，即使两个sep相邻，也会进行两次切割）。如果sep为空字符，Split会将s切分成每一个unicode码值一个字符串。参数n决定返回的切片的数目：</p>
     <pre>n &gt; 0 : 返回的切片最多n个子字符串；最后一个子字符串包含未进行切割的部分。
 n == 0: 返回nil
@@ -632,8 +634,8 @@ n &lt; 0 : 返回所有的子字符串组成的切
             </div>
         </div>
     </div>
-    <h3 id="Join">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/strings.go?name=release#349">Join</a> <a class="permalink" href="#Join">&para;</a></h3>
-    <pre class="funcdecl">func Join(a []<a href="https://godoc.org/builtin#string">string</a>, sep <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="Join">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/strings.go?name=release#349">Join</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Join(a []<a href="builtin.htm#string">string</a>, sep <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>将一系列字符串连接为一个字符串，之间用sep来分隔。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Join">
@@ -649,42 +651,42 @@ fmt.Println(strings.Join(s, &#34;, &#34;))</pre>
             </div>
         </div>
     </div>
-    <h3 id="Reader">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/reader.go?name=release#16">Reader</a> <a class="permalink" href="#Reader">&para;</a></h3>
+    <h3 id="Reader">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/reader.go?name=release#16">Reader</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Reader struct {
     <span class="com">// 内含隐藏或非导出字段</span>
 }</pre>
     <p>Reader类型通过从一个字符串读取数据，实现了io.Reader、io.Seeker、io.ReaderAt、io.WriterTo、io.ByteScanner、io.RuneScanner接口。</p>
-    <h4 id="NewReader">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/reader.go?name=release#144">NewReader</a> <a class="permalink" href="#NewReader">&para;</a></h4>
-    <pre class="funcdecl">func NewReader(s <a href="https://godoc.org/builtin#string">string</a>) *<a href="#Reader">Reader</a></pre>
+    <h4 id="NewReader">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/reader.go?name=release#144">NewReader</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func NewReader(s <a href="builtin.htm#string">string</a>) *<a href="#Reader">Reader</a></pre>
     <p>NewReader创建一个从s读取数据的Reader。本函数类似bytes.NewBufferString，但是更有效率，且为只读的。</p>
-    <h4 id="Reader.Len">func (*Reader) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/reader.go?name=release#24">Len</a> <a class="permalink" href="#Reader.Len">&para;</a></h4>
-    <pre class="funcdecl">func (r *<a href="#Reader">Reader</a>) Len() <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h4 id="Reader.Len">func (*Reader) <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/reader.go?name=release#24">Len</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (r *<a href="#Reader">Reader</a>) Len() <a href="builtin.htm#int">int</a></pre>
     <p>Len返回r包含的字符串还没有被读取的部分。</p>
-    <h4 id="Reader.Read">func (*Reader) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/reader.go?name=release#31">Read</a> <a class="permalink" href="#Reader.Read">&para;</a></h4>
-    <pre class="funcdecl">func (r *<a href="#Reader">Reader</a>) Read(b []<a href="https://godoc.org/builtin#byte">byte</a>) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
-    <h4 id="Reader.ReadByte">func (*Reader) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/reader.go?name=release#59">ReadByte</a> <a class="permalink" href="#Reader.ReadByte">&para;</a></h4>
-    <pre class="funcdecl">func (r *<a href="#Reader">Reader</a>) ReadByte() (b <a href="https://godoc.org/builtin#byte">byte</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
-    <h4 id="Reader.UnreadByte">func (*Reader) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/reader.go?name=release#69">UnreadByte</a> <a class="permalink" href="#Reader.UnreadByte">&para;</a></h4>
-    <pre class="funcdecl">func (r *<a href="#Reader">Reader</a>) UnreadByte() <a href="https://godoc.org/builtin#error">error</a></pre>
-    <h4 id="Reader.ReadRune">func (*Reader) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/reader.go?name=release#78">ReadRune</a> <a class="permalink" href="#Reader.ReadRune">&para;</a></h4>
-    <pre class="funcdecl">func (r *<a href="#Reader">Reader</a>) ReadRune() (ch <a href="https://godoc.org/builtin#rune">rune</a>, size <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
-    <h4 id="Reader.UnreadRune">func (*Reader) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/reader.go?name=release#93">UnreadRune</a> <a class="permalink" href="#Reader.UnreadRune">&para;</a></h4>
-    <pre class="funcdecl">func (r *<a href="#Reader">Reader</a>) UnreadRune() <a href="https://godoc.org/builtin#error">error</a></pre>
-    <h4 id="Reader.Seek">func (*Reader) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/reader.go?name=release#103">Seek</a> <a class="permalink" href="#Reader.Seek">&para;</a></h4>
-    <pre class="funcdecl">func (r *<a href="#Reader">Reader</a>) Seek(offset <a href="https://godoc.org/builtin#int64">int64</a>, whence <a href="https://godoc.org/builtin#int">int</a>) (<a href="https://godoc.org/builtin#int64">int64</a>, <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h4 id="Reader.Read">func (*Reader) <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/reader.go?name=release#31">Read</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (r *<a href="#Reader">Reader</a>) Read(b []<a href="builtin.htm#byte">byte</a>) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
+    <h4 id="Reader.ReadByte">func (*Reader) <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/reader.go?name=release#59">ReadByte</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (r *<a href="#Reader">Reader</a>) ReadByte() (b <a href="builtin.htm#byte">byte</a>, err <a href="builtin.htm#error">error</a>)</pre>
+    <h4 id="Reader.UnreadByte">func (*Reader) <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/reader.go?name=release#69">UnreadByte</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (r *<a href="#Reader">Reader</a>) UnreadByte() <a href="builtin.htm#error">error</a></pre>
+    <h4 id="Reader.ReadRune">func (*Reader) <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/reader.go?name=release#78">ReadRune</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (r *<a href="#Reader">Reader</a>) ReadRune() (ch <a href="builtin.htm#rune">rune</a>, size <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
+    <h4 id="Reader.UnreadRune">func (*Reader) <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/reader.go?name=release#93">UnreadRune</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (r *<a href="#Reader">Reader</a>) UnreadRune() <a href="builtin.htm#error">error</a></pre>
+    <h4 id="Reader.Seek">func (*Reader) <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/reader.go?name=release#103">Seek</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (r *<a href="#Reader">Reader</a>) Seek(offset <a href="builtin.htm#int64">int64</a>, whence <a href="builtin.htm#int">int</a>) (<a href="builtin.htm#int64">int64</a>, <a href="builtin.htm#error">error</a>)</pre>
     <p>Seek实现了io.Seeker接口。</p>
-    <h4 id="Reader.ReadAt">func (*Reader) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/reader.go?name=release#44">ReadAt</a> <a class="permalink" href="#Reader.ReadAt">&para;</a></h4>
-    <pre class="funcdecl">func (r *<a href="#Reader">Reader</a>) ReadAt(b []<a href="https://godoc.org/builtin#byte">byte</a>, off <a href="https://godoc.org/builtin#int64">int64</a>) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
-    <h4 id="Reader.WriteTo">func (*Reader) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/reader.go?name=release#124">WriteTo</a> <a class="permalink" href="#Reader.WriteTo">&para;</a></h4>
-    <pre class="funcdecl">func (r *<a href="#Reader">Reader</a>) WriteTo(w <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#Writer">Writer</a>) (n <a href="https://godoc.org/builtin#int64">int64</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h4 id="Reader.ReadAt">func (*Reader) <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/reader.go?name=release#44">ReadAt</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (r *<a href="#Reader">Reader</a>) ReadAt(b []<a href="builtin.htm#byte">byte</a>, off <a href="builtin.htm#int64">int64</a>) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
+    <h4 id="Reader.WriteTo">func (*Reader) <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/reader.go?name=release#124">WriteTo</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (r *<a href="#Reader">Reader</a>) WriteTo(w <a href="io.htm">io</a>.<a href="io.htm#Writer">Writer</a>) (n <a href="builtin.htm#int64">int64</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>WriteTo实现了io.WriterTo接口。</p>
-    <h3 id="Replacer">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/replace.go?name=release#10">Replacer</a> <a class="permalink" href="#Replacer">&para;</a></h3>
+    <h3 id="Replacer">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/replace.go?name=release#10">Replacer</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Replacer struct {
     <span class="com">// 内含隐藏或非导出字段</span>
 }</pre>
     <p>Replacer类型进行一系列字符串的替换。</p>
-    <h4 id="NewReplacer">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/replace.go?name=release#31">NewReplacer</a> <a class="permalink" href="#NewReplacer">&para;</a></h4>
-    <pre class="funcdecl">func NewReplacer(oldnew ...<a href="https://godoc.org/builtin#string">string</a>) *<a href="#Replacer">Replacer</a></pre>
+    <h4 id="NewReplacer">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/replace.go?name=release#31">NewReplacer</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func NewReplacer(oldnew ...<a href="builtin.htm#string">string</a>) *<a href="#Replacer">Replacer</a></pre>
     <p>使用提供的多组old、new字符串对创建并返回一个*Replacer。替换是依次进行的，匹配时不会重叠。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-NewReplacer">
@@ -700,11 +702,11 @@ fmt.Println(r.Replace(&#34;This is &lt;b&gt;HTML&lt;/b&gt;!&#34;))</pre>
             </div>
         </div>
     </div>
-    <h4 id="Replacer.Replace">func (*Replacer) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/replace.go?name=release#78">Replace</a> <a class="permalink" href="#Replacer.Replace">&para;</a></h4>
-    <pre class="funcdecl">func (r *<a href="#Replacer">Replacer</a>) Replace(s <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h4 id="Replacer.Replace">func (*Replacer) <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/replace.go?name=release#78">Replace</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (r *<a href="#Replacer">Replacer</a>) Replace(s <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>Replace返回s的所有替换进行完后的拷贝。</p>
-    <h4 id="Replacer.WriteString">func (*Replacer) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/strings/replace.go?name=release#83">WriteString</a> <a class="permalink" href="#Replacer.WriteString">&para;</a></h4>
-    <pre class="funcdecl">func (r *<a href="#Replacer">Replacer</a>) WriteString(w <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#Writer">Writer</a>, s <a href="https://godoc.org/builtin#string">string</a>) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h4 id="Replacer.WriteString">func (*Replacer) <a title="View Source" href="https://github.com/golang/go/blob/master/src/strings/replace.go?name=release#83">WriteString</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (r *<a href="#Replacer">Replacer</a>) WriteString(w <a href="io.htm">io</a>.<a href="io.htm#Writer">Writer</a>, s <a href="builtin.htm#string">string</a>) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>WriteString向w中写入s的所有替换进行完后的拷贝。</p>
 </div>
 </body>

@@ -83,7 +83,8 @@ Get animal handling licence.
         </div>
     </div>
     <h3 id="pkg-index" class="section-header">Index <a class="permalink" href="#pkg-index">&para;</a></h3>
-    <ul class="list-unstyled">
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#pkg-constants">Constants</a></li>
         <li><a href="#pkg-variables">Variables</a></li>
         <li><a href="#Header">type Header</a></li>
@@ -106,11 +107,12 @@ Get animal handling licence.
             <li><a href="#Writer.Close">func (tw *Writer) Close() error</a></li>
         </ul>
     </ul>
-    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-examples">&para;</a></h4>
-    <ul class="list-unstyled">
+    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#example-package" onclick="$('#ex-package').addClass('in').removeClass('collapse').height('auto')">package</a></li>
     </ul>
-    <h3 id="pkg-constants">Constants <a class="permalink" href="#pkg-constants">&para;</a></h3>
+    <h3 id="pkg-constants">Constants <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>const (
     <span class="com">// 类型</span>
     <span id="TypeReg">TypeReg</span>           = &#39;0&#39;    <span class="com">// 普通文件</span>
@@ -128,73 +130,73 @@ Get animal handling licence.
     <span id="TypeGNULongLink">TypeGNULongLink</span>   = &#39;K&#39;    <span class="com">// 下一个文件记录指向一个具有长名字的文件</span>
     <span id="TypeGNUSparse">TypeGNUSparse</span>     = &#39;S&#39;    <span class="com">// 稀疏文件</span>
 )</pre>
-    <h3 id="pkg-variables">Variables <a class="permalink" href="#pkg-variables">&para;</a></h3>
+    <h3 id="pkg-variables">Variables <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>var (
-    <span id="ErrWriteTooLong">ErrWriteTooLong</span>    = <a href="https://godoc.org/errors">errors</a>.<a href="https://godoc.org/errors#New">New</a>(&#34;archive/tar: write too long&#34;)
-    <span id="ErrFieldTooLong">ErrFieldTooLong</span>    = <a href="https://godoc.org/errors">errors</a>.<a href="https://godoc.org/errors#New">New</a>(&#34;archive/tar: header field too long&#34;)
-    <span id="ErrWriteAfterClose">ErrWriteAfterClose</span> = <a href="https://godoc.org/errors">errors</a>.<a href="https://godoc.org/errors#New">New</a>(&#34;archive/tar: write after close&#34;)
+    <span id="ErrWriteTooLong">ErrWriteTooLong</span>    = <a href="errors.htm">errors</a>.<a href="errors.htm#New">New</a>(&#34;archive/tar: write too long&#34;)
+    <span id="ErrFieldTooLong">ErrFieldTooLong</span>    = <a href="errors.htm">errors</a>.<a href="errors.htm#New">New</a>(&#34;archive/tar: header field too long&#34;)
+    <span id="ErrWriteAfterClose">ErrWriteAfterClose</span> = <a href="errors.htm">errors</a>.<a href="errors.htm#New">New</a>(&#34;archive/tar: write after close&#34;)
 )</pre>
     <pre>var (
-    <span id="ErrHeader">ErrHeader</span> = <a href="https://godoc.org/errors">errors</a>.<a href="https://godoc.org/errors#New">New</a>(&#34;archive/tar: invalid tar header&#34;)
+    <span id="ErrHeader">ErrHeader</span> = <a href="errors.htm">errors</a>.<a href="errors.htm#New">New</a>(&#34;archive/tar: invalid tar header&#34;)
 )</pre>
-    <h3 id="Header">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/archive/tar/common.go?name=release#46">Header</a> <a class="permalink" href="#Header">&para;</a></h3>
+    <h3 id="Header">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/archive/tar/common.go?name=release#46">Header</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Header struct {
-    <span id="Header.Name">Name</span>       <a href="https://godoc.org/builtin#string">string</a>    <span class="com">// 记录头域的文件名</span>
-    <span id="Header.Mode">Mode</span>       <a href="https://godoc.org/builtin#int64">int64</a>     <span class="com">// 权限和模式位</span>
-    <span id="Header.Uid">Uid</span>        <a href="https://godoc.org/builtin#int">int</a>       <span class="com">// 所有者的用户ID</span>
-    <span id="Header.Gid">Gid</span>        <a href="https://godoc.org/builtin#int">int</a>       <span class="com">// 所有者的组ID</span>
-    <span id="Header.Size">Size</span>       <a href="https://godoc.org/builtin#int64">int64</a>     <span class="com">// 字节数（长度）</span>
-    <span id="Header.ModTime">ModTime</span>    <a href="https://godoc.org/time">time</a>.<a href="https://godoc.org/time#Time">Time</a> <span class="com">// 修改时间</span>
-    <span id="Header.Typeflag">Typeflag</span>   <a href="https://godoc.org/builtin#byte">byte</a>      <span class="com">// 记录头的类型</span>
-    <span id="Header.Linkname">Linkname</span>   <a href="https://godoc.org/builtin#string">string</a>    <span class="com">// 链接的目标名</span>
-    <span id="Header.Uname">Uname</span>      <a href="https://godoc.org/builtin#string">string</a>    <span class="com">// 所有者的用户名</span>
-    <span id="Header.Gname">Gname</span>      <a href="https://godoc.org/builtin#string">string</a>    <span class="com">// 所有者的组名</span>
-    <span id="Header.Devmajor">Devmajor</span>   <a href="https://godoc.org/builtin#int64">int64</a>     <span class="com">// 字符设备或块设备的major number</span>
-    <span id="Header.Devminor">Devminor</span>   <a href="https://godoc.org/builtin#int64">int64</a>     <span class="com">// 字符设备或块设备的minor number</span>
-    <span id="Header.AccessTime">AccessTime</span> <a href="https://godoc.org/time">time</a>.<a href="https://godoc.org/time#Time">Time</a> <span class="com">// 访问时间</span>
-    <span id="Header.ChangeTime">ChangeTime</span> <a href="https://godoc.org/time">time</a>.<a href="https://godoc.org/time#Time">Time</a> <span class="com">// 状态改变时间</span>
-    <span id="Header.Xattrs">Xattrs</span>     map[<a href="https://godoc.org/builtin#string">string</a>]<a href="https://godoc.org/builtin#string">string</a>
+    <span id="Header.Name">Name</span>       <a href="builtin.htm#string">string</a>    <span class="com">// 记录头域的文件名</span>
+    <span id="Header.Mode">Mode</span>       <a href="builtin.htm#int64">int64</a>     <span class="com">// 权限和模式位</span>
+    <span id="Header.Uid">Uid</span>        <a href="builtin.htm#int">int</a>       <span class="com">// 所有者的用户ID</span>
+    <span id="Header.Gid">Gid</span>        <a href="builtin.htm#int">int</a>       <span class="com">// 所有者的组ID</span>
+    <span id="Header.Size">Size</span>       <a href="builtin.htm#int64">int64</a>     <span class="com">// 字节数（长度）</span>
+    <span id="Header.ModTime">ModTime</span>    <a href="time.htm">time</a>.<a href="time.htm#Time">Time</a> <span class="com">// 修改时间</span>
+    <span id="Header.Typeflag">Typeflag</span>   <a href="builtin.htm#byte">byte</a>      <span class="com">// 记录头的类型</span>
+    <span id="Header.Linkname">Linkname</span>   <a href="builtin.htm#string">string</a>    <span class="com">// 链接的目标名</span>
+    <span id="Header.Uname">Uname</span>      <a href="builtin.htm#string">string</a>    <span class="com">// 所有者的用户名</span>
+    <span id="Header.Gname">Gname</span>      <a href="builtin.htm#string">string</a>    <span class="com">// 所有者的组名</span>
+    <span id="Header.Devmajor">Devmajor</span>   <a href="builtin.htm#int64">int64</a>     <span class="com">// 字符设备或块设备的major number</span>
+    <span id="Header.Devminor">Devminor</span>   <a href="builtin.htm#int64">int64</a>     <span class="com">// 字符设备或块设备的minor number</span>
+    <span id="Header.AccessTime">AccessTime</span> <a href="time.htm">time</a>.<a href="time.htm#Time">Time</a> <span class="com">// 访问时间</span>
+    <span id="Header.ChangeTime">ChangeTime</span> <a href="time.htm">time</a>.<a href="time.htm#Time">Time</a> <span class="com">// 状态改变时间</span>
+    <span id="Header.Xattrs">Xattrs</span>     map[<a href="builtin.htm#string">string</a>]<a href="builtin.htm#string">string</a>
 }</pre>
     <p>Header代表tar档案文件里的单个头。Header类型的某些字段可能未使用。</p>
-    <h4 id="FileInfoHeader">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/archive/tar/common.go?name=release#204">FileInfoHeader</a> <a class="permalink" href="#FileInfoHeader">&para;</a></h4>
-    <pre class="funcdecl">func FileInfoHeader(fi <a href="https://godoc.org/os">os</a>.<a href="https://godoc.org/os#FileInfo">FileInfo</a>, link <a href="https://godoc.org/builtin#string">string</a>) (*<a href="#Header">Header</a>, <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h4 id="FileInfoHeader">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/archive/tar/common.go?name=release#204">FileInfoHeader</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func FileInfoHeader(fi <a href="os.htm">os</a>.<a href="os.htm#FileInfo">FileInfo</a>, link <a href="builtin.htm#string">string</a>) (*<a href="#Header">Header</a>, <a href="builtin.htm#error">error</a>)</pre>
     <p>FileInfoHeader返回一个根据fi填写了部分字段的Header。 如果fi描述一个符号链接，FileInfoHeader函数将link参数作为链接目标。如果fi描述一个目录，会在名字后面添加斜杠。因为os.FileInfo接口的Name方法只返回它描述的文件的无路径名，有可能需要将返回值的Name字段修改为文件的完整路径名。</p>
-    <h4 id="Header.FileInfo">func (*Header) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/archive/tar/common.go?name=release#71">FileInfo</a> <a class="permalink" href="#Header.FileInfo">&para;</a></h4>
-    <pre class="funcdecl">func (h *<a href="#Header">Header</a>) FileInfo() <a href="https://godoc.org/os">os</a>.<a href="https://godoc.org/os#FileInfo">FileInfo</a></pre>
+    <h4 id="Header.FileInfo">func (*Header) <a title="View Source" href="https://github.com/golang/go/blob/master/src/archive/tar/common.go?name=release#71">FileInfo</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (h *<a href="#Header">Header</a>) FileInfo() <a href="os.htm">os</a>.<a href="os.htm#FileInfo">FileInfo</a></pre>
     <p>FileInfo返回该Header对应的文件信息。（os.FileInfo类型）</p>
-    <h3 id="Reader">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/archive/tar/reader.go?name=release#31">Reader</a> <a class="permalink" href="#Reader">&para;</a></h3>
+    <h3 id="Reader">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/archive/tar/reader.go?name=release#31">Reader</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Reader struct {
     <span class="com">// 内含隐藏或非导出字段</span>
 }</pre>
     <p>Reader提供了对一个tar档案文件的顺序读取。一个tar档案文件包含一系列文件。Next方法返回档案中的下一个文件（包括第一个），返回值可以被视为io.Reader来获取文件的数据。</p>
-    <h4 id="NewReader">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/archive/tar/reader.go?name=release#84">NewReader</a> <a class="permalink" href="#NewReader">&para;</a></h4>
-    <pre class="funcdecl">func NewReader(r <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#Reader">Reader</a>) *<a href="#Reader">Reader</a></pre>
+    <h4 id="NewReader">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/archive/tar/reader.go?name=release#84">NewReader</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func NewReader(r <a href="io.htm">io</a>.<a href="io.htm#Reader">Reader</a>) *<a href="#Reader">Reader</a></pre>
     <p>NewReader创建一个从r读取的Reader。</p>
-    <h4 id="Reader.Next">func (*Reader) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/archive/tar/reader.go?name=release#87">Next</a> <a class="permalink" href="#Reader.Next">&para;</a></h4>
-    <pre class="funcdecl">func (tr *<a href="#Reader">Reader</a>) Next() (*<a href="#Header">Header</a>, <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h4 id="Reader.Next">func (*Reader) <a title="View Source" href="https://github.com/golang/go/blob/master/src/archive/tar/reader.go?name=release#87">Next</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (tr *<a href="#Reader">Reader</a>) Next() (*<a href="#Header">Header</a>, <a href="builtin.htm#error">error</a>)</pre>
     <p>转入tar档案文件下一记录，它会返回下一记录的头域。</p>
-    <h4 id="Reader.Read">func (*Reader) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/archive/tar/reader.go?name=release#726">Read</a> <a class="permalink" href="#Reader.Read">&para;</a></h4>
-    <pre class="funcdecl">func (tr *<a href="#Reader">Reader</a>) Read(b []<a href="https://godoc.org/builtin#byte">byte</a>) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h4 id="Reader.Read">func (*Reader) <a title="View Source" href="https://github.com/golang/go/blob/master/src/archive/tar/reader.go?name=release#726">Read</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (tr *<a href="#Reader">Reader</a>) Read(b []<a href="builtin.htm#byte">byte</a>) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>从档案文件的当前记录读取数据，到达记录末端时返回(0, EOF)，直到调用Next方法转入下一记录。</p>
-    <h3 id="Writer">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/archive/tar/writer.go?name=release#34">Writer</a> <a class="permalink" href="#Writer">&para;</a></h3>
+    <h3 id="Writer">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/archive/tar/writer.go?name=release#34">Writer</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Writer struct {
     <span class="com">// 内含隐藏或非导出字段</span>
 }</pre>
     <p>Writer类型提供了POSIX.1格式的tar档案文件的顺序写入。一个tar档案文件包含一系列文件。调用WriteHeader来写入一个新的文件，然后调用Write写入文件的数据，该记录写入的数据不能超过hdr.Size字节。</p>
-    <h4 id="NewWriter">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/archive/tar/writer.go?name=release#45">NewWriter</a> <a class="permalink" href="#NewWriter">&para;</a></h4>
-    <pre class="funcdecl">func NewWriter(w <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#Writer">Writer</a>) *<a href="#Writer">Writer</a></pre>
+    <h4 id="NewWriter">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/archive/tar/writer.go?name=release#45">NewWriter</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func NewWriter(w <a href="io.htm">io</a>.<a href="io.htm#Writer">Writer</a>) *<a href="#Writer">Writer</a></pre>
     <p>NewWriter创建一个写入w的*Writer。</p>
-    <h4 id="Writer.WriteHeader">func (*Writer) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/archive/tar/writer.go?name=release#136">WriteHeader</a> <a class="permalink" href="#Writer.WriteHeader">&para;</a></h4>
-    <pre class="funcdecl">func (tw *<a href="#Writer">Writer</a>) WriteHeader(hdr *<a href="#Header">Header</a>) <a href="https://godoc.org/builtin#error">error</a></pre>
+    <h4 id="Writer.WriteHeader">func (*Writer) <a title="View Source" href="https://github.com/golang/go/blob/master/src/archive/tar/writer.go?name=release#136">WriteHeader</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (tw *<a href="#Writer">Writer</a>) WriteHeader(hdr *<a href="#Header">Header</a>) <a href="builtin.htm#error">error</a></pre>
     <p>WriteHeader写入hdr并准备接受文件内容。如果不是第一次调用本方法，会调用Flush。在Close之后调用本方法会返回ErrWriteAfterClose。</p>
-    <h4 id="Writer.Write">func (*Writer) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/archive/tar/writer.go?name=release#343">Write</a> <a class="permalink" href="#Writer.Write">&para;</a></h4>
-    <pre class="funcdecl">func (tw *<a href="#Writer">Writer</a>) Write(b []<a href="https://godoc.org/builtin#byte">byte</a>) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h4 id="Writer.Write">func (*Writer) <a title="View Source" href="https://github.com/golang/go/blob/master/src/archive/tar/writer.go?name=release#343">Write</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (tw *<a href="#Writer">Writer</a>) Write(b []<a href="builtin.htm#byte">byte</a>) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>Write向tar档案文件的当前记录中写入数据。如果写入的数据总数超出上一次调用WriteHeader的参数hdr.Size字节，返回ErrWriteTooLong错误。</p>
-    <h4 id="Writer.Flush">func (*Writer) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/archive/tar/writer.go?name=release#48">Flush</a> <a class="permalink" href="#Writer.Flush">&para;</a></h4>
-    <pre class="funcdecl">func (tw *<a href="#Writer">Writer</a>) Flush() <a href="https://godoc.org/builtin#error">error</a></pre>
+    <h4 id="Writer.Flush">func (*Writer) <a title="View Source" href="https://github.com/golang/go/blob/master/src/archive/tar/writer.go?name=release#48">Flush</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (tw *<a href="#Writer">Writer</a>) Flush() <a href="builtin.htm#error">error</a></pre>
     <p>Flush结束当前文件的写入。（可选的）</p>
-    <h4 id="Writer.Close">func (*Writer) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/archive/tar/writer.go?name=release#365">Close</a> <a class="permalink" href="#Writer.Close">&para;</a></h4>
-    <pre class="funcdecl">func (tw *<a href="#Writer">Writer</a>) Close() <a href="https://godoc.org/builtin#error">error</a></pre>
+    <h4 id="Writer.Close">func (*Writer) <a title="View Source" href="https://github.com/golang/go/blob/master/src/archive/tar/writer.go?name=release#365">Close</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (tw *<a href="#Writer">Writer</a>) Close() <a href="builtin.htm#error">error</a></pre>
     <p>Close关闭tar档案文件，会将缓冲中未写入下层的io.Writer接口的数据刷新到下层。</p>
 </div>
 </body>

@@ -33,27 +33,28 @@
     <p>要查看所有可用的剖面，在你的浏览器阅读<a href="http://localhost:6060/debug/pprof/">http://localhost:6060/debug/pprof/</a>。要学习这些运转的设施，访问：</p>
     <pre><a href="http://blog.golang.org/2011/06/profiling-go-programs.html">http://blog.golang.org/2011/06/profiling-go-programs.html</a></pre>
     <h3 id="pkg-index" class="section-header">Index <a class="permalink" href="#pkg-index">&para;</a></h3>
-    <ul class="list-unstyled">
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#Handler">func Handler(name string) http.Handler</a></li>
         <li><a href="#Cmdline">func Cmdline(w http.ResponseWriter, r *http.Request)</a></li>
         <li><a href="#Index">func Index(w http.ResponseWriter, r *http.Request)</a></li>
         <li><a href="#Profile">func Profile(w http.ResponseWriter, r *http.Request)</a></li>
         <li><a href="#Symbol">func Symbol(w http.ResponseWriter, r *http.Request)</a></li>
     </ul>
-    <h3 id="Handler">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/net/http/pprof/pprof.go?name=release#150">Handler</a> <a class="permalink" href="#Handler">&para;</a></h3>
-    <pre class="funcdecl">func Handler(name <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/net/http">http</a>.<a href="https://godoc.org/net/http#Handler">Handler</a></pre>
+    <h3 id="Handler">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/net/http/pprof/pprof.go?name=release#150">Handler</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Handler(name <a href="builtin.htm#string">string</a>) <a href="net/http.htm">http</a>.<a href="net/http.htm#Handler">Handler</a></pre>
     <p>Handler返回一个提供name指定的剖面文件的服务的HTTP处理器。</p>
-    <h3 id="Cmdline">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/net/http/pprof/pprof.go?name=release#72">Cmdline</a> <a class="permalink" href="#Cmdline">&para;</a></h3>
-    <pre class="funcdecl">func Cmdline(w <a href="https://godoc.org/net/http">http</a>.<a href="https://godoc.org/net/http#ResponseWriter">ResponseWriter</a>, r *<a href="https://godoc.org/net/http">http</a>.<a href="https://godoc.org/net/http#Request">Request</a>)</pre>
+    <h3 id="Cmdline">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/net/http/pprof/pprof.go?name=release#72">Cmdline</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Cmdline(w <a href="net/http.htm">http</a>.<a href="net/http.htm#ResponseWriter">ResponseWriter</a>, r *<a href="net/http.htm">http</a>.<a href="net/http.htm#Request">Request</a>)</pre>
     <p>Cmdline回应执行中程序的命令行，采用NUL字节分隔的参数。本包将它注册在/debug/pprof/cmdline。</p>
-    <h3 id="Index">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/net/http/pprof/pprof.go?name=release#173">Index</a> <a class="permalink" href="#Index">&para;</a></h3>
-    <pre class="funcdecl">func Index(w <a href="https://godoc.org/net/http">http</a>.<a href="https://godoc.org/net/http#ResponseWriter">ResponseWriter</a>, r *<a href="https://godoc.org/net/http">http</a>.<a href="https://godoc.org/net/http#Request">Request</a>)</pre>
+    <h3 id="Index">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/net/http/pprof/pprof.go?name=release#173">Index</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Index(w <a href="net/http.htm">http</a>.<a href="net/http.htm#ResponseWriter">ResponseWriter</a>, r *<a href="net/http.htm">http</a>.<a href="net/http.htm#Request">Request</a>)</pre>
     <p>Index回复请求要求的pprof格式的剖面。例如，"/debug/pprof/heap"会回复"heap"剖面。Index会回复"/debug/pprof/" 请求一个列出所有可用的剖面的HTML页面。</p>
-    <h3 id="Profile">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/net/http/pprof/pprof.go?name=release#79">Profile</a> <a class="permalink" href="#Profile">&para;</a></h3>
-    <pre class="funcdecl">func Profile(w <a href="https://godoc.org/net/http">http</a>.<a href="https://godoc.org/net/http#ResponseWriter">ResponseWriter</a>, r *<a href="https://godoc.org/net/http">http</a>.<a href="https://godoc.org/net/http#Request">Request</a>)</pre>
+    <h3 id="Profile">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/net/http/pprof/pprof.go?name=release#79">Profile</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Profile(w <a href="net/http.htm">http</a>.<a href="net/http.htm#ResponseWriter">ResponseWriter</a>, r *<a href="net/http.htm">http</a>.<a href="net/http.htm#Request">Request</a>)</pre>
     <p>Profile回复pprof格式的CPU剖面。本包将它注册在/debug/pprof/profile。</p>
-    <h3 id="Symbol">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/net/http/pprof/pprof.go?name=release#104">Symbol</a> <a class="permalink" href="#Symbol">&para;</a></h3>
-    <pre class="funcdecl">func Symbol(w <a href="https://godoc.org/net/http">http</a>.<a href="https://godoc.org/net/http#ResponseWriter">ResponseWriter</a>, r *<a href="https://godoc.org/net/http">http</a>.<a href="https://godoc.org/net/http#Request">Request</a>)</pre>
+    <h3 id="Symbol">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/net/http/pprof/pprof.go?name=release#104">Symbol</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Symbol(w <a href="net/http.htm">http</a>.<a href="net/http.htm#ResponseWriter">ResponseWriter</a>, r *<a href="net/http.htm">http</a>.<a href="net/http.htm#Request">Request</a>)</pre>
     <p>Symbol查看请求中列出的程序计数器，回复一个映射程序计数器到函数名的表格。本包将它注册在/debug/pprof/symbol。</p>
 </div>
 </body>

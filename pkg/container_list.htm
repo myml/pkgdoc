@@ -40,7 +40,8 @@ for e := l.Front(); e != nil; e = e.Next() {
         </div>
     </div>
     <h3 id="pkg-index" class="section-header">Index <a class="permalink" href="#pkg-index">&para;</a></h3>
-    <ul class="list-unstyled">
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#Element">type Element</a></li>
         <ul>
             <li><a href="#Element.Next">func (e *Element) Next() *Element</a></li>
@@ -66,74 +67,75 @@ for e := l.Front(); e != nil; e = e.Next() {
             <li><a href="#List.Remove">func (l *List) Remove(e *Element) interface{}</a></li>
         </ul>
     </ul>
-    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-examples">&para;</a></h4>
-    <ul class="list-unstyled">
+    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#example-package" onclick="$('#ex-package').addClass('in').removeClass('collapse').height('auto')">package</a></li>
     </ul>
-    <h3 id="Element">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#15">Element</a> <a class="permalink" href="#Element">&para;</a></h3>
+    <h3 id="Element">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#15">Element</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Element struct {
     <span class="com">// 元素保管的值</span>
     <span id="Element.Value">Value</span> interface{}
     <span class="com">// 内含隐藏或非导出字段</span>
 }</pre>
     <p>Element类型代表是双向链表的一个元素。</p>
-    <h4 id="Element.Next">func (*Element) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#31">Next</a> <a class="permalink" href="#Element.Next">&para;</a></h4>
+    <h4 id="Element.Next">func (*Element) <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#31">Next</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (e *<a href="#Element">Element</a>) Next() *<a href="#Element">Element</a></pre>
     <p>Next返回链表的后一个元素或者nil。</p>
-    <h4 id="Element.Prev">func (*Element) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#39">Prev</a> <a class="permalink" href="#Element.Prev">&para;</a></h4>
+    <h4 id="Element.Prev">func (*Element) <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#39">Prev</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (e *<a href="#Element">Element</a>) Prev() *<a href="#Element">Element</a></pre>
     <p>Prev返回链表的前一个元素或者nil。</p>
-    <h3 id="List">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#48">List</a> <a class="permalink" href="#List">&para;</a></h3>
+    <h3 id="List">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#48">List</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type List struct {
     <span class="com">// 内含隐藏或非导出字段</span>
 }</pre>
     <p>List代表一个双向链表。List零值为一个空的、可用的链表。</p>
-    <h4 id="New">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#62">New</a> <a class="permalink" href="#New">&para;</a></h4>
+    <h4 id="New">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#62">New</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func New() *<a href="#List">List</a></pre>
     <p>New创建一个链表。</p>
-    <h4 id="List.Init">func (*List) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#54">Init</a> <a class="permalink" href="#List.Init">&para;</a></h4>
+    <h4 id="List.Init">func (*List) <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#54">Init</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (l *<a href="#List">List</a>) Init() *<a href="#List">List</a></pre>
     <p>Init清空链表。</p>
-    <h4 id="List.Len">func (*List) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#66">Len</a> <a class="permalink" href="#List.Len">&para;</a></h4>
-    <pre class="funcdecl">func (l *<a href="#List">List</a>) Len() <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h4 id="List.Len">func (*List) <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#66">Len</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (l *<a href="#List">List</a>) Len() <a href="builtin.htm#int">int</a></pre>
     <p>Len返回链表中元素的个数，复杂度O(1)。</p>
-    <h4 id="List.Front">func (*List) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#69">Front</a> <a class="permalink" href="#List.Front">&para;</a></h4>
+    <h4 id="List.Front">func (*List) <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#69">Front</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (l *<a href="#List">List</a>) Front() *<a href="#Element">Element</a></pre>
     <p>Front返回链表第一个元素或nil。</p>
-    <h4 id="List.Back">func (*List) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#77">Back</a> <a class="permalink" href="#List.Back">&para;</a></h4>
+    <h4 id="List.Back">func (*List) <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#77">Back</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (l *<a href="#List">List</a>) Back() *<a href="#Element">Element</a></pre>
     <p>Back返回链表最后一个元素或nil。</p>
-    <h4 id="List.PushFront">func (*List) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#131">PushFront</a> <a class="permalink" href="#List.PushFront">&para;</a></h4>
+    <h4 id="List.PushFront">func (*List) <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#131">PushFront</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (l *<a href="#List">List</a>) PushFront(v interface{}) *<a href="#Element">Element</a></pre>
     <p>PushBack将一个值为v的新元素插入链表的第一个位置，返回生成的新元素。</p>
-    <h4 id="List.PushFrontList">func (*List) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#211">PushFrontList</a> <a class="permalink" href="#List.PushFrontList">&para;</a></h4>
+    <h4 id="List.PushFrontList">func (*List) <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#211">PushFrontList</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (l *<a href="#List">List</a>) PushFrontList(other *<a href="#List">List</a>)</pre>
     <p>PushFrontList创建链表other的拷贝，并将拷贝的最后一个位置连接到链表l的第一个位置。</p>
-    <h4 id="List.PushBack">func (*List) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#137">PushBack</a> <a class="permalink" href="#List.PushBack">&para;</a></h4>
+    <h4 id="List.PushBack">func (*List) <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#137">PushBack</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (l *<a href="#List">List</a>) PushBack(v interface{}) *<a href="#Element">Element</a></pre>
     <p>PushBack将一个值为v的新元素插入链表的最后一个位置，返回生成的新元素。</p>
-    <h4 id="List.PushBackList">func (*List) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#202">PushBackList</a> <a class="permalink" href="#List.PushBackList">&para;</a></h4>
+    <h4 id="List.PushBackList">func (*List) <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#202">PushBackList</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (l *<a href="#List">List</a>) PushBackList(other *<a href="#List">List</a>)</pre>
     <p>PushBack创建链表other的拷贝，并将链表l的最后一个位置连接到拷贝的第一个位置。</p>
-    <h4 id="List.InsertBefore">func (*List) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#144">InsertBefore</a> <a class="permalink" href="#List.InsertBefore">&para;</a></h4>
+    <h4 id="List.InsertBefore">func (*List) <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#144">InsertBefore</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (l *<a href="#List">List</a>) InsertBefore(v interface{}, mark *<a href="#Element">Element</a>) *<a href="#Element">Element</a></pre>
     <p>InsertDefore将一个值为v的新元素插入到mark前面，并返回生成的新元素。如果mark不是l的元素，l不会被修改。</p>
-    <h4 id="List.InsertAfter">func (*List) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#154">InsertAfter</a> <a class="permalink" href="#List.InsertAfter">&para;</a></h4>
+    <h4 id="List.InsertAfter">func (*List) <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#154">InsertAfter</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (l *<a href="#List">List</a>) InsertAfter(v interface{}, mark *<a href="#Element">Element</a>) *<a href="#Element">Element</a></pre>
     <p>InsertAfter将一个值为v的新元素插入到mark后面，并返回新生成的元素。如果mark不是l的元素，l不会被修改。</p>
-    <h4 id="List.MoveToFront">func (*List) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#164">MoveToFront</a> <a class="permalink" href="#List.MoveToFront">&para;</a></h4>
+    <h4 id="List.MoveToFront">func (*List) <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#164">MoveToFront</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (l *<a href="#List">List</a>) MoveToFront(e *<a href="#Element">Element</a>)</pre>
     <p>MoveToFront将元素e移动到链表的第一个位置，如果e不是l的元素，l不会被修改。</p>
-    <h4 id="List.MoveToBack">func (*List) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#174">MoveToBack</a> <a class="permalink" href="#List.MoveToBack">&para;</a></h4>
+    <h4 id="List.MoveToBack">func (*List) <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#174">MoveToBack</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (l *<a href="#List">List</a>) MoveToBack(e *<a href="#Element">Element</a>)</pre>
     <p>MoveToBack将元素e移动到链表的最后一个位置，如果e不是l的元素，l不会被修改。</p>
-    <h4 id="List.MoveBefore">func (*List) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#184">MoveBefore</a> <a class="permalink" href="#List.MoveBefore">&para;</a></h4>
+    <h4 id="List.MoveBefore">func (*List) <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#184">MoveBefore</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (l *<a href="#List">List</a>) MoveBefore(e, mark *<a href="#Element">Element</a>)</pre>
     <p>MoveBefore将元素e移动到mark的前面。如果e或mark不是l的元素，或者e==mark，l不会被修改。</p>
-    <h4 id="List.MoveAfter">func (*List) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#193">MoveAfter</a> <a class="permalink" href="#List.MoveAfter">&para;</a></h4>
+    <h4 id="List.MoveAfter">func (*List) <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#193">MoveAfter</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (l *<a href="#List">List</a>) MoveAfter(e, mark *<a href="#Element">Element</a>)</pre>
     <p>MoveAfter将元素e移动到mark的后面。如果e或mark不是l的元素，或者e==mark，l不会被修改。</p>
-    <h4 id="List.Remove">func (*List) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/container/list/list.go?name=release#121">Remove</a> <a class="permalink" href="#List.Remove">&para;</a></h4>
+    <h4 id="List.Remove">func (*List) <a title="View Source" href="https://github.com/golang/go/blob/master/src/container/list/list.go?name=release#121">Remove</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (l *<a href="#List">List</a>) Remove(e *<a href="#Element">Element</a>) interface{}</pre>
     <p>Remove删除链表中的元素e，并返回e.Value。</p>
 </div>

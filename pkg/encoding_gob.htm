@@ -12,10 +12,10 @@
     <p><code>import "encoding/gob"</code>
     <p align="left">gob包管理gob流——在编码器（发送器）和解码器（接受器）之间交换的binary值。一般用于传递远端程序调用（RPC）的参数和结果，如net/rpc包就有提供。</p>
     <p align="left">本实现给每一个数据类型都编译生成一个编解码程序，当单个编码器用于传递数据流时，会分期偿还编译的消耗，是效率最高的。</p>
-    <h4 id="hdr-Basics">Basics <a class="permalink" href="#hdr-Basics">&para</a></h4>
+    <h4 id="hdr-Basics">Basics <a class="permalink" href="#pkg-index">&para</a></h4>
     <p align="left">Gob流是自解码的。流中的所有数据都有前缀（采用一个预定义类型的集合）指明其类型。指针不会传递，而是传递值；也就是说数据是压平了的。递归的类型可以很好的工作，但是递归的值（比如说值内某个成员直接/间接指向该值）会出问题。这个问题将来可能会修复。</p>
     <p align="left">要使用gob，先要创建一个编码器，并向其一共一系列数据：可以是值，也可以是指向实际存在数据的指针。编码器会确保所有必要的类型信息都被发送。在接收端，解码器从编码数据流中恢复数据并将它们填写进本地变量里。</p>
-    <h4 id="hdr-Types_and_Values">Types and Values <a class="permalink" href="#hdr-Types_and_Values">&para</a></h4>
+    <h4 id="hdr-Types_and_Values">Types and Values <a class="permalink" href="#pkg-index">&para</a></h4>
     <p>发送端和接收端的值/类型不需要严格匹配。对结构体来说，字段（根据字段名识别）如果发送端有而接收端没有，会被忽略；接收端有而发送端没有的字段也会被忽略；发送端和接收端都有的字段其类型必须是可兼容的；发送端和接收端都会在gob流和实际go类型之间进行必要的指针取址/寻址工作。举例如下：</p>
     <pre>struct { A, B int }
 </pre>
@@ -41,7 +41,7 @@ struct { C, D int }		// 无共同字段名</pre>
     <p align="left">Gob流不支持函数和通道。试图在最顶层编码这些类型的值会导致失败。结构体中包含函数或者通道类型的字段的话，会视作非导出字段（忽略）处理。</p>
     <p align="left">Gob可以编码任意实现了GobEncoder接口或者encoding.BinaryMarshaler接口的类型的值（通过调用对应的方法），GobEncoder接口优先。</p>
     <p align="left">Gob可以解码任意实现了GobDecoder接口或者encoding.BinaryUnmarshaler接口的类型的值（通过调用对应的方法），同样GobDecoder接口优先。</p>
-    <h4 id="hdr-Encoding_Details">Encoding Details <a class="permalink" href="#hdr-Encoding_Details">&para</a></h4>
+    <h4 id="hdr-Encoding_Details">Encoding Details <a class="permalink" href="#pkg-index">&para</a></h4>
     <p align="left">这部分文档是编码细节，对多数使用者并不重要。细节是按从底向上的顺序展示的。</p>
     <p align="left">无符号整数用两种方法发送。如果该整数小于128，则以一个字节发送该值；否则采用最小长度大端在前的字节流保存该整数，并在最前面使用一个字节保存字节流的字节数相反数。因此0被发送为(00)，7被发送为(07)，而256被发送为(FE 01 00)（字节数2，其相反数-2，用补码表示，为FE）。</p>
     <p align="left">布尔值按无符号整数编码，0表示假，1表示真。</p>
@@ -311,7 +311,8 @@ func interfaceDecode(dec *gob.Decoder) Pythagoras {
         </div>
     </div>
     <h3 id="pkg-index" class="section-header">Index <a class="permalink" href="#pkg-index">&para;</a></h3>
-    <ul class="list-unstyled">
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#GobDecoder">type GobDecoder</a></li>
         <li><a href="#GobEncoder">type GobEncoder</a></li>
         <li><a href="#Register">func Register(value interface{})</a></li>
@@ -330,64 +331,65 @@ func interfaceDecode(dec *gob.Decoder) Pythagoras {
         </ul>
         <li><a href="#CommonType">type CommonType</a></li>
     </ul>
-    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-examples">&para;</a></h4>
-    <ul class="list-unstyled">
+    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#example-package--Basic" onclick="$('#ex-package--Basic').addClass('in').removeClass('collapse').height('auto')">package (Basic)</a></li>
         <li><a href="#example-package--EncodeDecode" onclick="$('#ex-package--EncodeDecode').addClass('in').removeClass('collapse').height('auto')">package (EncodeDecode)</a></li>
         <li><a href="#example-package--Interface" onclick="$('#ex-package--Interface').addClass('in').removeClass('collapse').height('auto')">package (Interface)</a></li>
     </ul>
-    <h3 id="GobDecoder">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/encoding/gob/type.go?name=release#773">GobDecoder</a> <a class="permalink" href="#GobDecoder">&para;</a></h3>
+    <h3 id="GobDecoder">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/encoding/gob/type.go?name=release#773">GobDecoder</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type GobDecoder interface {
     <span class="com">// GobDecode必须是指针的方法，使用切片数据重写指针指向的值</span>
     <span class="com">// 切片数据应该由同一具体类型的GobEncode生成</span>
-    <span id="GobDecoder.GobDecode">GobDecode</span>([]<a href="https://godoc.org/builtin#byte">byte</a>) <a href="https://godoc.org/builtin#error">error</a>
+    <span id="GobDecoder.GobDecode">GobDecode</span>([]<a href="builtin.htm#byte">byte</a>) <a href="builtin.htm#error">error</a>
 }</pre>
     <p>GobDecoder是一个描述数据的接口，提供自己的方案来解码GobEncoder发送的数据。</p>
-    <h3 id="GobEncoder">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/encoding/gob/type.go?name=release#764">GobEncoder</a> <a class="permalink" href="#GobEncoder">&para;</a></h3>
+    <h3 id="GobEncoder">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/encoding/gob/type.go?name=release#764">GobEncoder</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type GobEncoder interface {
     <span class="com">// GobEncode方法返回一个代表值的切片数据</span>
     <span class="com">// 该切片数据由同一类型的指针方法GobDecoder接受解码</span><span class="com"></span>
-    <span id="GobEncoder.GobEncode">GobEncode</span>() ([]<a href="https://godoc.org/builtin#byte">byte</a>, <a href="https://godoc.org/builtin#error">error</a>)
+    <span id="GobEncoder.GobEncode">GobEncode</span>() ([]<a href="builtin.htm#byte">byte</a>, <a href="builtin.htm#error">error</a>)
 }</pre>
     <p align="left">GobEncoder是一个描述数据的接口，提供自己的方案来将数据编码供GobDecoder接收并解码。一个实现了GobEncoder接口和GobDecoder接口的类型可以完全控制自身数据的表示，因此可以包含非导出字段、通道、函数等数据，这些数据gob流正常是不能传输的。</p>
     <p align="left">注意：因为gob数据可以被永久保存，在软件更新的过程中保证用于GobEncoder编码的数据的稳定性（保证兼容）是较好的设计原则。例如，让GobEncode 接口在编码后数据里包含版本信息可能很有意义。</p>
-    <h3 id="Register">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/encoding/gob/type.go?name=release#816">Register</a> <a class="permalink" href="#Register">&para;</a></h3>
+    <h3 id="Register">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/encoding/gob/type.go?name=release#816">Register</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre class="funcdecl">func Register(value interface{})</pre>
     <p>Register记录value下层具体值的类型和其名称。该名称将用来识别发送或接受接口类型值时下层的具体类型。本函数只应在初始化时调用，如果类型和名字的映射不是一一对应的，会panic。</p>
-    <h3 id="RegisterName">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/encoding/gob/type.go?name=release#788">RegisterName</a> <a class="permalink" href="#RegisterName">&para;</a></h3>
-    <pre class="funcdecl">func RegisterName(name <a href="https://godoc.org/builtin#string">string</a>, value interface{})</pre>
+    <h3 id="RegisterName">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/encoding/gob/type.go?name=release#788">RegisterName</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func RegisterName(name <a href="builtin.htm#string">string</a>, value interface{})</pre>
     <p>RegisterName类似Register，淡灰使用提供的name代替类型的默认名称。</p>
-    <h3 id="Decoder">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/encoding/gob/decoder.go?name=release#18">Decoder</a> <a class="permalink" href="#Decoder">&para;</a></h3>
+    <h3 id="Decoder">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/encoding/gob/decoder.go?name=release#18">Decoder</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Decoder struct {
     <span class="com">// 内含隐藏或不导出字段</span>
 }</pre>
     <p>Decoder管理从连接远端读取的类型和数据信息的解释（的操作）。</p>
-    <h4 id="NewDecoder">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/encoding/gob/decoder.go?name=release#34">NewDecoder</a> <a class="permalink" href="#NewDecoder">&para;</a></h4>
-    <pre class="funcdecl">func NewDecoder(r <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#Reader">Reader</a>) *<a href="#Decoder">Decoder</a></pre>
+    <h4 id="NewDecoder">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/encoding/gob/decoder.go?name=release#34">NewDecoder</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func NewDecoder(r <a href="io.htm">io</a>.<a href="io.htm#Reader">Reader</a>) *<a href="#Decoder">Decoder</a></pre>
     <p>函数返回一个从r读取数据的*Decoder，如果r不满足io.ByteReader接口，则会包装r为bufio.Reader。</p>
-    <h4 id="Decoder.Decode">func (*Decoder) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/encoding/gob/decoder.go?name=release#193">Decode</a> <a class="permalink" href="#Decoder.Decode">&para;</a></h4>
-    <pre class="funcdecl">func (dec *<a href="#Decoder">Decoder</a>) Decode(e interface{}) <a href="https://godoc.org/builtin#error">error</a></pre>
+    <h4 id="Decoder.Decode">func (*Decoder) <a title="View Source" href="https://github.com/golang/go/blob/master/src/encoding/gob/decoder.go?name=release#193">Decode</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (dec *<a href="#Decoder">Decoder</a>) Decode(e interface{}) <a href="builtin.htm#error">error</a></pre>
     <p>Decode从输入流读取下一个之并将该值存入e。如果e是nil，将丢弃该值；否则e必须是可接收该值的类型的指针。如果输入结束，方法会返回io.EOF并且不修改e（指向的值）。</p>
-    <h4 id="Decoder.DecodeValue">func (*Decoder) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/encoding/gob/decoder.go?name=release#213">DecodeValue</a> <a class="permalink" href="#Decoder.DecodeValue">&para;</a></h4>
-    <pre class="funcdecl">func (dec *<a href="#Decoder">Decoder</a>) DecodeValue(v <a href="https://godoc.org/reflect">reflect</a>.<a href="https://godoc.org/reflect#Value">Value</a>) <a href="https://godoc.org/builtin#error">error</a></pre>
+    <h4 id="Decoder.DecodeValue">func (*Decoder) <a title="View Source" href="https://github.com/golang/go/blob/master/src/encoding/gob/decoder.go?name=release#213">DecodeValue</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (dec *<a href="#Decoder">Decoder</a>) DecodeValue(v <a href="reflect.htm">reflect</a>.<a href="reflect.htm#Value">Value</a>) <a href="builtin.htm#error">error</a></pre>
     <p>DecodeValue从输入流读取下一个值，如果v是reflect.Value类型的零值（v.Kind() == Invalid），方法丢弃该值；否则它会把该值存入v。此时，v必须代表一个非nil的指向实际存在值的指针或者可写入的reflect.Value（v.CanSet()为真）。如果输入结束，方法会返回io.EOF并且不修改e（指向的值）。</p>
-    <h3 id="Encoder">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/encoding/gob/encoder.go?name=release#16">Encoder</a> <a class="permalink" href="#Encoder">&para;</a></h3>
+    <h3 id="Encoder">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/encoding/gob/encoder.go?name=release#16">Encoder</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Encoder struct {
     <span class="com">// 内含隐藏或不导出字段</span>
 }</pre>
     <p>Encoder管理将数据和类型信息编码后发送到连接远端（的操作）。</p>
-    <h4 id="NewEncoder">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/encoding/gob/encoder.go?name=release#33">NewEncoder</a> <a class="permalink" href="#NewEncoder">&para;</a></h4>
-    <pre class="funcdecl">func NewEncoder(w <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#Writer">Writer</a>) *<a href="#Encoder">Encoder</a></pre>
+    <h4 id="NewEncoder">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/encoding/gob/encoder.go?name=release#33">NewEncoder</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func NewEncoder(w <a href="io.htm">io</a>.<a href="io.htm#Writer">Writer</a>) *<a href="#Encoder">Encoder</a></pre>
     <p>NewEncoder返回一个将编码后数据写入w的*Encoder。</p>
-    <h4 id="Encoder.Encode">func (*Encoder) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/encoding/gob/encoder.go?name=release#170">Encode</a> <a class="permalink" href="#Encoder.Encode">&para;</a></h4>
-    <pre class="funcdecl">func (enc *<a href="#Encoder">Encoder</a>) Encode(e interface{}) <a href="https://godoc.org/builtin#error">error</a></pre>
+    <h4 id="Encoder.Encode">func (*Encoder) <a title="View Source" href="https://github.com/golang/go/blob/master/src/encoding/gob/encoder.go?name=release#170">Encode</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (enc *<a href="#Encoder">Encoder</a>) Encode(e interface{}) <a href="builtin.htm#error">error</a></pre>
     <p>Encode方法将e编码后发送，并且会保证所有的类型信息都先发送。</p>
-    <h4 id="Encoder.EncodeValue">func (*Encoder) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/encoding/gob/encoder.go?name=release#214">EncodeValue</a> <a class="permalink" href="#Encoder.EncodeValue">&para;</a></h4>
-    <pre class="funcdecl">func (enc *<a href="#Encoder">Encoder</a>) EncodeValue(value <a href="https://godoc.org/reflect">reflect</a>.<a href="https://godoc.org/reflect#Value">Value</a>) <a href="https://godoc.org/builtin#error">error</a></pre>
+    <h4 id="Encoder.EncodeValue">func (*Encoder) <a title="View Source" href="https://github.com/golang/go/blob/master/src/encoding/gob/encoder.go?name=release#214">EncodeValue</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (enc *<a href="#Encoder">Encoder</a>) EncodeValue(value <a href="reflect.htm">reflect</a>.<a href="reflect.htm#Value">Value</a>) <a href="builtin.htm#error">error</a></pre>
     <p>EncodeValue方法将value代表的数据编码后发送，并且会保证所有的类型信息都先发送。</p>
-    <h3 id="CommonType">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/encoding/gob/type.go?name=release#225">CommonType</a> <a class="permalink" href="#CommonType">&para;</a></h3>
+    <h3 id="CommonType">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/encoding/gob/type.go?name=release#225">CommonType</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type CommonType struct {
-    <span id="CommonType.Name">Name</span> <a href="https://godoc.org/builtin#string">string</a>
+    <span id="CommonType.Name">Name</span> <a href="builtin.htm#string">string</a>
     <span id="CommonType.Id">Id</span>   typeId
 }</pre>
     <p>CommonType保存所有类型的成员。这是个历史遗留&ldquo;问题&rdquo;，出于保持binary兼容性才保留，只用于类型描述的编码。该类型应视为不导出类型。</p>

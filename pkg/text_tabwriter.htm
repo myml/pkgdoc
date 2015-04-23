@@ -13,7 +13,8 @@
     <p align="left">tabwriter包实现了写入过滤器（tabwriter.Writer），可以将输入的缩进修正为正确的对齐文本。</p>
     <p align="left">本包采用的Elastic Tabstops算法参见<a href="http://nickgravgaard.com/elastictabstops/index.html">http://nickgravgaard.com/elastictabstops/index.html</a></p>
     <h3 id="pkg-index" class="section-header">Index <a class="permalink" href="#pkg-index">&para;</a></h3>
-    <ul class="list-unstyled">
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#pkg-constants">Constants</a></li>
         <li><a href="#Writer">type Writer</a></li>
         <ul>
@@ -23,14 +24,15 @@
             <li><a href="#Writer.Flush">func (b *Writer) Flush() (err error)</a></li>
         </ul>
     </ul>
-    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-examples">&para;</a></h4>
-    <ul class="list-unstyled">
+    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#example-Writer-Init" onclick="$('#ex-Writer-Init').addClass('in').removeClass('collapse').height('auto')">Writer.Init</a></li>
     </ul>
-    <h3 id="pkg-constants">Constants <a class="permalink" href="#pkg-constants">&para;</a></h3>
+    <h3 id="pkg-constants">Constants <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>const (
     <span class="com">// 忽略html标签，并将字符实体（以'&amp;'开始，以';'结束）视为单字符</span>
-    <span id="FilterHTML">FilterHTML</span> <a href="https://godoc.org/builtin#uint">uint</a> = 1 &lt;&lt; <a href="https://godoc.org/builtin#iota">iota</a>
+    <span id="FilterHTML">FilterHTML</span> <a href="builtin.htm#uint">uint</a> = 1 &lt;&lt; <a href="builtin.htm#iota">iota</a>
     <span class="com">// 将转义后文本两端的转义字符去掉</span>
     <span id="StripEscape">StripEscape</span>
     <span class="com">// 强制单元格右对齐，默认是左对齐的</span>
@@ -46,7 +48,7 @@
     <pre>const <span id="Escape">Escape</span> = &#39;\xff&#39;</pre>
     <p>用于包围转义字符，避免该字符被转义；例如字符串"Ignore this tab: \xff\t\xff"中的'\t'不被转义，不结束单元；格式化时Escape视为长度1的单字符。</p>
     <p>选择'\xff'是因为该字符不能出现在合法的utf-8序列里。</p>
-    <h3 id="Writer">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/text/tabwriter/tabwriter.go?name=release#77">Writer</a> <a class="permalink" href="#Writer">&para;</a></h3>
+    <h3 id="Writer">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/text/tabwriter/tabwriter.go?name=release#77">Writer</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Writer struct {
     <span class="com">// 内含隐藏或非导出字段</span>
 }</pre>
@@ -58,11 +60,11 @@
     <p align="left">如果设置了StripEscape，则不会计算转义字符的宽度（输出中也会去除转义字符）。</p>
     <p align="left">进纸符'\f'被视为换行，但也会截止当前行的所有列（有效的刷新）；除非在HTML标签内或者在转义文本段内，输出中'\f'都被作为换行。</p>
     <p align="left">Writer会在内部缓存输入以便有效的对齐，调用者必须在写完后执行Flush方法。</p>
-    <h4 id="NewWriter">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/text/tabwriter/tabwriter.go?name=release#556">NewWriter</a> <a class="permalink" href="#NewWriter">&para;</a></h4>
-    <pre class="funcdecl">func NewWriter(output <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#Writer">Writer</a>, minwidth, tabwidth, padding <a href="https://godoc.org/builtin#int">int</a>, padchar <a href="https://godoc.org/builtin#byte">byte</a>, flags <a href="https://godoc.org/builtin#uint">uint</a>) *<a href="#Writer">Writer</a></pre>
+    <h4 id="NewWriter">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/text/tabwriter/tabwriter.go?name=release#556">NewWriter</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func NewWriter(output <a href="io.htm">io</a>.<a href="io.htm#Writer">Writer</a>, minwidth, tabwidth, padding <a href="builtin.htm#int">int</a>, padchar <a href="builtin.htm#byte">byte</a>, flags <a href="builtin.htm#uint">uint</a>) *<a href="#Writer">Writer</a></pre>
     <p>创建并初始化一个tabwriter.Writer，参数用法和Init函数类似。</p>
-    <h4 id="Writer.Init">func (*Writer) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/text/tabwriter/tabwriter.go?name=release#172">Init</a> <a class="permalink" href="#Writer.Init">&para;</a></h4>
-    <pre class="funcdecl">func (b *<a href="#Writer">Writer</a>) Init(output <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#Writer">Writer</a>, minwidth, tabwidth, padding <a href="https://godoc.org/builtin#int">int</a>, padchar <a href="https://godoc.org/builtin#byte">byte</a>, flags <a href="https://godoc.org/builtin#uint">uint</a>) *<a href="#Writer">Writer</a></pre>
+    <h4 id="Writer.Init">func (*Writer) <a title="View Source" href="https://github.com/golang/go/blob/master/src/text/tabwriter/tabwriter.go?name=release#172">Init</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (b *<a href="#Writer">Writer</a>) Init(output <a href="io.htm">io</a>.<a href="io.htm#Writer">Writer</a>, minwidth, tabwidth, padding <a href="builtin.htm#int">int</a>, padchar <a href="builtin.htm#byte">byte</a>, flags <a href="builtin.htm#uint">uint</a>) *<a href="#Writer">Writer</a></pre>
     <p>初始化一个Writer，第一个参数指定格式化后的输出目标，其余的参数控制格式化：</p>
     <pre>minwidth 最小单元长度
 tabwidth tab字符的宽度
@@ -100,11 +102,11 @@ w.Flush()</pre>
             </div>
         </div>
     </div>
-    <h4 id="Writer.Write">func (*Writer) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/text/tabwriter/tabwriter.go?name=release#477">Write</a> <a class="permalink" href="#Writer.Write">&para;</a></h4>
-    <pre class="funcdecl">func (b *<a href="#Writer">Writer</a>) Write(buf []<a href="https://godoc.org/builtin#byte">byte</a>) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h4 id="Writer.Write">func (*Writer) <a title="View Source" href="https://github.com/golang/go/blob/master/src/text/tabwriter/tabwriter.go?name=release#477">Write</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (b *<a href="#Writer">Writer</a>) Write(buf []<a href="builtin.htm#byte">byte</a>) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>将buf写入b，实现io.Writer接口，只有在写入底层输出流是才可能发生并返回错误。</p>
-    <h4 id="Writer.Flush">func (*Writer) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/text/tabwriter/tabwriter.go?name=release#452">Flush</a> <a class="permalink" href="#Writer.Flush">&para;</a></h4>
-    <pre class="funcdecl">func (b *<a href="#Writer">Writer</a>) Flush() (err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h4 id="Writer.Flush">func (*Writer) <a title="View Source" href="https://github.com/golang/go/blob/master/src/text/tabwriter/tabwriter.go?name=release#452">Flush</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (b *<a href="#Writer">Writer</a>) Flush() (err <a href="builtin.htm#error">error</a>)</pre>
     <p>在最后一次调用Write后，必须调用Flush方法以清空缓存，并将格式化对齐后的文本写入生成时提供的output中。</p>
 </div>
 </body>

@@ -12,7 +12,8 @@
     <p><code>import "unicode/utf8"</code>
     <p>utf8包实现了对utf-8文本的常用函数和常数的支持，包括rune和utf-8编码byte序列之间互相翻译的函数。</p>
     <h3 id="pkg-index" class="section-header">Index <a class="permalink" href="#pkg-index">&para;</a></h3>
-    <ul class="list-unstyled">
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#pkg-constants">Constants</a></li>
         <li><a href="#ValidRune">func ValidRune(r rune) bool</a></li>
         <li><a href="#RuneLen">func RuneLen(r rune) int</a></li>
@@ -29,8 +30,9 @@
         <li><a href="#DecodeLastRune">func DecodeLastRune(p []byte) (r rune, size int)</a></li>
         <li><a href="#DecodeLastRuneInString">func DecodeLastRuneInString(s string) (r rune, size int)</a></li>
     </ul>
-    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-examples">&para;</a></h4>
-    <ul class="list-unstyled">
+    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#example-DecodeLastRune" onclick="$('#ex-DecodeLastRune').addClass('in').removeClass('collapse').height('auto')">DecodeLastRune</a></li>
         <li><a href="#example-DecodeLastRuneInString" onclick="$('#ex-DecodeLastRuneInString').addClass('in').removeClass('collapse').height('auto')">DecodeLastRuneInString</a></li>
         <li><a href="#example-DecodeRune" onclick="$('#ex-DecodeRune').addClass('in').removeClass('collapse').height('auto')">DecodeRune</a></li>
@@ -46,7 +48,7 @@
         <li><a href="#example-ValidRune" onclick="$('#ex-ValidRune').addClass('in').removeClass('collapse').height('auto')">ValidRune</a></li>
         <li><a href="#example-ValidString" onclick="$('#ex-ValidString').addClass('in').removeClass('collapse').height('auto')">ValidString</a></li>
     </ul>
-    <h3 id="pkg-constants">Constants <a class="permalink" href="#pkg-constants">&para;</a></h3>
+    <h3 id="pkg-constants">Constants <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>const (
     <span id="RuneError">RuneError</span> = &#39;\uFFFD&#39;     <span class="com">// 错误的Rune或"Unicode replacement character"</span>
     <span id="RuneSelf">RuneSelf</span>  = 0x80         <span class="com">// 低于RunSelf的字符用代表单字节的同一值表示</span>
@@ -54,8 +56,8 @@
     <span id="UTFMax">UTFMax</span>    = 4            <span class="com">// 最大的utf-8编码的unicode字符的长度</span>
 )</pre>
     <p>编码的基础常数。</p>
-    <h3 id="ValidRune">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/unicode/utf8/utf8.go?name=release#425">ValidRune</a> <a class="permalink" href="#ValidRune">&para;</a></h3>
-    <pre class="funcdecl">func ValidRune(r <a href="https://godoc.org/builtin#rune">rune</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h3 id="ValidRune">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/unicode/utf8/utf8.go?name=release#425">ValidRune</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func ValidRune(r <a href="builtin.htm#rune">rune</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>判断r是否可以编码为合法的utf-8序列。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-ValidRune">
@@ -74,8 +76,8 @@ false
             </div>
         </div>
     </div>
-    <h3 id="RuneLen">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/unicode/utf8/utf8.go?name=release#310">RuneLen</a> <a class="permalink" href="#RuneLen">&para;</a></h3>
-    <pre class="funcdecl">func RuneLen(r <a href="https://godoc.org/builtin#rune">rune</a>) <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h3 id="RuneLen">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/unicode/utf8/utf8.go?name=release#310">RuneLen</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func RuneLen(r <a href="builtin.htm#rune">rune</a>) <a href="builtin.htm#int">int</a></pre>
     <p>返回r编码后的字节数。如果r不是一个合法的可编码为utf-8序列的值，会返回-1。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-RuneLen">
@@ -92,8 +94,8 @@ fmt.Println(utf8.RuneLen(&#39;界&#39;))</pre>
             </div>
         </div>
     </div>
-    <h3 id="RuneStart">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/unicode/utf8/utf8.go?name=release#384">RuneStart</a> <a class="permalink" href="#RuneStart">&para;</a></h3>
-    <pre class="funcdecl">func RuneStart(b <a href="https://godoc.org/builtin#byte">byte</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h3 id="RuneStart">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/unicode/utf8/utf8.go?name=release#384">RuneStart</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func RuneStart(b <a href="builtin.htm#byte">byte</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>报告字节b是否可以作为某个rune编码后的第一个字节。第二个即之后的字节总是将左端两个字位设为10。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-RuneStart">
@@ -113,8 +115,8 @@ false
             </div>
         </div>
     </div>
-    <h3 id="FullRune">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/unicode/utf8/utf8.go?name=release#203">FullRune</a> <a class="permalink" href="#FullRune">&para;</a></h3>
-    <pre class="funcdecl">func FullRune(p []<a href="https://godoc.org/builtin#byte">byte</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h3 id="FullRune">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/unicode/utf8/utf8.go?name=release#203">FullRune</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func FullRune(p []<a href="builtin.htm#byte">byte</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>报告切片p是否以一个码值的完整utf-8编码开始。不合法的编码因为会被转换为宽度1的错误码值而被视为完整的。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-FullRune">
@@ -132,8 +134,8 @@ false
             </div>
         </div>
     </div>
-    <h3 id="FullRuneInString">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/unicode/utf8/utf8.go?name=release#209">FullRuneInString</a> <a class="permalink" href="#FullRuneInString">&para;</a></h3>
-    <pre class="funcdecl">func FullRuneInString(s <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h3 id="FullRuneInString">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/unicode/utf8/utf8.go?name=release#209">FullRuneInString</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func FullRuneInString(s <a href="builtin.htm#string">string</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>函数类似FullRune但输入参数是字符串。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-FullRuneInString">
@@ -151,8 +153,8 @@ false
             </div>
         </div>
     </div>
-    <h3 id="RuneCount">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/unicode/utf8/utf8.go?name=release#359">RuneCount</a> <a class="permalink" href="#RuneCount">&para;</a></h3>
-    <pre class="funcdecl">func RuneCount(p []<a href="https://godoc.org/builtin#byte">byte</a>) <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h3 id="RuneCount">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/unicode/utf8/utf8.go?name=release#359">RuneCount</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func RuneCount(p []<a href="builtin.htm#byte">byte</a>) <a href="builtin.htm#int">int</a></pre>
     <p>返回p中的utf-8编码的码值的个数。错误或者不完整的编码会被视为宽度1字节的单个码值。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-RuneCount">
@@ -170,8 +172,8 @@ runes = 9
             </div>
         </div>
     </div>
-    <h3 id="RuneCountInString">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/unicode/utf8/utf8.go?name=release#374">RuneCountInString</a> <a class="permalink" href="#RuneCountInString">&para;</a></h3>
-    <pre class="funcdecl">func RuneCountInString(s <a href="https://godoc.org/builtin#string">string</a>) (n <a href="https://godoc.org/builtin#int">int</a>)</pre>
+    <h3 id="RuneCountInString">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/unicode/utf8/utf8.go?name=release#374">RuneCountInString</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func RuneCountInString(s <a href="builtin.htm#string">string</a>) (n <a href="builtin.htm#int">int</a>)</pre>
     <p>函数类似RuneCount但输入参数是一个字符串。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-RuneCountInString">
@@ -189,8 +191,8 @@ runes = 9
             </div>
         </div>
     </div>
-    <h3 id="Valid">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/unicode/utf8/utf8.go?name=release#387">Valid</a> <a class="permalink" href="#Valid">&para;</a></h3>
-    <pre class="funcdecl">func Valid(p []<a href="https://godoc.org/builtin#byte">byte</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h3 id="Valid">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/unicode/utf8/utf8.go?name=release#387">Valid</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Valid(p []<a href="builtin.htm#byte">byte</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>返回切片p是否包含完整且合法的utf-8编码序列。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Valid">
@@ -209,8 +211,8 @@ false
             </div>
         </div>
     </div>
-    <h3 id="ValidString">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/unicode/utf8/utf8.go?name=release#407">ValidString</a> <a class="permalink" href="#ValidString">&para;</a></h3>
-    <pre class="funcdecl">func ValidString(s <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h3 id="ValidString">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/unicode/utf8/utf8.go?name=release#407">ValidString</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func ValidString(s <a href="builtin.htm#string">string</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>报告s是否包含完整且合法的utf-8编码序列。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-ValidString">
@@ -229,8 +231,8 @@ false
             </div>
         </div>
     </div>
-    <h3 id="EncodeRune">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/unicode/utf8/utf8.go?name=release#330">EncodeRune</a> <a class="permalink" href="#EncodeRune">&para;</a></h3>
-    <pre class="funcdecl">func EncodeRune(p []<a href="https://godoc.org/builtin#byte">byte</a>, r <a href="https://godoc.org/builtin#rune">rune</a>) <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h3 id="EncodeRune">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/unicode/utf8/utf8.go?name=release#330">EncodeRune</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func EncodeRune(p []<a href="builtin.htm#byte">byte</a>, r <a href="builtin.htm#rune">rune</a>) <a href="builtin.htm#int">int</a></pre>
     <p>EncodeRune将r的utf-8编码序列写入p（p必须有足够的长度），并返回写入的字节数。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-EncodeRune">
@@ -250,8 +252,8 @@ fmt.Println(n)</pre>
             </div>
         </div>
     </div>
-    <h3 id="DecodeRune">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/unicode/utf8/utf8.go?name=release#219">DecodeRune</a> <a class="permalink" href="#DecodeRune">&para;</a></h3>
-    <pre class="funcdecl">func DecodeRune(p []<a href="https://godoc.org/builtin#byte">byte</a>) (r <a href="https://godoc.org/builtin#rune">rune</a>, size <a href="https://godoc.org/builtin#int">int</a>)</pre>
+    <h3 id="DecodeRune">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/unicode/utf8/utf8.go?name=release#219">DecodeRune</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func DecodeRune(p []<a href="builtin.htm#byte">byte</a>) (r <a href="builtin.htm#rune">rune</a>, size <a href="builtin.htm#int">int</a>)</pre>
     <p align="left">函数解码p开始位置的第一个utf-8编码的码值，返回该码值和编码的字节数。如果编码不合法，会返回(RuneError, 1)。该返回值在正确的utf-8编码情况下是不可能返回的。</p>
     <p align="left">如果一个utf-8编码序列格式不正确，或者编码的码值超出utf-8合法码值的范围，或者不是该码值的最短编码，该编码序列即是不合法的。函数不会执行其他的验证。</p>
     <div class="panel-group">
@@ -280,8 +282,8 @@ o 1
             </div>
         </div>
     </div>
-    <h3 id="DecodeRuneInString">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/unicode/utf8/utf8.go?name=release#229">DecodeRuneInString</a> <a class="permalink" href="#DecodeRuneInString">&para;</a></h3>
-    <pre class="funcdecl">func DecodeRuneInString(s <a href="https://godoc.org/builtin#string">string</a>) (r <a href="https://godoc.org/builtin#rune">rune</a>, size <a href="https://godoc.org/builtin#int">int</a>)</pre>
+    <h3 id="DecodeRuneInString">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/unicode/utf8/utf8.go?name=release#229">DecodeRuneInString</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func DecodeRuneInString(s <a href="builtin.htm#string">string</a>) (r <a href="builtin.htm#rune">rune</a>, size <a href="builtin.htm#int">int</a>)</pre>
     <p>函数类似DecodeRune但输入参数是字符串。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-DecodeRuneInString">
@@ -309,8 +311,8 @@ o 1
             </div>
         </div>
     </div>
-    <h3 id="DecodeLastRune">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/unicode/utf8/utf8.go?name=release#239">DecodeLastRune</a> <a class="permalink" href="#DecodeLastRune">&para;</a></h3>
-    <pre class="funcdecl">func DecodeLastRune(p []<a href="https://godoc.org/builtin#byte">byte</a>) (r <a href="https://godoc.org/builtin#rune">rune</a>, size <a href="https://godoc.org/builtin#int">int</a>)</pre>
+    <h3 id="DecodeLastRune">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/unicode/utf8/utf8.go?name=release#239">DecodeLastRune</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func DecodeLastRune(p []<a href="builtin.htm#byte">byte</a>) (r <a href="builtin.htm#rune">rune</a>, size <a href="builtin.htm#int">int</a>)</pre>
     <p>函数解码p中最后一个utf-8编码序列，返回该码值和编码序列的长度。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-DecodeLastRune">
@@ -338,8 +340,8 @@ H 1
             </div>
         </div>
     </div>
-    <h3 id="DecodeLastRuneInString">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/unicode/utf8/utf8.go?name=release#276">DecodeLastRuneInString</a> <a class="permalink" href="#DecodeLastRuneInString">&para;</a></h3>
-    <pre class="funcdecl">func DecodeLastRuneInString(s <a href="https://godoc.org/builtin#string">string</a>) (r <a href="https://godoc.org/builtin#rune">rune</a>, size <a href="https://godoc.org/builtin#int">int</a>)</pre>
+    <h3 id="DecodeLastRuneInString">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/unicode/utf8/utf8.go?name=release#276">DecodeLastRuneInString</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func DecodeLastRuneInString(s <a href="builtin.htm#string">string</a>) (r <a href="builtin.htm#rune">rune</a>, size <a href="builtin.htm#int">int</a>)</pre>
     <p>函数类似DecodeLastRune但输入参数是字符串。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-DecodeLastRuneInString">

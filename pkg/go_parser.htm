@@ -12,14 +12,15 @@
     <p><code>import "go/parser"</code>
     <p>Package parser implements a parser for Go source files. Input may be provided in a variety of forms (see the various Parse* functions); the output is an abstract syntax tree (AST) representing the Go source. The parser is invoked through one of the Parse* functions.</p>
     <h3 id="pkg-index" class="section-header">Index <a class="permalink" href="#pkg-index">&para;</a></h3>
-    <ul class="list-unstyled">
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#ParseDir">func ParseDir(fset *token.FileSet, path string, filter func(os.FileInfo) bool, mode Mode) (pkgs map[string]*ast.Package, first error)</a></li>
         <li><a href="#ParseExpr">func ParseExpr(x string) (ast.Expr, error)</a></li>
         <li><a href="#ParseFile">func ParseFile(fset *token.FileSet, filename string, src interface{}, mode Mode) (f *ast.File, err error)</a></li>
         <li><a href="#Mode">type Mode</a></li>
     </ul>
     
-    <h3 id="ParseDir">func ParseDir</a> <a class="permalink" href="#ParseDir">&para;</a></h3>
+    <h3 id="ParseDir">func ParseDir</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>func ParseDir(fset *<a href="./go_token.htm">token</a>.<a href="./go_token.htm#FileSet">FileSet</a>, path <a href="./builtin.htm#string">string</a>, filter func(<a href="./os.htm">os</a>.<a href="./os.htm#FileInfo">FileInfo</a>) <a href="./builtin.htm#bool">bool</a>, mode <a href="#Mode">Mode</a>) (pkgs map[<a href="./builtin.htm#string">string</a>]*<a href="./go_ast.htm">ast</a>.<a href="./go_ast.htm#Package">Package</a>, first <a href="./builtin.htm#error">error</a>)</pre>
             <p>
 ParseDir calls ParseFile for all files with names ending in &#34;.go&#34; in the
@@ -38,7 +39,7 @@ first error encountered are returned.
 </p>
 
 
-    <h3 id="ParseExpr">func ParseExpr <a class="permalink" href="#ParseExpr">&para;</a></h3>
+    <h3 id="ParseExpr">func ParseExpr <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>func ParseExpr(x <a href="./builtin.htm#string">string</a>) (<a href="./go_ast.htm">ast</a>.<a href="./go_ast.htm#Expr">Expr</a>, <a href="./builtin.htm#error">error</a>)</pre>
             <p>
 ParseExpr is a convenience function for obtaining the AST of an expression x.
@@ -46,7 +47,7 @@ The position information recorded in the AST is undefined. The filename used
 in error messages is the empty string.
 </p>
 
-    <h3 id="ParseFile">func ParseFile <a class="permalink" href="#ParseFile">&para;</a></h3>
+    <h3 id="ParseFile">func ParseFile <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>func ParseFile(fset *<a href="./go_token.htm">token</a>.<a href="./go_token.htm#FileSet">FileSet</a>, filename <a href="./builtin.htm#string">string</a>, src interface{}, mode <a href="#Mode">Mode</a>) (f *<a href="./go_ast.htm">ast</a>.<a href="./go_ast.htm#File">File</a>, err <a href="./builtin.htm#error">error</a>)</pre>
             <p>
 ParseFile parses the source code of a single Go source file and returns
@@ -107,7 +108,7 @@ for _, s := range f.Imports {
     </div>
 </div>
 
-<h3 id="Mode">type Mode <a class="permalink" href="#Mode">&para;</a></h3>
+<h3 id="Mode">type Mode <a class="permalink" href="#pkg-index">&para;</a></h3>
 <pre>type Mode <a href="./builtin.htm#uint">uint</a></pre>
             <p>
 A Mode value is a set of flags (or 0).

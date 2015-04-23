@@ -11,7 +11,7 @@
     <h2 id="pkg-overview">package fmt</h2>
     <p><code>import "fmt"</code>
     <p>mt包实现了类似C语言printf和scanf的格式化I/O。格式化动作（'verb'）源自C语言但更简单。</p>
-    <h4 id="hdr-Printing">Printing <a class="permalink" href="#hdr-Printing">&para</a></h4>
+    <h4 id="hdr-Printing">Printing <a class="permalink" href="#pkg-index">&para</a></h4>
     <p>verb：</p>
     <p>通用：</p>
     <pre>%v	值的默认格式表示
@@ -122,7 +122,7 @@ func (x X) String() string { return Sprintf(&#34;&lt;%s&gt;&#34;, x) }
     <pre>%!s(PANIC=bad)
 </pre>
     <p>%!s指示表示错误（panic）出现时的使用的verb。</p>
-    <h4 id="hdr-Scanning">Scanning <a class="permalink" href="#hdr-Scanning">&para</a></h4>
+    <h4 id="hdr-Scanning">Scanning <a class="permalink" href="#pkg-index">&para</a></h4>
     <p align="left">一系列类似的函数可以扫描格式化文本以生成值。</p>
     <p align="left">Scan、Scanf和Scanln从标准输入os.Stdin读取文本；Fscan、Fscanf、Fscanln从指定的io.Reader接口读取文本；Sscan、Sscanf、Sscanln从一个参数字符串读取文本。</p>
     <p align="left">Scanln、Fscanln、Sscanln会在读取到换行时停止，并要求一次提供一行所有条目；Scanf、Fscanf、Sscanf只有在格式化文本末端有换行时会读取到换行为止；其他函数会将换行视为空白。</p>
@@ -139,7 +139,8 @@ flag &#39;#&#39;和&#39;+&#39; 未实现   </pre>
     <p align="left">在所有的扫描函数里，如果一个操作数实现了Scan方法（或者说，它实现了Scanner接口），将会使用该接口为该操作数扫描文本。另外，如果如果扫描到（准备填写）的参数比提供的参数个数少，会返回一个错误。</p>
     <p align="left">提供的所有参数必须为指针或者实现了Scanner接口。注意：Fscan等函数可能会在返回前多读取一个rune，这导致多次调用这些函数时可能会跳过部分输入。只有在输入里各值之间没有空白时，会出现问题。如果提供给Fscan等函数的io.Reader接口实现了ReadRune方法，将使用该方法读取字符。如果该io.Reader接口还实现了UnreadRune方法，将是使用该方法保存字符，这样可以使成功执行的Fscan等函数不会丢失数据。如果要给一个没有这两个方法的io.Reader接口提供这两个方法，使用bufio.NewReader。</p>
     <h3 id="pkg-index" class="section-header">Index <a class="permalink" href="#pkg-index">&para;</a></h3>
-    <ul class="list-unstyled">
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#Stringer">type Stringer</a></li>
         <li><a href="#GoStringer">type GoStringer</a></li>
         <li><a href="#State">type State</a></li>
@@ -166,41 +167,41 @@ flag &#39;#&#39;和&#39;+&#39; 未实现   </pre>
         <li><a href="#Fscanln">func Fscanln(r io.Reader, a ...interface{}) (n int, err error)</a></li>
         <li><a href="#Sscanln">func Sscanln(str string, a ...interface{}) (n int, err error)</a></li>
     </ul>
-    <h3 id="Stringer">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/print.go?name=release#63">Stringer</a> <a class="permalink" href="#Stringer">&para;</a></h3>
+    <h3 id="Stringer">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/print.go?name=release#63">Stringer</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Stringer interface {
-    <span id="Stringer.String">String</span>() <a href="https://godoc.org/builtin#string">string</a>
+    <span id="Stringer.String">String</span>() <a href="builtin.htm#string">string</a>
 }</pre>
     <p align="left">实现了Stringer接口的类型（即有String方法），定义了该类型值的原始显示。当采用任何接受字符的verb（%v %s %q %x %X）动作格式化一个操作数时，或者被不使用格式字符串如Print函数打印操作数时，会调用String方法来生成输出的文本。</p>
-    <h3 id="GoStringer">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/print.go?name=release#71">GoStringer</a> <a class="permalink" href="#GoStringer">&para;</a></h3>
+    <h3 id="GoStringer">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/print.go?name=release#71">GoStringer</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type GoStringer interface {
-    <span id="GoStringer.GoString">GoString</span>() <a href="https://godoc.org/builtin#string">string</a>
+    <span id="GoStringer.GoString">GoString</span>() <a href="builtin.htm#string">string</a>
 }</pre>
     <p>实现了GoStringer接口的类型（即有GoString方法），定义了该类型值的go语法表示。当采用verb %#v格式化一个操作数时，会调用GoString方法来生成输出的文本。</p>
-    <h3 id="State">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/print.go?name=release#39">State</a> <a class="permalink" href="#State">&para;</a></h3>
+    <h3 id="State">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/print.go?name=release#39">State</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type State interface {
     <span class="com">// Write方法用来写入格式化的文本</span>
-    <span id="State.Write">Write</span>(b []<a href="https://godoc.org/builtin#byte">byte</a>) (ret <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)
+    <span id="State.Write">Write</span>(b []<a href="builtin.htm#byte">byte</a>) (ret <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)
     <span class="com">// Width返回宽度值，及其是否被设置</span>
-    <span id="State.Width">Width</span>() (wid <a href="https://godoc.org/builtin#int">int</a>, ok <a href="https://godoc.org/builtin#bool">bool</a>)
+    <span id="State.Width">Width</span>() (wid <a href="builtin.htm#int">int</a>, ok <a href="builtin.htm#bool">bool</a>)
     <span class="com">// Precision返回精度值，及其是否被设置</span>
-    <span id="State.Precision">Precision</span>() (prec <a href="https://godoc.org/builtin#int">int</a>, ok <a href="https://godoc.org/builtin#bool">bool</a>)
+    <span id="State.Precision">Precision</span>() (prec <a href="builtin.htm#int">int</a>, ok <a href="builtin.htm#bool">bool</a>)
     <span class="com">// Flag报告是否设置了flag c（一个字符，如+、-、#等）</span>
-    <span id="State.Flag">Flag</span>(c <a href="https://godoc.org/builtin#int">int</a>) <a href="https://godoc.org/builtin#bool">bool</a>
+    <span id="State.Flag">Flag</span>(c <a href="builtin.htm#int">int</a>) <a href="builtin.htm#bool">bool</a>
 }</pre>
     <p>State代表一个传递给自定义Formatter接口的Format方法的打印环境。它实现了io.Writer接口用来写入格式化的文本，还提供了该操作数的格式字符串指定的选项和宽度、精度信息（通过调用方法）。</p>
-    <h3 id="Formatter">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/print.go?name=release#54">Formatter</a> <a class="permalink" href="#Formatter">&para;</a></h3>
+    <h3 id="Formatter">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/print.go?name=release#54">Formatter</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Formatter interface {
     <span class="com">// c为verb，f提供verb的细节信息和Write方法用于写入生成的格式化文本</span>
-    <span id="Formatter.Format">Format</span>(f <a href="#State">State</a>, c <a href="https://godoc.org/builtin#rune">rune</a>)
+    <span id="Formatter.Format">Format</span>(f <a href="#State">State</a>, c <a href="builtin.htm#rune">rune</a>)
 }</pre>
     <p>实现了Formatter接口的类型可以定制自己的格式化输出。Format方法的实现内部可以调用Sprint或Fprint等函数来生成自身的输出。</p>
-    <h3 id="ScanState">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/scan.go?name=release#29">ScanState</a> <a class="permalink" href="#ScanState">&para;</a></h3>
+    <h3 id="ScanState">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/scan.go?name=release#29">ScanState</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type ScanState interface {
     <span class="com">// 从输入读取下一个rune（Unicode码值），在读取超过指定宽度时会返回EOF</span>
     <span class="com">// 如果在Scanln、Fscanln或Sscanln中被调用，本方法会在返回第一个'\n'后再次调用时返回EOF</span>
-    <span id="ScanState.ReadRune">ReadRune</span>() (r <a href="https://godoc.org/builtin#rune">rune</a>, size <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)
+    <span id="ScanState.ReadRune">ReadRune</span>() (r <a href="builtin.htm#rune">rune</a>, size <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)
     <span class="com">// UnreadRune方法让下一次调用ReadRune时返回上一次返回的rune且不移动读取位置</span>
-    <span id="ScanState.UnreadRune">UnreadRune</span>() <a href="https://godoc.org/builtin#error">error</a>
+    <span id="ScanState.UnreadRune">UnreadRune</span>() <a href="builtin.htm#error">error</a>
     <span class="com">// SkipSpace方法跳过输入中的空白，换行被视为空白</span>
     <span class="com">// 在Scanln、Fscanln或Sscanln中被调用时，换行被视为EOF</span>
     <span id="ScanState.SkipSpace">SkipSpace</span>()
@@ -210,75 +211,75 @@ flag &#39;#&#39;和&#39;+&#39; 未实现   </pre>
     <span class="com">// 换行被视为空白，在Scanln、Fscanln或Sscanln中被调用时，换行被视为EOF。</span>
     <span class="com">// 返回的切片指向一个共享内存，可能被下一次调用Token方法时重写；</span>
     <span class="com">// 或被使用该Scanstate的另一个Scan函数重写；或者在本次调用的Scan方法返回时重写。</span>
-    <span id="ScanState.Token">Token</span>(skipSpace <a href="https://godoc.org/builtin#bool">bool</a>, f func(<a href="https://godoc.org/builtin#rune">rune</a>) <a href="https://godoc.org/builtin#bool">bool</a>) (token []<a href="https://godoc.org/builtin#byte">byte</a>, err <a href="https://godoc.org/builtin#error">error</a>)
+    <span id="ScanState.Token">Token</span>(skipSpace <a href="builtin.htm#bool">bool</a>, f func(<a href="builtin.htm#rune">rune</a>) <a href="builtin.htm#bool">bool</a>) (token []<a href="builtin.htm#byte">byte</a>, err <a href="builtin.htm#error">error</a>)
     <span class="com">// Width返回返回宽度值，及其是否被设置。单位是unicode码值。</span>
-    <span id="ScanState.Width">Width</span>() (wid <a href="https://godoc.org/builtin#int">int</a>, ok <a href="https://godoc.org/builtin#bool">bool</a>)
+    <span id="ScanState.Width">Width</span>() (wid <a href="builtin.htm#int">int</a>, ok <a href="builtin.htm#bool">bool</a>)
     <span class="com">// 因为本接口实现了ReadRune方法，Read方法永远不应被在Scanner接口中使用。</span>
     <span class="com">// 一个合法的ScanStat接口实现可能会选择让本方法总是返回错误。</span>
-    <span id="ScanState.Read">Read</span>(buf []<a href="https://godoc.org/builtin#byte">byte</a>) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)
+    <span id="ScanState.Read">Read</span>(buf []<a href="builtin.htm#byte">byte</a>) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)
 }</pre>
     <p>ScanState代表一个将传递给Scanner接口的Scan方法的扫描环境。 Scan函数中，可以进行一次一个rune的扫描，或者使用Token方法获得下一个token（比如空白分隔的token）。</p>
-    <h3 id="Scanner">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/scan.go?name=release#63">Scanner</a> <a class="permalink" href="#Scanner">&para;</a></h3>
+    <h3 id="Scanner">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/scan.go?name=release#63">Scanner</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Scanner interface {
-    <span id="Scanner.Scan">Scan</span>(state <a href="#ScanState">ScanState</a>, verb <a href="https://godoc.org/builtin#rune">rune</a>) <a href="https://godoc.org/builtin#error">error</a>
+    <span id="Scanner.Scan">Scan</span>(state <a href="#ScanState">ScanState</a>, verb <a href="builtin.htm#rune">rune</a>) <a href="builtin.htm#error">error</a>
 }</pre>
     <p>当Scan、Scanf、Scanln或类似函数接受实现了Scanner接口的类型（其Scan方法的receiver必须是指针，该方法从输入读取该类型值的字符串表示并将结果写入receiver）作为参数时，会调用其Scan方法进行定制的扫描。</p>
-    <h3 id="Printf">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/print.go?name=release#196">Printf</a> <a class="permalink" href="#Printf">&para;</a></h3>
-    <pre class="funcdecl">func Printf(format <a href="https://godoc.org/builtin#string">string</a>, a ...interface{}) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h3 id="Printf">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/print.go?name=release#196">Printf</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Printf(format <a href="builtin.htm#string">string</a>, a ...interface{}) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>Printf根据format参数生成格式化的字符串并写入标准输出。返回写入的字节数和遇到的任何错误。</p>
-    <h3 id="Fprintf">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/print.go?name=release#186">Fprintf</a> <a class="permalink" href="#Fprintf">&para;</a></h3>
-    <pre class="funcdecl">func Fprintf(w <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#Writer">Writer</a>, format <a href="https://godoc.org/builtin#string">string</a>, a ...interface{}) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h3 id="Fprintf">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/print.go?name=release#186">Fprintf</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Fprintf(w <a href="io.htm">io</a>.<a href="io.htm#Writer">Writer</a>, format <a href="builtin.htm#string">string</a>, a ...interface{}) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>Fprintf根据format参数生成格式化的字符串并写入w。返回写入的字节数和遇到的任何错误。</p>
-    <h3 id="Sprintf">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/print.go?name=release#201">Sprintf</a> <a class="permalink" href="#Sprintf">&para;</a></h3>
-    <pre class="funcdecl">func Sprintf(format <a href="https://godoc.org/builtin#string">string</a>, a ...interface{}) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="Sprintf">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/print.go?name=release#201">Sprintf</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Sprintf(format <a href="builtin.htm#string">string</a>, a ...interface{}) <a href="builtin.htm#string">string</a></pre>
     <p>Sprintf根据format参数生成格式化的字符串并返回该字符串。</p>
-    <h3 id="Print">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/print.go?name=release#231">Print</a> <a class="permalink" href="#Print">&para;</a></h3>
-    <pre class="funcdecl">func Print(a ...interface{}) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h3 id="Print">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/print.go?name=release#231">Print</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Print(a ...interface{}) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>Print采用默认格式将其参数格式化并写入标准输出。如果两个相邻的参数都不是字符串，会在它们的输出之间添加空格。返回写入的字节数和遇到的任何错误。</p>
-    <h3 id="Fprint">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/print.go?name=release#220">Fprint</a> <a class="permalink" href="#Fprint">&para;</a></h3>
-    <pre class="funcdecl">func Fprint(w <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#Writer">Writer</a>, a ...interface{}) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h3 id="Fprint">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/print.go?name=release#220">Fprint</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Fprint(w <a href="io.htm">io</a>.<a href="io.htm#Writer">Writer</a>, a ...interface{}) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>Fprint采用默认格式将其参数格式化并写入w。如果两个相邻的参数都不是字符串，会在它们的输出之间添加空格。返回写入的字节数和遇到的任何错误。</p>
-    <h3 id="Sprint">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/print.go?name=release#237">Sprint</a> <a class="permalink" href="#Sprint">&para;</a></h3>
-    <pre class="funcdecl">func Sprint(a ...interface{}) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="Sprint">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/print.go?name=release#237">Sprint</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Sprint(a ...interface{}) <a href="builtin.htm#string">string</a></pre>
     <p>Sprint采用默认格式将其参数格式化，串联所有输出生成并返回一个字符串。如果两个相邻的参数都不是字符串，会在它们的输出之间添加空格。</p>
-    <h3 id="Println">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/print.go?name=release#263">Println</a> <a class="permalink" href="#Println">&para;</a></h3>
-    <pre class="funcdecl">func Println(a ...interface{}) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h3 id="Println">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/print.go?name=release#263">Println</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Println(a ...interface{}) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>Println采用默认格式将其参数格式化并写入标准输出。总是会在相邻参数的输出之间添加空格并在输出结束后添加换行符。返回写入的字节数和遇到的任何错误。</p>
-    <h3 id="Fprintln">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/print.go?name=release#252">Fprintln</a> <a class="permalink" href="#Fprintln">&para;</a></h3>
-    <pre class="funcdecl">func Fprintln(w <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#Writer">Writer</a>, a ...interface{}) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h3 id="Fprintln">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/print.go?name=release#252">Fprintln</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Fprintln(w <a href="io.htm">io</a>.<a href="io.htm#Writer">Writer</a>, a ...interface{}) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>Fprintln采用默认格式将其参数格式化并写入w。总是会在相邻参数的输出之间添加空格并在输出结束后添加换行符。返回写入的字节数和遇到的任何错误。</p>
-    <h3 id="Sprintln">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/print.go?name=release#269">Sprintln</a> <a class="permalink" href="#Sprintln">&para;</a></h3>
-    <pre class="funcdecl">func Sprintln(a ...interface{}) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="Sprintln">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/print.go?name=release#269">Sprintln</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Sprintln(a ...interface{}) <a href="builtin.htm#string">string</a></pre>
     <p>Sprintln采用默认格式将其参数格式化，串联所有输出生成并返回一个字符串。总是会在相邻参数的输出之间添加空格并在输出结束后添加换行符。</p>
-    <h3 id="Errorf">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/print.go?name=release#211">Errorf</a> <a class="permalink" href="#Errorf">&para;</a></h3>
-    <pre class="funcdecl">func Errorf(format <a href="https://godoc.org/builtin#string">string</a>, a ...interface{}) <a href="https://godoc.org/builtin#error">error</a></pre>
+    <h3 id="Errorf">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/print.go?name=release#211">Errorf</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Errorf(format <a href="builtin.htm#string">string</a>, a ...interface{}) <a href="builtin.htm#error">error</a></pre>
     <p>Errorf根据format参数生成格式化字符串并返回一个包含该字符串的错误。</p>
-    <h3 id="Scanf">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/scan.go?name=release#84">Scanf</a> <a class="permalink" href="#Scanf">&para;</a></h3>
-    <pre class="funcdecl">func Scanf(format <a href="https://godoc.org/builtin#string">string</a>, a ...interface{}) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h3 id="Scanf">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/scan.go?name=release#84">Scanf</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Scanf(format <a href="builtin.htm#string">string</a>, a ...interface{}) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>Scanf从标准输入扫描文本，根据format 参数指定的格式将成功读取的空白分隔的值保存进成功传递给本函数的参数。返回成功扫描的条目个数和遇到的任何错误。</p>
-    <h3 id="Fscanf">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/scan.go?name=release#143">Fscanf</a> <a class="permalink" href="#Fscanf">&para;</a></h3>
-    <pre class="funcdecl">func Fscanf(r <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#Reader">Reader</a>, format <a href="https://godoc.org/builtin#string">string</a>, a ...interface{}) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h3 id="Fscanf">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/scan.go?name=release#143">Fscanf</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Fscanf(r <a href="io.htm">io</a>.<a href="io.htm#Reader">Reader</a>, format <a href="builtin.htm#string">string</a>, a ...interface{}) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>Fscanf从r扫描文本，根据format 参数指定的格式将成功读取的空白分隔的值保存进成功传递给本函数的参数。返回成功扫描的条目个数和遇到的任何错误。</p>
-    <h3 id="Sscanf">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/scan.go?name=release#116">Sscanf</a> <a class="permalink" href="#Sscanf">&para;</a></h3>
-    <pre class="funcdecl">func Sscanf(str <a href="https://godoc.org/builtin#string">string</a>, format <a href="https://godoc.org/builtin#string">string</a>, a ...interface{}) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h3 id="Sscanf">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/scan.go?name=release#116">Sscanf</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Sscanf(str <a href="builtin.htm#string">string</a>, format <a href="builtin.htm#string">string</a>, a ...interface{}) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>Sscanf从字符串str扫描文本，根据format 参数指定的格式将成功读取的空白分隔的值保存进成功传递给本函数的参数。返回成功扫描的条目个数和遇到的任何错误。</p>
-    <h3 id="Scan">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/scan.go?name=release#71">Scan</a> <a class="permalink" href="#Scan">&para;</a></h3>
-    <pre class="funcdecl">func Scan(a ...interface{}) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h3 id="Scan">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/scan.go?name=release#71">Scan</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Scan(a ...interface{}) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>Scan从标准输入扫描文本，将成功读取的空白分隔的值保存进成功传递给本函数的参数。换行视为空白。返回成功扫描的条目个数和遇到的任何错误。如果读取的条目比提供的参数少，会返回一个错误报告原因。</p>
-    <h3 id="Fscan">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/scan.go?name=release#124">Fscan</a> <a class="permalink" href="#Fscan">&para;</a></h3>
-    <pre class="funcdecl">func Fscan(r <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#Reader">Reader</a>, a ...interface{}) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h3 id="Fscan">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/scan.go?name=release#124">Fscan</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Fscan(r <a href="io.htm">io</a>.<a href="io.htm#Reader">Reader</a>, a ...interface{}) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>Fscan从r扫描文本，将成功读取的空白分隔的值保存进成功传递给本函数的参数。换行视为空白。返回成功扫描的条目个数和遇到的任何错误。如果读取的条目比提供的参数少，会返回一个错误报告原因。</p>
-    <h3 id="Sscan">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/scan.go?name=release#103">Sscan</a> <a class="permalink" href="#Sscan">&para;</a></h3>
-    <pre class="funcdecl">func Sscan(str <a href="https://godoc.org/builtin#string">string</a>, a ...interface{}) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h3 id="Sscan">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/scan.go?name=release#103">Sscan</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Sscan(str <a href="builtin.htm#string">string</a>, a ...interface{}) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>Sscan从字符串str扫描文本，将成功读取的空白分隔的值保存进成功传递给本函数的参数。换行视为空白。返回成功扫描的条目个数和遇到的任何错误。如果读取的条目比提供的参数少，会返回一个错误报告原因。</p>
-    <h3 id="Scanln">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/scan.go?name=release#77">Scanln</a> <a class="permalink" href="#Scanln">&para;</a></h3>
-    <pre class="funcdecl">func Scanln(a ...interface{}) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h3 id="Scanln">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/scan.go?name=release#77">Scanln</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Scanln(a ...interface{}) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>Scanln类似Scan，但会在换行时才停止扫描。最后一个条目后必须有换行或者到达结束位置。</p>
-    <h3 id="Fscanln">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/scan.go?name=release#133">Fscanln</a> <a class="permalink" href="#Fscanln">&para;</a></h3>
-    <pre class="funcdecl">func Fscanln(r <a href="https://godoc.org/io">io</a>.<a href="https://godoc.org/io#Reader">Reader</a>, a ...interface{}) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h3 id="Fscanln">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/scan.go?name=release#133">Fscanln</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Fscanln(r <a href="io.htm">io</a>.<a href="io.htm#Reader">Reader</a>, a ...interface{}) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>Fscanln类似Fscan，但会在换行时才停止扫描。最后一个条目后必须有换行或者到达结束位置。</p>
-    <h3 id="Sscanln">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/fmt/scan.go?name=release#109">Sscanln</a> <a class="permalink" href="#Sscanln">&para;</a></h3>
-    <pre class="funcdecl">func Sscanln(str <a href="https://godoc.org/builtin#string">string</a>, a ...interface{}) (n <a href="https://godoc.org/builtin#int">int</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h3 id="Sscanln">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/fmt/scan.go?name=release#109">Sscanln</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Sscanln(str <a href="builtin.htm#string">string</a>, a ...interface{}) (n <a href="builtin.htm#int">int</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>Sscanln类似Sscan，但会在换行时才停止扫描。最后一个条目后必须有换行或者到达结束位置。</p>
 </div>
 </body>

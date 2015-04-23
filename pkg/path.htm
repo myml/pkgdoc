@@ -12,7 +12,8 @@
     <p><code>import "path"</code>
     <p>path实现了对斜杠分隔的路径的实用操作函数。</p>
     <h3 id="pkg-index" class="section-header">Index <a class="permalink" href="#pkg-index">&para;</a></h3>
-    <ul class="list-unstyled">
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#pkg-variables">Variables</a></li>
         <li><a href="#IsAbs">func IsAbs(path string) bool</a></li>
         <li><a href="#Split">func Split(path string) (dir, file string)</a></li>
@@ -23,8 +24,9 @@
         <li><a href="#Clean">func Clean(path string) string</a></li>
         <li><a href="#Match">func Match(pattern, name string) (matched bool, err error)</a></li>
     </ul>
-    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-examples">&para;</a></h4>
-    <ul class="list-unstyled">
+    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#example-Base" onclick="$('#ex-Base').addClass('in').removeClass('collapse').height('auto')">Base</a></li>
         <li><a href="#example-Clean" onclick="$('#ex-Clean').addClass('in').removeClass('collapse').height('auto')">Clean</a></li>
         <li><a href="#example-Dir" onclick="$('#ex-Dir').addClass('in').removeClass('collapse').height('auto')">Dir</a></li>
@@ -33,11 +35,11 @@
         <li><a href="#example-Join" onclick="$('#ex-Join').addClass('in').removeClass('collapse').height('auto')">Join</a></li>
         <li><a href="#example-Split" onclick="$('#ex-Split').addClass('in').removeClass('collapse').height('auto')">Split</a></li>
     </ul>
-    <h3 id="pkg-variables">Variables <a class="permalink" href="#pkg-variables">&para;</a></h3>
-    <pre>var <span id="ErrBadPattern">ErrBadPattern</span> = <a href="https://godoc.org/errors">errors</a>.<a href="https://godoc.org/errors#New">New</a>(&#34;syntax error in pattern&#34;)</pre>
+    <h3 id="pkg-variables">Variables <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre>var <span id="ErrBadPattern">ErrBadPattern</span> = <a href="errors.htm">errors</a>.<a href="errors.htm#New">New</a>(&#34;syntax error in pattern&#34;)</pre>
     <p>ErrBadPattern表示一个glob模式匹配字符串的格式错误。</p>
-    <h3 id="IsAbs">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/path/path.go?name=release#196">IsAbs</a> <a class="permalink" href="#IsAbs">&para;</a></h3>
-    <pre class="funcdecl">func IsAbs(path <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h3 id="IsAbs">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/path/path.go?name=release#196">IsAbs</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func IsAbs(path <a href="builtin.htm#string">string</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>IsAbs返回路径是否是一个绝对路径。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-IsAbs">
@@ -52,8 +54,8 @@
             </div>
         </div>
     </div>
-    <h3 id="Split">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/path/path.go?name=release#142">Split</a> <a class="permalink" href="#Split">&para;</a></h3>
-    <pre class="funcdecl">func Split(path <a href="https://godoc.org/builtin#string">string</a>) (dir, file <a href="https://godoc.org/builtin#string">string</a>)</pre>
+    <h3 id="Split">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/path/path.go?name=release#142">Split</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Split(path <a href="builtin.htm#string">string</a>) (dir, file <a href="builtin.htm#string">string</a>)</pre>
     <p>Split函数将路径从最后一个斜杠后面位置分隔为两个部分（dir和file）并返回。如果路径中没有斜杠，函数返回值dir会设为空字符串，file会设为path。两个返回值满足path == dir+file。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Split">
@@ -68,8 +70,8 @@
             </div>
         </div>
     </div>
-    <h3 id="Join">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/path/path.go?name=release#150">Join</a> <a class="permalink" href="#Join">&para;</a></h3>
-    <pre class="funcdecl">func Join(elem ...<a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="Join">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/path/path.go?name=release#150">Join</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Join(elem ...<a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>Join函数可以将任意数量的路径元素放入一个单一路径里，会根据需要添加斜杠。结果是经过简化的，所有的空字符串元素会被忽略。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Join">
@@ -84,8 +86,8 @@
             </div>
         </div>
     </div>
-    <h3 id="Dir">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/path/path.go?name=release#207">Dir</a> <a class="permalink" href="#Dir">&para;</a></h3>
-    <pre class="funcdecl">func Dir(path <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="Dir">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/path/path.go?name=release#207">Dir</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Dir(path <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>Dir返回路径除去最后一个路径元素的部分，即该路径最后一个元素所在的目录。在使用Split去掉最后一个元素后，会简化路径并去掉末尾的斜杠。如果路径是空字符串，会返回"."；如果路径由1到多个斜杠后跟0到多个非斜杠字符组成，会返回"/"；其他任何情况下都不会返回以斜杠结尾的路径。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Dir">
@@ -100,8 +102,8 @@
             </div>
         </div>
     </div>
-    <h3 id="Base">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/path/path.go?name=release#176">Base</a> <a class="permalink" href="#Base">&para;</a></h3>
-    <pre class="funcdecl">func Base(path <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="Base">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/path/path.go?name=release#176">Base</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Base(path <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>Base函数返回路径的最后一个元素。在提取元素前会求掉末尾的斜杠。如果路径是""，会返回"."；如果路径是只有一个斜杆构成，会返回"/"。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Base">
@@ -116,8 +118,8 @@
             </div>
         </div>
     </div>
-    <h3 id="Ext">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/path/path.go?name=release#163">Ext</a> <a class="permalink" href="#Ext">&para;</a></h3>
-    <pre class="funcdecl">func Ext(path <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="Ext">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/path/path.go?name=release#163">Ext</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Ext(path <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p>Ext函数返回path文件扩展名。返回值是路径最后一个斜杠分隔出的路径元素的最后一个'.'起始的后缀（包括'.'）。如果该元素没有'.'会返回空字符串。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Ext">
@@ -132,8 +134,8 @@
             </div>
         </div>
     </div>
-    <h3 id="Clean">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/path/path.go?name=release#69">Clean</a> <a class="permalink" href="#Clean">&para;</a></h3>
-    <pre class="funcdecl">func Clean(path <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="Clean">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/path/path.go?name=release#69">Clean</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Clean(path <a href="builtin.htm#string">string</a>) <a href="builtin.htm#string">string</a></pre>
     <p align="left">Clean函数通过单纯的词法操作返回和path代表同一地址的最短路径。</p>
     <p align="left">它会不断的依次应用如下的规则，直到不能再进行任何处理：</p>
     <pre>1. 将连续的多个斜杠替换为单个斜杠
@@ -170,8 +172,8 @@ Clean(&#34;/../a/b/../././/c&#34;) = &#34;/a/c&#34;
             </div>
         </div>
     </div>
-    <h3 id="Match">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/path/match.go?name=release#38">Match</a> <a class="permalink" href="#Match">&para;</a></h3>
-    <pre class="funcdecl">func Match(pattern, name <a href="https://godoc.org/builtin#string">string</a>) (matched <a href="https://godoc.org/builtin#bool">bool</a>, err <a href="https://godoc.org/builtin#error">error</a>)</pre>
+    <h3 id="Match">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/path/match.go?name=release#38">Match</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Match(pattern, name <a href="builtin.htm#string">string</a>) (matched <a href="builtin.htm#bool">bool</a>, err <a href="builtin.htm#error">error</a>)</pre>
     <p>如果name匹配shell文件名模式匹配字符串，Match函数返回真。该模式匹配字符串语法为：</p>
     <pre>pattern:
 	{ term }

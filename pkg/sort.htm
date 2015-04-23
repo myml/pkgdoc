@@ -321,7 +321,8 @@ func printOrgans(s []*Organ) {
         </div>
     </div>
     <h3 id="pkg-index" class="section-header">Index <a class="permalink" href="#pkg-index">&para;</a></h3>
-    <ul class="list-unstyled">
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#Interface">type Interface</a></li>
         <li><a href="#IntSlice">type IntSlice</a></li>
         <ul>
@@ -362,8 +363,9 @@ func printOrgans(s []*Organ) {
         <li><a href="#IsSorted">func IsSorted(data Interface) bool</a></li>
         <li><a href="#Search">func Search(n int, f func(int) bool) int</a></li>
     </ul>
-    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-examples">&para;</a></h4>
-    <ul class="list-unstyled">
+    <h4 id="pkg-examples">Examples <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <a href="../index.html"><h3>返回首页</h3></a>
+		</br>
         <li><a href="#example-Ints" onclick="$('#ex-Ints').addClass('in').removeClass('collapse').height('auto')">Ints</a></li>
         <li><a href="#example-Reverse" onclick="$('#ex-Reverse').addClass('in').removeClass('collapse').height('auto')">Reverse</a></li>
         <li><a href="#example-package" onclick="$('#ex-package').addClass('in').removeClass('collapse').height('auto')">package</a></li>
@@ -371,72 +373,72 @@ func printOrgans(s []*Organ) {
         <li><a href="#example-package--SortMultiKeys" onclick="$('#ex-package--SortMultiKeys').addClass('in').removeClass('collapse').height('auto')">package (SortMultiKeys)</a></li>
         <li><a href="#example-package--SortWrapper" onclick="$('#ex-package--SortWrapper').addClass('in').removeClass('collapse').height('auto')">package (SortWrapper)</a></li>
     </ul>
-    <h3 id="Interface">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#12">Interface</a> <a class="permalink" href="#Interface">&para;</a></h3>
+    <h3 id="Interface">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#12">Interface</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre>type Interface interface {
     <span class="com">// Len方法返回集合中的元素个数</span>
-    <span id="Interface.Len">Len</span>() <a href="https://godoc.org/builtin#int">int</a>
+    <span id="Interface.Len">Len</span>() <a href="builtin.htm#int">int</a>
     <span class="com">// Less方法报告索引i的元素是否比索引j的元素小</span>
-    <span id="Interface.Less">Less</span>(i, j <a href="https://godoc.org/builtin#int">int</a>) <a href="https://godoc.org/builtin#bool">bool</a>
+    <span id="Interface.Less">Less</span>(i, j <a href="builtin.htm#int">int</a>) <a href="builtin.htm#bool">bool</a>
     <span class="com">// Swap方法交换索引i和j的两个元素</span>
-    <span id="Interface.Swap">Swap</span>(i, j <a href="https://godoc.org/builtin#int">int</a>)
+    <span id="Interface.Swap">Swap</span>(i, j <a href="builtin.htm#int">int</a>)
 }</pre>
     <p>一个满足sort.Interface接口的（集合）类型可以被本包的函数进行排序。方法要求集合中的元素可以被整数索引。</p>
-    <h3 id="IntSlice">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#233">IntSlice</a> <a class="permalink" href="#IntSlice">&para;</a></h3>
-    <pre>type IntSlice []<a href="https://godoc.org/builtin#int">int</a></pre>
+    <h3 id="IntSlice">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#233">IntSlice</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre>type IntSlice []<a href="builtin.htm#int">int</a></pre>
     <p>IntSlice给[]int添加方法以满足Interface接口，以便排序为递增序列。</p>
-    <h4 id="IntSlice.Len">func (IntSlice) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#235">Len</a> <a class="permalink" href="#IntSlice.Len">&para;</a></h4>
-    <pre class="funcdecl">func (p <a href="#IntSlice">IntSlice</a>) Len() <a href="https://godoc.org/builtin#int">int</a></pre>
-    <h4 id="IntSlice.Less">func (IntSlice) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#236">Less</a> <a class="permalink" href="#IntSlice.Less">&para;</a></h4>
-    <pre class="funcdecl">func (p <a href="#IntSlice">IntSlice</a>) Less(i, j <a href="https://godoc.org/builtin#int">int</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
-    <h4 id="IntSlice.Swap">func (IntSlice) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#237">Swap</a> <a class="permalink" href="#IntSlice.Swap">&para;</a></h4>
-    <pre class="funcdecl">func (p <a href="#IntSlice">IntSlice</a>) Swap(i, j <a href="https://godoc.org/builtin#int">int</a>)</pre>
-    <h4 id="IntSlice.Sort">func (IntSlice) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#240">Sort</a> <a class="permalink" href="#IntSlice.Sort">&para;</a></h4>
+    <h4 id="IntSlice.Len">func (IntSlice) <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#235">Len</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (p <a href="#IntSlice">IntSlice</a>) Len() <a href="builtin.htm#int">int</a></pre>
+    <h4 id="IntSlice.Less">func (IntSlice) <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#236">Less</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (p <a href="#IntSlice">IntSlice</a>) Less(i, j <a href="builtin.htm#int">int</a>) <a href="builtin.htm#bool">bool</a></pre>
+    <h4 id="IntSlice.Swap">func (IntSlice) <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#237">Swap</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (p <a href="#IntSlice">IntSlice</a>) Swap(i, j <a href="builtin.htm#int">int</a>)</pre>
+    <h4 id="IntSlice.Sort">func (IntSlice) <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#240">Sort</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (p <a href="#IntSlice">IntSlice</a>) Sort()</pre>
     <p>Sort等价于调用Sort(p)</p>
-    <h4 id="IntSlice.Search">func (IntSlice) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/search.go?name=release#106">Search</a> <a class="permalink" href="#IntSlice.Search">&para;</a></h4>
-    <pre class="funcdecl">func (p <a href="#IntSlice">IntSlice</a>) Search(x <a href="https://godoc.org/builtin#int">int</a>) <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h4 id="IntSlice.Search">func (IntSlice) <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/search.go?name=release#106">Search</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (p <a href="#IntSlice">IntSlice</a>) Search(x <a href="builtin.htm#int">int</a>) <a href="builtin.htm#int">int</a></pre>
     <p>Search等价于调用SearchInts(p, x)</p>
-    <h3 id="Float64Slice">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#243">Float64Slice</a> <a class="permalink" href="#Float64Slice">&para;</a></h3>
-    <pre>type Float64Slice []<a href="https://godoc.org/builtin#float64">float64</a></pre>
+    <h3 id="Float64Slice">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#243">Float64Slice</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre>type Float64Slice []<a href="builtin.htm#float64">float64</a></pre>
     <p>Float64Slice给[]float64添加方法以满足Interface接口，以便排序为递增序列。</p>
-    <h4 id="Float64Slice.Len">func (Float64Slice) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#245">Len</a> <a class="permalink" href="#Float64Slice.Len">&para;</a></h4>
-    <pre class="funcdecl">func (p <a href="#Float64Slice">Float64Slice</a>) Len() <a href="https://godoc.org/builtin#int">int</a></pre>
-    <h4 id="Float64Slice.Less">func (Float64Slice) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#246">Less</a> <a class="permalink" href="#Float64Slice.Less">&para;</a></h4>
-    <pre class="funcdecl">func (p <a href="#Float64Slice">Float64Slice</a>) Less(i, j <a href="https://godoc.org/builtin#int">int</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
-    <h4 id="Float64Slice.Swap">func (Float64Slice) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#247">Swap</a> <a class="permalink" href="#Float64Slice.Swap">&para;</a></h4>
-    <pre class="funcdecl">func (p <a href="#Float64Slice">Float64Slice</a>) Swap(i, j <a href="https://godoc.org/builtin#int">int</a>)</pre>
-    <h4 id="Float64Slice.Sort">func (Float64Slice) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#255">Sort</a> <a class="permalink" href="#Float64Slice.Sort">&para;</a></h4>
+    <h4 id="Float64Slice.Len">func (Float64Slice) <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#245">Len</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (p <a href="#Float64Slice">Float64Slice</a>) Len() <a href="builtin.htm#int">int</a></pre>
+    <h4 id="Float64Slice.Less">func (Float64Slice) <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#246">Less</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (p <a href="#Float64Slice">Float64Slice</a>) Less(i, j <a href="builtin.htm#int">int</a>) <a href="builtin.htm#bool">bool</a></pre>
+    <h4 id="Float64Slice.Swap">func (Float64Slice) <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#247">Swap</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (p <a href="#Float64Slice">Float64Slice</a>) Swap(i, j <a href="builtin.htm#int">int</a>)</pre>
+    <h4 id="Float64Slice.Sort">func (Float64Slice) <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#255">Sort</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (p <a href="#Float64Slice">Float64Slice</a>) Sort()</pre>
     <p>Sort等价于调用Sort(p)</p>
-    <h4 id="Float64Slice.Search">func (Float64Slice) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/search.go?name=release#109">Search</a> <a class="permalink" href="#Float64Slice.Search">&para;</a></h4>
-    <pre class="funcdecl">func (p <a href="#Float64Slice">Float64Slice</a>) Search(x <a href="https://godoc.org/builtin#float64">float64</a>) <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h4 id="Float64Slice.Search">func (Float64Slice) <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/search.go?name=release#109">Search</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (p <a href="#Float64Slice">Float64Slice</a>) Search(x <a href="builtin.htm#float64">float64</a>) <a href="builtin.htm#int">int</a></pre>
     <p>Search等价于调用SearchFloat64s(p, x)</p>
-    <h3 id="StringSlice">type <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#258">StringSlice</a> <a class="permalink" href="#StringSlice">&para;</a></h3>
-    <pre>type StringSlice []<a href="https://godoc.org/builtin#string">string</a></pre>
+    <h3 id="StringSlice">type <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#258">StringSlice</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre>type StringSlice []<a href="builtin.htm#string">string</a></pre>
     <p>StringSlice给[]string添加方法以满足Interface接口，以便排序为递增序列。</p>
-    <h4 id="StringSlice.Len">func (StringSlice) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#260">Len</a> <a class="permalink" href="#StringSlice.Len">&para;</a></h4>
-    <pre class="funcdecl">func (p <a href="#StringSlice">StringSlice</a>) Len() <a href="https://godoc.org/builtin#int">int</a></pre>
-    <h4 id="StringSlice.Less">func (StringSlice) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#261">Less</a> <a class="permalink" href="#StringSlice.Less">&para;</a></h4>
-    <pre class="funcdecl">func (p <a href="#StringSlice">StringSlice</a>) Less(i, j <a href="https://godoc.org/builtin#int">int</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
-    <h4 id="StringSlice.Swap">func (StringSlice) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#262">Swap</a> <a class="permalink" href="#StringSlice.Swap">&para;</a></h4>
-    <pre class="funcdecl">func (p <a href="#StringSlice">StringSlice</a>) Swap(i, j <a href="https://godoc.org/builtin#int">int</a>)</pre>
-    <h4 id="StringSlice.Sort">func (StringSlice) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#265">Sort</a> <a class="permalink" href="#StringSlice.Sort">&para;</a></h4>
+    <h4 id="StringSlice.Len">func (StringSlice) <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#260">Len</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (p <a href="#StringSlice">StringSlice</a>) Len() <a href="builtin.htm#int">int</a></pre>
+    <h4 id="StringSlice.Less">func (StringSlice) <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#261">Less</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (p <a href="#StringSlice">StringSlice</a>) Less(i, j <a href="builtin.htm#int">int</a>) <a href="builtin.htm#bool">bool</a></pre>
+    <h4 id="StringSlice.Swap">func (StringSlice) <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#262">Swap</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (p <a href="#StringSlice">StringSlice</a>) Swap(i, j <a href="builtin.htm#int">int</a>)</pre>
+    <h4 id="StringSlice.Sort">func (StringSlice) <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#265">Sort</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
     <pre class="funcdecl">func (p <a href="#StringSlice">StringSlice</a>) Sort()</pre>
     <p>Sort等价于调用Sort(p)</p>
-    <h4 id="StringSlice.Search">func (StringSlice) <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/search.go?name=release#112">Search</a> <a class="permalink" href="#StringSlice.Search">&para;</a></h4>
-    <pre class="funcdecl">func (p <a href="#StringSlice">StringSlice</a>) Search(x <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h4 id="StringSlice.Search">func (StringSlice) <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/search.go?name=release#112">Search</a> <a class="permalink" href="#pkg-index">&para;</a></h4>
+    <pre class="funcdecl">func (p <a href="#StringSlice">StringSlice</a>) Search(x <a href="builtin.htm#string">string</a>) <a href="builtin.htm#int">int</a></pre>
     <p>Search等价于调用SearchStrings(p, x)</p>
-    <h3 id="Sort">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#192">Sort</a> <a class="permalink" href="#Sort">&para;</a></h3>
+    <h3 id="Sort">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#192">Sort</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre class="funcdecl">func Sort(data <a href="#Interface">Interface</a>)</pre>
     <p>Sort排序data。它调用1次data.Len确定长度，调用O(n*log(n))次data.Less和data.Swap。本函数不能保证排序的稳定性（即不保证相等元素的相对次序不变）。</p>
-    <h3 id="Stable">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#317">Stable</a> <a class="permalink" href="#Stable">&para;</a></h3>
+    <h3 id="Stable">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#317">Stable</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre class="funcdecl">func Stable(data <a href="#Interface">Interface</a>)</pre>
     <p align="left">Stable排序data，并保证排序的稳定性，相等元素的相对次序不变。</p>
     <p align="left">它调用1次data.Len，O(n*log(n))次data.Less和O(n*log(n)*log(n))次data.Swap。</p>
-    <h3 id="IsSorted">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#220">IsSorted</a> <a class="permalink" href="#IsSorted">&para;</a></h3>
-    <pre class="funcdecl">func IsSorted(data <a href="#Interface">Interface</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h3 id="IsSorted">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#220">IsSorted</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func IsSorted(data <a href="#Interface">Interface</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>IsSorted报告data是否已经被排序。</p>
-    <h3 id="Reverse">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#215">Reverse</a> <a class="permalink" href="#Reverse">&para;</a></h3>
+    <h3 id="Reverse">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#215">Reverse</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
     <pre class="funcdecl">func Reverse(data <a href="#Interface">Interface</a>) <a href="#Interface">Interface</a></pre>
     <p>Reverse包装一个Interface接口并返回一个新的Interface接口，对该接口排序可生成递减序列。</p>
     <div class="panel-group">
@@ -454,8 +456,8 @@ fmt.Println(s)</pre>
             </div>
         </div>
     </div>
-    <h3 id="Search">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/search.go?name=release#59">Search</a> <a class="permalink" href="#Search">&para;</a></h3>
-    <pre class="funcdecl">func Search(n <a href="https://godoc.org/builtin#int">int</a>, f func(<a href="https://godoc.org/builtin#int">int</a>) <a href="https://godoc.org/builtin#bool">bool</a>) <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h3 id="Search">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/search.go?name=release#59">Search</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Search(n <a href="builtin.htm#int">int</a>, f func(<a href="builtin.htm#int">int</a>) <a href="builtin.htm#bool">bool</a>) <a href="builtin.htm#int">int</a></pre>
     <p align="left">Search函数采用二分法搜索找到[0, n)区间内最小的满足f(i)==true的值i。也就是说，Search函数希望f在输入位于区间[0, n)的前面某部分（可以为空）时返回假，而在输入位于剩余至结尾的部分（可以为空）时返回真；Search函数会返回满足f(i)==true的最小值i。如果没有该值，函数会返回n。注意，未找到时的返回值不是-1，这一点和strings.Index等函数不同。Search函数只会用区间[0, n)内的值调用f。</p>
     <p align="left">一般使用Search找到值x在插入一个有序的、可索引的数据结构时，应插入的位置。这种情况下，参数f（通常是闭包）会捕捉应搜索的值和被查询的数据集。</p>
     <p align="left">例如，给定一个递增顺序的切片，调用Search(len(data), func(i int) bool { return data[i] &gt;= 23 })会返回data中最小的索引i满足data[i] &gt;= 23。如果调用者想要知道23是否在切片里，它必须另外检查data[i] == 23。</p>
@@ -480,8 +482,8 @@ if i &lt; len(data) &amp;&amp; data[i] == x {
 	})
 	fmt.Printf(&#34;Your number is %d.\n&#34;, answer)
 }</pre>
-<h3 id="Ints">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#270">Ints</a> <a class="permalink" href="#Ints">&para;</a></h3>
-    <pre class="funcdecl">func Ints(a []<a href="https://godoc.org/builtin#int">int</a>)</pre>
+<h3 id="Ints">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#270">Ints</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Ints(a []<a href="builtin.htm#int">int</a>)</pre>
     <p>Ints函数将a排序为递增顺序。</p>
     <div class="panel-group">
         <div class="panel panel-default" id="example-Ints">
@@ -498,29 +500,29 @@ fmt.Println(s)</pre>
             </div>
         </div>
     </div>
-    <h3 id="IntsAreSorted">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#279">IntsAreSorted</a> <a class="permalink" href="#IntsAreSorted">&para;</a></h3>
-    <pre class="funcdecl">func IntsAreSorted(a []<a href="https://godoc.org/builtin#int">int</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h3 id="IntsAreSorted">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#279">IntsAreSorted</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func IntsAreSorted(a []<a href="builtin.htm#int">int</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>IntsAreSorted检查a是否已排序为递增顺序。</p>
-    <h3 id="SearchInts">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/search.go?name=release#83">SearchInts</a> <a class="permalink" href="#SearchInts">&para;</a></h3>
-    <pre class="funcdecl">func SearchInts(a []<a href="https://godoc.org/builtin#int">int</a>, x <a href="https://godoc.org/builtin#int">int</a>) <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h3 id="SearchInts">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/search.go?name=release#83">SearchInts</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func SearchInts(a []<a href="builtin.htm#int">int</a>, x <a href="builtin.htm#int">int</a>) <a href="builtin.htm#int">int</a></pre>
     <p>SearchInts在递增顺序的a中搜索x，返回x的索引。如果查找不到，返回值是x应该插入a的位置（以保证a的递增顺序），返回值可以是len(a)。</p>
-    <h3 id="Float64s">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#273">Float64s</a> <a class="permalink" href="#Float64s">&para;</a></h3>
-    <pre class="funcdecl">func Float64s(a []<a href="https://godoc.org/builtin#float64">float64</a>)</pre>
+    <h3 id="Float64s">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#273">Float64s</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Float64s(a []<a href="builtin.htm#float64">float64</a>)</pre>
     <p>Float64s函数将a排序为递增顺序。</p>
-    <h3 id="Float64sAreSorted">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#282">Float64sAreSorted</a> <a class="permalink" href="#Float64sAreSorted">&para;</a></h3>
-    <pre class="funcdecl">func Float64sAreSorted(a []<a href="https://godoc.org/builtin#float64">float64</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h3 id="Float64sAreSorted">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#282">Float64sAreSorted</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Float64sAreSorted(a []<a href="builtin.htm#float64">float64</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>Float64sAreSorted检查a是否已排序为递增顺序。</p>
-    <h3 id="SearchFloat64s">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/search.go?name=release#92">SearchFloat64s</a> <a class="permalink" href="#SearchFloat64s">&para;</a></h3>
-    <pre class="funcdecl">func SearchFloat64s(a []<a href="https://godoc.org/builtin#float64">float64</a>, x <a href="https://godoc.org/builtin#float64">float64</a>) <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h3 id="SearchFloat64s">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/search.go?name=release#92">SearchFloat64s</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func SearchFloat64s(a []<a href="builtin.htm#float64">float64</a>, x <a href="builtin.htm#float64">float64</a>) <a href="builtin.htm#int">int</a></pre>
     <p>SearchFloat64s在递增顺序的a中搜索x，返回x的索引。如果查找不到，返回值是x应该插入a的位置（以保证a的递增顺序），返回值可以是len(a)。</p>
-    <h3 id="Strings">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#276">Strings</a> <a class="permalink" href="#Strings">&para;</a></h3>
-    <pre class="funcdecl">func Strings(a []<a href="https://godoc.org/builtin#string">string</a>)</pre>
+    <h3 id="Strings">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#276">Strings</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func Strings(a []<a href="builtin.htm#string">string</a>)</pre>
     <p>Strings函数将a排序为递增顺序。</p>
-    <h3 id="StringsAreSorted">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/sort.go?name=release#285">StringsAreSorted</a> <a class="permalink" href="#StringsAreSorted">&para;</a></h3>
-    <pre class="funcdecl">func StringsAreSorted(a []<a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#bool">bool</a></pre>
+    <h3 id="StringsAreSorted">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/sort.go?name=release#285">StringsAreSorted</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func StringsAreSorted(a []<a href="builtin.htm#string">string</a>) <a href="builtin.htm#bool">bool</a></pre>
     <p>StringsAreSorted检查a是否已排序为递增顺序。</p>
-    <h3 id="SearchStrings">func <a title="View Source" href="http://code.google.com/p/go/source/browse/src/pkg/sort/search.go?name=release#101">SearchStrings</a> <a class="permalink" href="#SearchStrings">&para;</a></h3>
-    <pre class="funcdecl">func SearchStrings(a []<a href="https://godoc.org/builtin#string">string</a>, x <a href="https://godoc.org/builtin#string">string</a>) <a href="https://godoc.org/builtin#int">int</a></pre>
+    <h3 id="SearchStrings">func <a title="View Source" href="https://github.com/golang/go/blob/master/src/sort/search.go?name=release#101">SearchStrings</a> <a class="permalink" href="#pkg-index">&para;</a></h3>
+    <pre class="funcdecl">func SearchStrings(a []<a href="builtin.htm#string">string</a>, x <a href="builtin.htm#string">string</a>) <a href="builtin.htm#int">int</a></pre>
     <p>SearchStrings在递增顺序的a中搜索x，返回x的索引。如果查找不到，返回值是x应该插入a的位置（以保证a的递增顺序），返回值可以是len(a)。</p>
 </div>
 </body>
