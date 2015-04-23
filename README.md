@@ -1,5 +1,4 @@
-#pkgdoc
-
-[PaaS@OSC 演示地址](http://mygodoc.oschina.mopaas.com)
-
-排版完全取自godoc.org，非常感谢godoc。因为godoc和本翻译都是开源，未询问即使用其数据，如有侵权请告知本人。
+golang中文手册
+forked @刘地的pkgdoc
+非常感谢,是这个手册带我走入golang的;
+英语不行就不参与翻译了,主要添加演示平台的功能,比如搜索,下载之类的
