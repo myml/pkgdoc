@@ -139,7 +139,7 @@ flag &#39;#&#39;和&#39;+&#39; 未实现   </pre>
     <p align="left">在所有的扫描函数里，如果一个操作数实现了Scan方法（或者说，它实现了Scanner接口），将会使用该接口为该操作数扫描文本。另外，如果如果扫描到（准备填写）的参数比提供的参数个数少，会返回一个错误。</p>
     <p align="left">提供的所有参数必须为指针或者实现了Scanner接口。注意：Fscan等函数可能会在返回前多读取一个rune，这导致多次调用这些函数时可能会跳过部分输入。只有在输入里各值之间没有空白时，会出现问题。如果提供给Fscan等函数的io.Reader接口实现了ReadRune方法，将使用该方法读取字符。如果该io.Reader接口还实现了UnreadRune方法，将是使用该方法保存字符，这样可以使成功执行的Fscan等函数不会丢失数据。如果要给一个没有这两个方法的io.Reader接口提供这两个方法，使用bufio.NewReader。</p>
     <h3 id="pkg-index" class="section-header">Index <a class="permalink" href="#pkg-index">&para;</a></h3>
-    <a href="../index.html"><h3>返回首页</h3></a>
+    <a href="../main.html"><h3>返回首页</h3></a>
 		</br>
         <li><a href="#Stringer">type Stringer</a></li>
         <li><a href="#GoStringer">type GoStringer</a></li>
