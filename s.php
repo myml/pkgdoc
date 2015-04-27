@@ -7,7 +7,7 @@ if($_GET['s']!=""){
 		$s=file_get_contents($name);
 		$pos=strpos($s,$_GET['s']);
 		if ($pos!=false){
-			echo '<a href="',$name,'"><h2>',$name,'</h2></a> ...',substr($s,$pos-60,90),"<strong>",$_GET['s'],"</strong>",substr($s,$pos,90),...</br>';
+			echo '<a href="',$name,'"><h2>',$name,'</h2></a> ...',substr($s,$pos-60,90),"<strong>",$_GET['s'],"</strong>",substr($s,$pos+strlen($_GET['s']),90),'...</br>';
 	}
 	}
 }
